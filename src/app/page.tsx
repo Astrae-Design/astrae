@@ -1,6 +1,7 @@
 import GalleryShowcase from "@/components/custom/gallery";
 import { Hero } from "@/sections/common/hero";
 import LogoTicker from "@/sections/common/logo-ticker";
+import { FaqCentral } from "@/sections/home/faq";
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
       <Hero />
       <LogoTicker />
       <GalleryShowcase />
-      <div className="h-screen" />
+      <FaqCentral />
     </div>
   );
 };
