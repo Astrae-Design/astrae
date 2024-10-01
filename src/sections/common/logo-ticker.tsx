@@ -1,6 +1,8 @@
+"use client";
+
 import { companyLogo } from "@/constants";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 const LogoTicker = () => {
   return (
     <section className="py-20 md:py-12">
@@ -9,8 +11,17 @@ const LogoTicker = () => {
           <div className=" flex-1 md:flex-none">
             <h2 className=" text-white">Trusted by top innovated teams</h2>
           </div>
-          <div className=" flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
-            <div className=" flex flex-none gap-14">
+          <div className="flex flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
+            <motion.div
+              initial={{ translateX: "-50%" }}
+              animate={{ translateX: "0%" }}
+              transition={{
+                repeat: Infinity,
+                duration: 30,
+                ease: "linear",
+              }}
+              className=" flex flex-none gap-14 -translate-x-1/2"
+            >
               {companyLogo.map((logo, idx) => (
                 <Image
                   width={170}
@@ -21,7 +32,7 @@ const LogoTicker = () => {
                   key={idx}
                 />
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

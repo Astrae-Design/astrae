@@ -15,11 +15,11 @@ export const Header = () => {
             </div>
             <span className=" text-white font-semibold text-base">Astrae</span>
           </div>
-          <div className="hidden md:block">
-            <nav className=" flex gap-8 items-center text-sm">
+          <div className="hidden lg:block">
+            <nav className=" flex gap-8 lg:-mr-14 items-center text-sm">
               <MarketplaceMenu />
               <a
-                className="text-white/70 -ml-3 hover:text-white transition"
+                className="text-white/70 -ml-5 hover:text-white transition"
                 href="#"
               >
                 Pricing
@@ -36,18 +36,12 @@ export const Header = () => {
             </nav>
           </div>
           <div className="flex gap-4 items-center">
-            <div className="flex items-center gap-4">
-              <div className=" inline-flex items-center gap-1.5">
+            <div className="flex items-center gap-2">
+              <div className=" inline-flex items-center gap-3">
                 <div className=" hidden md:block">
-                  <Button variant="secondary" className=" px-0 w-10 group">
-                    <div className="h-6 w-6 relative opacity-70 group-hover:opacity-100 transition">
-                      <Image
-                        fill
-                        src="/assets/icons/icon-cart.svg"
-                        alt="Cart"
-                      />
-                    </div>
-                  </Button>
+                  <div className="h-6 w-6 relative opacity-70 cursor-pointer hover:opacity-100 transition">
+                    <Image fill src="/assets/icons/icon-cart.svg" alt="Cart" />
+                  </div>
                 </div>
 
                 <Button variant="secondary" className="hidden md:block">

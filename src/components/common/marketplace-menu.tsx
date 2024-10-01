@@ -68,7 +68,7 @@ export function MarketplaceMenu() {
             </a>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[480px] ">
               {components.map((component) => (
                 <ListItem
                   className=" group"
@@ -115,12 +115,14 @@ const ListItem = React.forwardRef<
             <div className="h-7 w-7 relative">
               <Image
                 fill
+                priority={true}
                 className="object-contain group-hover:hidden"
                 src={src}
                 alt={title}
               />
               <Image
                 fill
+                priority={true}
                 className="object-contain hidden group-hover:block"
                 src={srcActive}
                 alt={title}

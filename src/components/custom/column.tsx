@@ -12,7 +12,12 @@ const Column: React.FC<ColumnProps> = ({ galleryImages, y }) => {
       {galleryImages.map((src, i) => {
         return (
           <div key={i} className="imageContainer">
-            <Image src={`/assets/gallery/${src}`} alt="Astrae gallery" fill />
+            <Image
+              priority={true}
+              src={`/assets/gallery/${src}`}
+              alt="Astrae gallery"
+              fill
+            />
           </div>
         );
       })}
