@@ -5,9 +5,10 @@ import Image from "next/image";
 
 export const Header = () => {
   return (
-    <header className="py-4 border-b border-white/15 md:border-none">
+    <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-10">
+      <div className=" absolute inset-0 backdrop-blur -z-10 md:hidden"></div>
       <div className="container">
-        <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl max-w-full mx-auto">
+        <div className="flex justify-between items-center md:border border-white/15 md:bg-black md:backdrop-blur md:p-2.5 rounded-xl max-w-full mx-auto relative">
           <div className="h-10 inline-flex gap-1.5 justify-center items-center">
             <div className="h-8 w-8 relative">
               <Image fill src="/assets/logo.svg" alt="Logo" />
@@ -37,13 +38,21 @@ export const Header = () => {
           <div className="flex gap-4 items-center">
             <div className="flex items-center gap-4">
               <div className=" inline-flex items-center gap-1.5">
-                <Button variant="secondary" className=" px-0 w-10 group hidden md:block">
-                  <div className="h-6 w-6 relative opacity-70 group-hover:opacity-100 transition">
-                    <Image fill src="/assets/icons/icon-cart.svg" alt="Cart" />
-                  </div>
-                </Button>
+                <div className=" hidden md:block">
+                  <Button variant="secondary" className=" px-0 w-10 group">
+                    <div className="h-6 w-6 relative opacity-70 group-hover:opacity-100 transition">
+                      <Image
+                        fill
+                        src="/assets/icons/icon-cart.svg"
+                        alt="Cart"
+                      />
+                    </div>
+                  </Button>
+                </div>
 
-                <Button variant="secondary" className="hidden md:block">Login</Button>
+                <Button variant="secondary" className="hidden md:block">
+                  Login
+                </Button>
               </div>
               <PrimaryButton>Get Unlimited Access</PrimaryButton>
             </div>

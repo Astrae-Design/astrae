@@ -76,3 +76,87 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Scrollbar */
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  display: none;
+}
+/* End Scrollbar */
+
+::selection {
+  background-color: #0096fa;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #0096fa;
+  color: #ffffff;
+}
+
+::ms-selection {
+  background-color: #0096fa;
+  color: #ffffff;
+}
+
+/* Gallery */
+
+.gallery {
+  height: 175vh;
+  background: black;
+  position: relative;
+  display: flex;
+  gap: 1vw;
+  padding: 1vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.gallery .column {
+  position: relative;
+  height: 100%;
+  width: 25%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.gallery .column .imageContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-radius: 0.4vw;
+  overflow: hidden;
+}
+
+.gallery .column .imageContainer img {
+  object-fit: cover;
+}
+
+.gallery .column:nth-of-type(1) {
+  top: -45%;
+}
+
+.gallery .column:nth-of-type(2) {
+  top: -95%;
+}
+
+.gallery .column:nth-of-type(3) {
+  top: -45%;
+}
+
+.gallery .column:nth-of-type(4) {
+  top: -75%;
+}
+
+.spacer {
+  height: 10vh;
+}
+
+/* End Gallery */
