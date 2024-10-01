@@ -132,7 +132,7 @@ export const Hero = () => {
           </div>
         </div>
       </motion.div>
-      <div className=" container relative mt-12 md:mt-0">
+      <div className=" container relative mt-12 md:mt-0 z-10">
         <h1 className=" text-5xl md:text-6xl lg:text-8xl md:leading-none font-semibold tracking-tighter text-transparent bg-clip-text text-center bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(2,69,166,.5))]">
           React Template Marketplace For Stunning Sites
         </h1>

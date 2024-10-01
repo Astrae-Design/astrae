@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 const LogoTicker = () => {
   return (
-    <section className="py-20 md:py-12">
+    <section className="py-8 md:py-12">
       <div className=" container">
         <div className="flex items-center gap-5">
           <div className=" flex-1 md:flex-none">
@@ -20,7 +20,7 @@ const LogoTicker = () => {
                 duration: 30,
                 ease: "linear",
               }}
-              className=" flex flex-none gap-14 -translate-x-1/2"
+              className=" flex flex-none gap-0 md:gap-14 -translate-x-1/2"
             >
               {companyLogo.map((logo, idx) => (
                 <Image
@@ -28,7 +28,7 @@ const LogoTicker = () => {
                   height={1}
                   src={`/assets/company/${logo}`}
                   alt="Company logo"
-                  className="object-contain"
+                  className="object-contain scale-75 md:scale-100"
                   key={idx}
                 />
               ))}
