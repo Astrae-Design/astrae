@@ -3,19 +3,24 @@ import { MarketplaceMenu } from "@/components/common/marketplace-menu";
 import PrimaryButton from "@/components/common/primarybutton";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Header = () => {
   return (
     <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-50">
       <div className=" absolute inset-0 backdrop-blur -z-10 md:hidden"></div>
       <div className="container">
-        <div className="flex justify-between items-center md:border border-white/15 md:bg-black md:backdrop-blur md:p-2.5 rounded-xl max-w-full mx-auto relative">
-          <div className="h-10 inline-flex gap-1.5 justify-center items-center">
-            <div className="h-8 w-8 relative">
-              <Image fill src="/assets/logo.svg" alt="Logo" />
+        <div className="flex justify-between items-center md:border border-white/15 md:bg-black/80 md:backdrop-blur md:p-2.5 rounded-xl max-w-full mx-auto relative">
+          <Link className="h-8" href="/">
+            <div className="inline-flex gap-1.5 justify-center items-center">
+              <div className="h-8 w-8 relative">
+                <Image fill src="/assets/logo.svg" alt="Logo" />
+              </div>
+              <span className=" text-white font-semibold text-base">
+                Astrae
+              </span>
             </div>
-            <span className=" text-white font-semibold text-base">Astrae</span>
-          </div>
+          </Link>
           <div className="hidden lg:block">
             <nav className=" flex gap-8 lg:-mr-14 items-center text-sm">
               <MarketplaceMenu />
@@ -43,7 +48,10 @@ export const Header = () => {
                   <Cart />
                 </div>
 
-                <Button variant="secondary" className="hidden md:block">
+                <Button
+                  variant="secondary"
+                  className="hidden md:block bg-transparent hover:bg-transparent  "
+                >
                   Login
                 </Button>
               </div>

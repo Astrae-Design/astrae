@@ -89,21 +89,6 @@ body {
 }
 /* End Scrollbar */
 
-::selection {
-  background-color: #0096fa;
-  color: #ffffff;
-}
-
-::-moz-selection {
-  background-color: #0096fa;
-  color: #ffffff;
-}
-
-::ms-selection {
-  background-color: #0096fa;
-  color: #ffffff;
-}
-
 /* Gallery */
 
 .gallery {

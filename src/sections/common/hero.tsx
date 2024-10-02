@@ -35,7 +35,7 @@ const Hero = () => {
         duration: 120,
       }}
     >
-      <div className=" absolute inset-0 bg-[radial-gradient(75%_75%_at_center_center,rgb(2,69,166,.3)_15%,rgb(2,69,166,.3)_78%,transparent)]"></div>
+      <div className=" absolute inset-0 bg-[radial-gradient(75%_75%_at_center_center,rgb(2,69,166,.2)_15%,rgb(2,69,166,.1)_78%,transparent)]"></div>
 
       <motion.div
         animate={{
@@ -134,6 +134,14 @@ const Hero = () => {
       </motion.div>
 
       <div className=" container relative mt-12 md:mt-0 z-10">
+        <div className="w-full flex items-center justify-center mb-8 md:-mt-4">
+          <div className=" relative inline-flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-0  focus:ring-offset-0 group">
+            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0096FA_0%,#0245A6_50%,#0096FA_100%)]" />
+            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#000B1A] px-4  text-base font-archivo font-medium text-white backdrop-blur-3xl">
+              <span className="mr-0.5">✨ Hundreds of templates</span>
+            </span>
+          </div>
+        </div>
         <h1 className=" text-5xl md:text-6xl lg:text-8xl md:leading-none font-semibold tracking-tighter text-transparent bg-clip-text text-center bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(2,69,166,.5))]">
           React Template Marketplace For Stunning Sites
         </h1>

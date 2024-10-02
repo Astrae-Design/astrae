@@ -11,7 +11,6 @@ const Home = () => {
       <Hero />
       <LogoTicker />
       <GalleryShowcase />
-
       <Value />
       <FaqCentral />
       <Reviews />

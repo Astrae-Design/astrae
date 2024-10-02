@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 const components: {
   title: string;
@@ -63,9 +64,12 @@ export function MarketplaceMenu() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>
-            <a className="text-white/70 hover:text-white transition" href="#">
+            <Link
+              className="text-white/70 hover:text-white transition"
+              href="/marketplace"
+            >
               Marketplace
-            </a>
+            </Link>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[480px] ">

@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const Value = () => {
   return (
-    <div className=" w-full py-40 overflow-x-hidden">
-      <div className="flex flex-col container">
+    <div className=" w-full overflow-x-hidden">
+      <div className="flex flex-col container z-50">
         <div className=" w-full flex items-center justify-between gap-10">
           <div className="flex flex-col items-start flex-none text-start">
             <h2 className="font-semibold text-5xl lg:text-6xl w-full text-white max-w-lg ">
@@ -74,7 +74,7 @@ const Value = () => {
               </div>
             </div>
           </div>
-          <div className=" w-full">
+          <div className=" w-full [mask-image:linear-gradient(to_bottom,transparent,black_80%,black_100%,transparent)]">
             <SlidingCardsMarquee />
           </div>
         </div>
