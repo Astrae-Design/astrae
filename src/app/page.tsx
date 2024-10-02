@@ -1,6 +1,6 @@
+import GalleryShowcase from "@/components/custom/gallery";
 import Hero from "@/sections/common/hero";
 import LogoTicker from "@/sections/common/logo-ticker";
-import GalleryShowcase from "@/components/custom/gallery";
 import Reviews from "@/sections/common/reviews";
 import Value from "@/sections/common/value";
 import FaqCentral from "@/sections/home/faq";
@@ -11,6 +11,7 @@ const Home = () => {
       <Hero />
       <LogoTicker />
       <GalleryShowcase />
+
       <Value />
       <FaqCentral />
       <Reviews />

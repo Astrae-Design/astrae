@@ -60,27 +60,30 @@ const TestimonialList = ({
         return (
           <div
             key={t.id}
-            className="shrink-0 w-[500px] grid grid-cols-[7rem,_1fr] rounded-xl overflow-hidden relative"
+            className="shrink-0 w-[400px] flex flex-col rounded-lg overflow-hidden relative border border-white/15"
           >
-            <div className=" w-full h-44 relative">
-              <Image
-                unoptimized
-                fill
-                src={t.img}
-                alt="Profile"
-                className="object-cover"
-              />
+            <div className=" bg-gradient-to-t from-[#0245A6]/30 to-black h-full flex flex-col justify-between p-4">
+              <span className="block text-lg text-white/70">{t.info}</span>
+              <div className="flex items-center gap-4 mt-4">
+                <div className=" w-12 aspect-square h-12 relative">
+                  <Image
+                    unoptimized
+                    fill
+                    src={t.img}
+                    alt="Profile"
+                    className="object-cover object-top rounded-lg"
+                  />
+                </div>
+                <div>
+                  <span className="block font-semibold text-lg text-white">
+                    {t.name}
+                  </span>
+                  <span className="block text-white/70 text-sm font-medium">
+                    {t.title}
+                  </span>
+                </div>
+              </div>
             </div>
-            <div className=" bg-gradient-to-r from-[#0245A6]/50 to-black border border-white/15 rounded-r-xl  text-slate-50 p-4">
-              <span className="block font-semibold text-lg mb-1 text-white">
-                {t.name}
-              </span>
-              <span className="block mb-3 text-sm font-medium">{t.title}</span>
-              <span className="block text-sm text-slate-300">{t.info}</span>
-            </div>
-            <span className="text-7xl absolute top-2 right-2 text-white/50">
-              &ldquo;
-            </span>
           </div>
         );
       })}
