@@ -1,3 +1,4 @@
+import { Cart } from "@/components/common/cart";
 import { MarketplaceMenu } from "@/components/common/marketplace-menu";
 import PrimaryButton from "@/components/common/primarybutton";
 import { Button } from "@/components/ui/button";
@@ -5,7 +6,7 @@ import Image from "next/image";
 
 export const Header = () => {
   return (
-    <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-10">
+    <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-50">
       <div className=" absolute inset-0 backdrop-blur -z-10 md:hidden"></div>
       <div className="container">
         <div className="flex justify-between items-center md:border border-white/15 md:bg-black md:backdrop-blur md:p-2.5 rounded-xl max-w-full mx-auto relative">
@@ -39,9 +40,7 @@ export const Header = () => {
             <div className="flex items-center gap-2">
               <div className=" inline-flex items-center gap-3">
                 <div className=" hidden md:block">
-                  <div className="h-6 w-6 relative opacity-70 cursor-pointer hover:opacity-100 transition">
-                    <Image fill src="/assets/icons/icon-cart.svg" alt="Cart" />
-                  </div>
+                  <Cart />
                 </div>
 
                 <Button variant="secondary" className="hidden md:block">

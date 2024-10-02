@@ -1,6 +1,6 @@
 import { FaqItems } from "@/components/common/faq-items";
 
-export const FaqCentral = () => {
+const FaqCentral = () => {
   return (
     <section className="py-20 px-3 md:px-0">
       <div className=" container z-10 flex flex-col items-center justify-center">
@@ -17,3 +17,5 @@ export const FaqCentral = () => {
     </section>
   );
 };
+
+export default FaqCentral;

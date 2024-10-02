@@ -1,6 +1,6 @@
 const PrimaryButton = (props: React.PropsWithChildren) => {
   return (
-    <button className="relative h-10 px-3 rounded-lg font-medium text-white text-sm bg-gradient-to-b from-[#0245A6] to-[#0096FA] shadow-[0px_0px_12px_#0096FA]">
+    <button className="relative w-full h-10 px-3 rounded-lg font-medium text-white text-sm bg-gradient-to-b from-[#0245A6] to-[#0096FA] shadow-[0px_0px_12px_#0096FA]">
       <div className=" absolute inset-0">
         <div className=" rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
         <div className=" rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]" />

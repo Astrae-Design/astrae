@@ -19,7 +19,9 @@ const Footer = () => {
           <p className="text-white text-sm mt-2 mb-6">
             Templates Beyond Ordinary
           </p>
-          <PrimaryButton>Explore Our Collection</PrimaryButton>
+          <div className=" w-fit">
+            <PrimaryButton>Explore Our Collection</PrimaryButton>
+          </div>
         </div>
 
         <div className="w-full flex flex-wrap items-start md:justify-end gap-12 md:gap-28 mt-12 md:mt-0">

@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
-export const Hero = () => {
+const Hero = () => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -142,10 +142,12 @@ export const Hero = () => {
           focus on what matters — building standout websites that captivate your
           audience.
         </p>
-        <div className="flex justify-center items-center gap-4 mt-5">
+        <div className="flex justify-center w-fit mx-auto items-center gap-4 mt-5">
           <PrimaryButton>Explore Our Collection</PrimaryButton>
         </div>
       </div>
     </motion.section>
   );
 };
+
+export default Hero;
