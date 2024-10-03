@@ -70,7 +70,7 @@ const CallToAction = () => {
             backgroundPositionX: "800px",
           }}
           ref={borderedDivRef}
-          className=" border border-white/15 rounded-xl py-24 overflow-hidden relative group"
+          className=" border border-white/15 rounded-xl py-14 md:py-24 overflow-hidden relative group"
         >
           <div
             className=" absolute inset-0 bg-[rgb(2,69,166)] bg-blend-overlay [mask-image:radial-gradient(50%_50%_at_50%_35%,black,transparent)] transition duration-700 group-hover:opacity-0"

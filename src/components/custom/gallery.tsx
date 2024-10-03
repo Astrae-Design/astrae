@@ -31,7 +31,7 @@ const GalleryShowcase: React.FC = () => {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 5,
+      duration: 2,
       touchMultiplier: 2,
     });
 
@@ -54,7 +54,7 @@ const GalleryShowcase: React.FC = () => {
   }, []);
 
   return (
-    <div className="">
+    <div>
       <div className="spacer"></div>
       <div className=" relative">
         <div className="gallery" ref={gallery}>

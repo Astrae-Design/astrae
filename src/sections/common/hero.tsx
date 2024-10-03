@@ -142,7 +142,7 @@ const Hero = () => {
             </span>
           </div>
         </div>
-        <h1 className=" text-5xl md:text-6xl lg:text-8xl md:leading-none font-semibold tracking-tighter text-transparent bg-clip-text text-center bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(2,69,166,.5))]">
+        <h1 className=" -mt-4 md:-mt-0 text-5xl md:text-6xl lg:text-8xl md:leading-none font-semibold tracking-tighter text-transparent bg-clip-text text-center bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(2,69,166,.5))]">
           React Template Marketplace For Stunning Sites
         </h1>
         <p className=" text-base md:text-xl text-white/70 mt-2 md:mt-2 text-center max-w-2xl mx-auto">

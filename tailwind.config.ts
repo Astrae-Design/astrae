@@ -13,7 +13,7 @@ const config: Config = {
     container: {
       center: true,
       padding: {
-        DEFAULT: "20px",
+        DEFAULT: "8px",
         lg: "80px",
       },
       screens: {
@@ -92,8 +92,14 @@ const config: Config = {
             height: "0",
           },
         },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
       },
       animation: {
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

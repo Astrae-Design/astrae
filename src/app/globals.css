@@ -185,6 +185,60 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+  .gallery {
+    height: 175vh;
+    background: black;
+    position: relative;
+    display: flex;
+    gap: 1vw;
+    padding: 1vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    pointer-events: none;
+    touch-action: none;
+  }
+  .gallery .column {
+    position: relative;
+    height: 100%;
+    width: 25%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+  }
+
+  .gallery .column .imageContainer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 0.4vw;
+    overflow: hidden;
+  }
+
+  .gallery .column .imageContainer img {
+    object-fit: cover;
+  }
+
+  .gallery .column:nth-of-type(1) {
+    top: -45%;
+  }
+
+  .gallery .column:nth-of-type(2) {
+    top: -95%;
+  }
+
+  .gallery .column:nth-of-type(3) {
+    top: -45%;
+  }
+
+  .gallery .column:nth-of-type(4) {
+    top: -75%;
+  }
+
+  .spacer {
+    height: 10vh;
+  }
+
   .slidingImages {
     display: flex;
     flex-direction: column;
@@ -200,6 +254,22 @@ body {
     gap: 4vw;
     width: 570vw;
     left: -80vw;
+  }
+  .slidingImages .slider .project-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slidingImages .slider .project-item .imageContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .slidingImages .slider .project-item .imageContainer img {
+    object-fit: cover;
+    object-position: center;
   }
 }
 
