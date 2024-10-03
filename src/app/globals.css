@@ -92,7 +92,7 @@ body {
 /* Gallery */
 
 .gallery {
-  height: 175dvh;
+  height: 175vh;
   background: black;
   position: relative;
   display: flex;
