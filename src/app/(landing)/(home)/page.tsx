@@ -1,5 +1,6 @@
 import ChatWidget from "@/components/common/chat-widget";
 import GalleryShowcase from "@/components/custom/gallery";
+import CallToAction from "@/sections/common/cta";
 import Hero from "@/sections/common/hero";
 import LogoTicker from "@/sections/common/logo-ticker";
 import Pricing from "@/sections/common/pricing";
@@ -19,6 +20,7 @@ const Home = () => {
       <Pricing />
       <FaqCentral />
       <Reviews />
+      <CallToAction />
     </div>
   );
 };

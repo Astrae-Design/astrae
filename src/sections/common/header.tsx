@@ -24,21 +24,30 @@ export const Header = () => {
           <div className="hidden lg:block">
             <nav className=" flex gap-8 lg:-mr-14 items-center text-sm">
               <MarketplaceMenu />
-              <a
+              <Link
                 className="text-white/70 -ml-5 hover:text-white transition"
-                href="#"
+                href="/pricing"
               >
                 Pricing
-              </a>
-              <a className="text-white/70 hover:text-white transition" href="#">
+              </Link>
+              <Link
+                className="text-white/70 hover:text-white transition"
+                href="/contact"
+              >
                 Contact
-              </a>
-              <a className="text-white/70 hover:text-white transition" href="#">
+              </Link>
+              <Link
+                className="text-white/70 hover:text-white transition"
+                href="/blog"
+              >
                 Blog
-              </a>
-              <a className="text-white/70 hover:text-white transition" href="#">
+              </Link>
+              <Link
+                className="text-white/70 hover:text-white transition"
+                href="https://studioix.agency"
+              >
                 Studio IX
-              </a>
+              </Link>
             </nav>
           </div>
           <div className="flex gap-4 items-center">

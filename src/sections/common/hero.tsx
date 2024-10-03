@@ -35,7 +35,7 @@ const Hero = () => {
         duration: 120,
       }}
     >
-      <div className=" absolute inset-0 bg-[radial-gradient(75%_75%_at_center_center,rgb(2,69,166,.2)_15%,rgb(2,69,166,.1)_78%,transparent)]"></div>
+      <div className=" absolute inset-0 bg-[radial-gradient(75%_75%_at_center_center,rgb(2,69,166,.20)_15%,rgb(2,69,166,.10)_78%,transparent)]"></div>
 
       <motion.div
         animate={{

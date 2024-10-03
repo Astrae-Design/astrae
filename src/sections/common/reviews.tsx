@@ -62,7 +62,7 @@ const TestimonialList = ({
             key={t.id}
             className="shrink-0 w-[400px] flex flex-col rounded-lg overflow-hidden relative border border-white/15"
           >
-            <div className=" bg-gradient-to-t from-[#0245A6]/30 to-black h-full flex flex-col justify-between p-4">
+            <div className=" bg-[#161616]/80 backdrop-blur-md h-full flex flex-col justify-between p-4">
               <span className="block text-lg text-white/70">{t.info}</span>
               <div className="flex items-center gap-4 mt-4">
                 <div className=" w-12 aspect-square h-12 relative">

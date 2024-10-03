@@ -1,9 +1,8 @@
+import Footer from "@/sections/common/footer";
+import { Header } from "@/sections/common/header";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Header } from "@/sections/common/header";
-import Footer from "@/sections/common/footer";
-import CallToAction from "@/sections/common/cta";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,7 +33,6 @@ export default function RootLayout({
       >
         <Header />
         {children}
-        <CallToAction />
         <Footer />
       </body>
     </html>
