@@ -7,7 +7,7 @@ const SlidingCardsMarquee = () => {
   return (
     <div className="bg-black">
       <div className="p-4 overflow-x-hidden relative">
-        <div className="absolute top-0 bottom-0 left-0 w-28 md:w-40 z-10 bg-gradient-to-r from-black to-transparent" />
+        <div className="absolute top-0 bottom-0 left-0 w-8 md:w-40 z-10 bg-gradient-to-r from-black to-transparent" />
 
         <div className="flex items-center mb-4">
           <CardList list={showcaseItems.top} duration={125} />
@@ -20,7 +20,7 @@ const SlidingCardsMarquee = () => {
           <CardList list={showcaseItems.bottom} duration={75} reverse />
         </div>
 
-        <div className="absolute top-0 bottom-0 right-[16rem] w-28 md:w-40 z-10 bg-gradient-to-l from-black to-transparent" />
+        <div className="absolute top-0 bottom-0 right-0 md:right-[16rem] w-8 md:w-40 z-10 bg-gradient-to-l from-black to-transparent" />
       </div>
     </div>
   );

@@ -6,11 +6,11 @@ import Image from "next/image";
 const Value = () => {
   return (
     <div className=" w-full overflow-x-hidden">
-      <div className="flex flex-col container z-50">
-        <div className=" w-full flex items-center justify-between gap-10">
-          <div className="flex flex-col items-start flex-none text-start">
-            <h2 className="font-semibold text-5xl lg:text-6xl w-full text-white max-w-lg ">
-              Customize And Launch In Minute
+      <div className="flex flex-col md:container z-50">
+        <div className=" w-full flex flex-col md:flex-row items-center justify-between gap-10">
+          <div className=" container flex flex-col items-start flex-none text-start">
+            <h2 className="font-semibold text-5xl lg:text-6xl w-full text-white max-w-full md:max-w-lg ">
+              Customize And Launch In Minutes
             </h2>
             <p className=" text-base md:text-lg text-white/70 mt-2 md:mt-2 max-w-xl mx-auto">
               Plura is a sleek, one-page template crafted to showcase the work
@@ -21,8 +21,8 @@ const Value = () => {
             <div className="flex items-center gap-8 mt-6">
               <PrimaryButton>Browse Entire Library</PrimaryButton>
               <div className=" flex items-center -space-x-4">
-                <div className="inline-flex items-center justify-center h-6 w-6  md:h-10 md:w-10 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
-                  <div className=" relative h-6 w-6 md:h-5 md:w-5">
+                <div className="inline-flex items-center justify-center h-10 w-10  md:h-12 md:w-12 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
+                  <div className=" relative h-6 w-6 md:h-7 md:w-7">
                     <Image
                       fill
                       src="/assets/icons/icon-tailwindcss.svg"
@@ -31,8 +31,8 @@ const Value = () => {
                     />
                   </div>
                 </div>
-                <div className="inline-flex items-center justify-center h-6 w-6  md:h-10 md:w-10 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
-                  <div className=" relative h-6 w-6 md:h-5 md:w-5">
+                <div className="inline-flex items-center justify-center h-10 w-10  md:h-12 md:w-12 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
+                  <div className=" relative h-6 w-6 md:h-7 md:w-7">
                     <Image
                       fill
                       src="/assets/icons/icon-framer-motion.svg"
@@ -41,8 +41,8 @@ const Value = () => {
                     />
                   </div>
                 </div>
-                <div className="inline-flex items-center justify-center h-6 w-6  md:h-10 md:w-10 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
-                  <div className=" relative h-6 w-6 md:h-5 md:w-5">
+                <div className="inline-flex items-center justify-center h-10 w-10  md:h-12 md:w-12 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
+                  <div className=" relative h-6 w-6 md:h-7 md:w-7">
                     <Image
                       fill
                       src="/assets/icons/icon-react.svg"
@@ -51,8 +51,8 @@ const Value = () => {
                     />
                   </div>
                 </div>
-                <div className="inline-flex items-center justify-center h-6 w-6  md:h-10 md:w-10 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
-                  <div className=" relative h-6 w-6 md:h-5 md:w-5">
+                <div className="inline-flex items-center justify-center h-10 w-10  md:h-12 md:w-12 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
+                  <div className=" relative h-6 w-6 md:h-7 md:w-7">
                     <Image
                       fill
                       src="/assets/icons/icon-shadcn.svg"
@@ -61,8 +61,8 @@ const Value = () => {
                     />
                   </div>
                 </div>
-                <div className="inline-flex items-center justify-center h-6 w-6  md:h-10 md:w-10 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
-                  <div className=" relative h-6 w-6 md:h-5 md:w-5">
+                <div className="inline-flex items-center justify-center h-10 w-10  md:h-12 md:w-12 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
+                  <div className=" relative h-6 w-6 md:h-7 md:w-7">
                     <Image
                       fill
                       src="/assets/icons/icon-next-js.svg"
@@ -74,7 +74,7 @@ const Value = () => {
               </div>
             </div>
           </div>
-          <div className=" w-full [mask-image:linear-gradient(to_bottom,transparent,black_80%,black_100%,transparent)]">
+          <div className=" w-full [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_100%,transparent)] md:[mask-image:linear-gradient(to_bottom,transparent,black_80%,black_100%,transparent)]">
             <SlidingCardsMarquee />
           </div>
         </div>

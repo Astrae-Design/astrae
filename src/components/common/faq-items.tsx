@@ -10,7 +10,7 @@ export function FaqItems() {
     <Accordion type="multiple" className="w-full md:max-w-3xl mt-10 md:mb-20">
       <AccordionItem value="item-1">
         <AccordionTrigger>
-          Why wouldn&apos;t I just hire a designer or developer?
+          What if I just want a single website?
         </AccordionTrigger>
         <AccordionContent>
           At Studio IX, we value collaboration and believe in working closely
@@ -22,7 +22,7 @@ export function FaqItems() {
       </AccordionItem>
       <AccordionItem value="item-2">
         <AccordionTrigger>
-          What is the turn around time of most tasks?
+          What if I just want a single website?
         </AccordionTrigger>
         <AccordionContent>
           Turnaround time for most tasks typically depends on the scope and
@@ -54,7 +54,7 @@ export function FaqItems() {
       </AccordionItem>
       <AccordionItem value="item-5">
         <AccordionTrigger>
-          Why does Studio IX sound too good to be true?
+          What if I just want a single website?
         </AccordionTrigger>
         <AccordionContent>
           Studio IX&apos;s dedication to excellence, experienced team, and

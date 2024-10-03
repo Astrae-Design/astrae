@@ -7,7 +7,7 @@ const FaqCentral = () => {
         <h2 className="font-semibold text-5xl lg:text-6xl text-white text-center">
           FAQ Central
         </h2>
-        <p className=" text-base md:text-lg text-white/70 mt-2 md:mt-2 text-center max-w-xl mx-auto">
+        <p className=" text-base md:text-lg text-white/70 mt-2 md:mt-2 text-center w-full md:max-w-xl mx-auto">
           Explore our FAQs for instant answers to popular inquiries. For more
           specific assistance, don&apos;t hesitate to{" "}
           <span className=" text-[#0096FA]"> Reach out to us</span>

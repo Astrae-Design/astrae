@@ -30,7 +30,10 @@ const GalleryShowcase: React.FC = () => {
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
 
   useEffect(() => {
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+      duration: 5,
+      touchMultiplier: 2,
+    });
 
     const raf = (time: number) => {
       lenis.raf(time);

@@ -100,6 +100,8 @@ body {
   padding: 1vw;
   box-sizing: border-box;
   overflow: hidden;
+  pointer-events: none;
+  touch-action: none;
 }
 
 .gallery .column {
@@ -182,23 +184,22 @@ body {
   object-position: center;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .slidingImages {
     display: flex;
     flex-direction: column;
-    gap: 2.5vw;
+    gap: 2vw;
     position: relative;
-    margin-top: 16px;
     background-color: transparent;
     z-index: 1;
   }
   .slidingImages .slider {
     display: flex;
     position: relative;
-    height: 72vw;
+    height: 52vw;
     gap: 4vw;
-    width: 320vw;
-    left: -20vw;
+    width: 570vw;
+    left: -80vw;
   }
 }
 
