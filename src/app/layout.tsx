@@ -1,5 +1,3 @@
-import Footer from "@/sections/common/footer";
-import { Header } from "@/sections/common/header";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -29,11 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black select-none`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen bg-black select-none`}
       >
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

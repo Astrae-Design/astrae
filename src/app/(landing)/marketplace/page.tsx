@@ -1,6 +1,6 @@
-import CallToAction from "@/sections/common/cta";
-import Reviews from "@/sections/common/reviews";
-import Value from "@/sections/common/value";
+import CallToAction from "@/sections/cta";
+import Reviews from "@/sections/reviews";
+import Value from "@/sections/value";
 
 const MarketplacePage = () => {
   return (

@@ -1,9 +1,9 @@
 import ChatWidget from "@/components/common/chat-widget";
 import PricingCards from "@/components/common/pricing-cards";
-import CallToAction from "@/sections/common/cta";
-import PricingHero from "@/sections/common/pricing-hero";
-import Reviews from "@/sections/common/reviews";
-import FaqCentral from "@/sections/home/faq";
+import CallToAction from "@/sections/cta";
+import PricingHero from "@/sections/pricing-hero";
+import Reviews from "@/sections/reviews";
+import FaqCentral from "@/sections/faq";
 
 const PricingPage = () => {
   return (

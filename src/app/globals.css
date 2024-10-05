@@ -97,7 +97,6 @@ body {
   position: relative;
   display: flex;
   gap: 1vw;
-  padding: 1vw;
   box-sizing: border-box;
   overflow: hidden;
   pointer-events: none;

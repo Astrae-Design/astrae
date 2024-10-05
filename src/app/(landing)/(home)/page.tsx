@@ -1,12 +1,13 @@
 import ChatWidget from "@/components/common/chat-widget";
 import GalleryShowcase from "@/components/custom/gallery";
-import CallToAction from "@/sections/common/cta";
-import Hero from "@/sections/common/hero";
-import LogoTicker from "@/sections/common/logo-ticker";
-import Pricing from "@/sections/common/pricing";
-import Reviews from "@/sections/common/reviews";
-import Value from "@/sections/common/value";
-import FaqCentral from "@/sections/home/faq";
+import CallToAction from "@/sections/cta";
+import FaqCentral from "@/sections/faq";
+import Features from "@/sections/features";
+import Hero from "@/sections/hero";
+import LogoTicker from "@/sections/logo-ticker";
+import Pricing from "@/sections/pricing";
+import Reviews from "@/sections/reviews";
+import Value from "@/sections/value";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <GalleryShowcase />
       <div className="h-[10rem]" />
       <Value />
+      <Features />
       <Pricing />
       <FaqCentral />
       <Reviews />

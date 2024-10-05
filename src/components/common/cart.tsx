@@ -36,20 +36,22 @@ export function Cart() {
               />
             </div>
 
-            <p className=" text-white/70 text-sm">No items in cart</p>
+            <p className=" text-white/70 text-sm lg:text-base">
+              No items in cart
+            </p>
           </div>
           <div className=" h-1/2 flex flex-col items-center w-full justify-end pb-12">
             <Separator className="mb-4 opacity-15" orientation="horizontal" />
             <div className=" w-full flex items-center justify-between text-white">
               <p>Total</p>
-              <h4 className=" font-medium text-2xl">$ 0.00</h4>
+              <h4 className=" font-medium text-2xl">$0.00</h4>
             </div>
             <Separator className="mt-4 opacity-15" orientation="horizontal" />
             <div className="flex items-center space-x-2 w-full text-white mt-8 mb-4">
               <Checkbox id="terms" />
               <label
                 htmlFor="terms"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="text-sm lg:text-base font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
               >
                 Accept terms and conditions
               </label>

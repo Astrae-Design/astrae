@@ -16,13 +16,13 @@ export const Header = () => {
               <div className="h-8 w-8 relative">
                 <Image fill src="/assets/logo.svg" alt="Logo" />
               </div>
-              <span className=" text-white font-semibold text-base">
+              <span className=" text-white font-semibold text-base md:text-lg">
                 Astrae
               </span>
             </div>
           </Link>
           <div className="hidden lg:block">
-            <nav className=" flex gap-8 lg:-mr-14 items-center text-sm">
+            <nav className=" flex gap-8 lg:-mr-14 items-center text-sm lg:text-base">
               <MarketplaceMenu />
               <Link
                 className="text-white/70 -ml-5 hover:text-white transition"
@@ -57,12 +57,14 @@ export const Header = () => {
                   <Cart />
                 </div>
 
-                <Button
-                  variant="secondary"
-                  className="hidden md:block bg-transparent hover:bg-transparent  "
-                >
-                  Login
-                </Button>
+                <Link href="/welcome">
+                  <Button
+                    variant="secondary"
+                    className="hidden md:block bg-transparent hover:bg-transparent  "
+                  >
+                    Login
+                  </Button>
+                </Link>
               </div>
               <PrimaryButton>Get Unlimited Access</PrimaryButton>
             </div>

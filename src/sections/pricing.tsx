@@ -24,13 +24,14 @@ type CheckListItemType = {
 const Pricing = () => {
   return (
     <div className="w-full flex flex-col items-center container">
-      <section className="mx-auto px-4 md:px-0 w-full md:max-w-7xl py-24">
+      <section className="mx-auto  w-full md:max-w-7xl py-24">
         <h2 className="font-semibold text-5xl lg:text-6xl text-white text-center max-w-3xl mx-auto">
           Get instant access massive template library
         </h2>
         <p className=" text-base md:text-lg text-white/70 mt-2 md:mt-2 text-center w-full md:max-w-xl mx-auto">
           Explore our FAQs for instant answers to popular inquiries. For more
-          specific assistance, don&apos;t hesitate to Reach out to us.
+          specific assistance, don&apos;t hesitate to{" "}
+          <span className=" text-[#0096FA]">Reach out</span>
         </p>
         <div className=" w-full flex flex-col items-center mt-4">
           <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-4 items-start w-full">

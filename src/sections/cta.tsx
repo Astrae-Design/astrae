@@ -13,6 +13,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { RefObject, useEffect, useRef } from "react";
+import Link from "next/link";
 
 const useRelativeMousePosition = (to: RefObject<HTMLElement>) => {
   const mouseX = useMotionValue(0);
@@ -157,13 +158,17 @@ const CallToAction = () => {
               </div>
             </div>
             <div className=" justify-center w-full inline-flex items-center gap-4 mt-4">
-              <div className=" w-fit">
-                <PrimaryButton>Get Started Now</PrimaryButton>
-              </div>
-              <Button className=" h-11 bg-transparent" variant="secondary">
-                Studio IX
-                <ArrowUpRight className=" ml-3" />
-              </Button>
+              <Link href="/pricing">
+                <div className=" w-fit">
+                  <PrimaryButton>Get Started Now</PrimaryButton>
+                </div>
+              </Link>
+              <Link href="https://studioix.agency">
+                <Button className=" h-11 bg-transparent" variant="secondary">
+                  Studio IX
+                  <ArrowUpRight className=" ml-3" />
+                </Button>
+              </Link>
             </div>
           </div>
         </motion.div>

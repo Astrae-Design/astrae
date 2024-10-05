@@ -2,7 +2,7 @@ import { FaqItems } from "@/components/common/faq-items";
 
 const FaqCentral = () => {
   return (
-    <section className="py-20 px-3 md:px-0">
+    <section className="py-20">
       <div className=" container z-10 flex flex-col items-center justify-center">
         <h2 className="font-semibold text-5xl lg:text-6xl text-white text-center">
           FAQ Central
