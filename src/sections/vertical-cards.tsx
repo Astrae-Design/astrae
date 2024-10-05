@@ -61,6 +61,7 @@ const CardItem = ({
               <Image
                 unoptimized
                 fill
+                quality={40}
                 src={t.img}
                 alt="Profile"
                 className="object-cover"
