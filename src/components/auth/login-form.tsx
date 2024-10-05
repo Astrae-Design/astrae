@@ -14,16 +14,15 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { LoginSchema } from "@/schemas";
+import { Loader2 } from "lucide-react";
 import { login } from "../../../actions/login";
+import { PasswordInput } from "../ui/password-input";
 import { FormError } from "./form-error";
 import { FormSuccess } from "./form-success";
-import { PasswordInput } from "../ui/password-input";
-import { Loader2 } from "lucide-react";
 
 export const LoginForm = () => {
   const searchParams = useSearchParams();
