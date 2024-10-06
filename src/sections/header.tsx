@@ -1,5 +1,6 @@
 import { Cart } from "@/components/common/cart";
 import { MarketplaceMenu } from "@/components/common/marketplace-menu";
+import MobileNavigation from "@/components/common/mobile-navigation";
 import PrimaryButton from "@/components/common/primarybutton";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -69,9 +70,7 @@ export const Header = () => {
               <PrimaryButton>Get Unlimited Access</PrimaryButton>
             </div>
 
-            <div className="h-8 w-8 relative md:hidden">
-              <Image fill src="/assets/icons/icon-menu.svg" alt="Menu" />
-            </div>
+            <MobileNavigation />
           </div>
         </div>
       </div>
