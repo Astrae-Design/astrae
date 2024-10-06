@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence, MotionConfig } from "framer-motion";
+import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -116,9 +116,12 @@ const MobileNavigation = () => {
                   className="list-none space-y-6 container"
                 >
                   <li>
-                    <a href="#" className="text-4xl font-medium text-white">
+                    <Link
+                      href="/marketplace"
+                      className="text-4xl font-medium text-white"
+                    >
                       Marketplace
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <Link href="#" className="text-4xl font-medium text-white">
@@ -126,19 +129,28 @@ const MobileNavigation = () => {
                     </Link>
                   </li>
                   <li>
-                    <a href="#" className="text-4xl font-medium text-white">
+                    <Link
+                      href="/contact"
+                      className="text-4xl font-medium text-white"
+                    >
                       Contact
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="text-4xl font-medium text-white">
+                    <Link
+                      href="/blog"
+                      className="text-4xl font-medium text-white"
+                    >
                       Blog
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="text-4xl font-medium text-white">
+                    <Link
+                      href="https://studioix.agency"
+                      className="text-4xl font-medium text-white"
+                    >
                       Studio IX
-                    </a>
+                    </Link>
                   </li>
                 </motion.ul>
                 <motion.div

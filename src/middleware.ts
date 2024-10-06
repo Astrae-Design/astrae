@@ -5,6 +5,9 @@ import {
   DEFAULT_LOGIN_REDIRECT,
   apiAuthPrefix,
   authRoutes,
+  blogPrefix,
+  cmsPrefix,
+  marketplacePrefix,
   publicRoutes,
 } from "./routes";
 
@@ -15,7 +18,11 @@ export default auth((req) => {
   const isLoggedIn = !!req.auth;
 
   const isApiAuthRoute = nextUrl.pathname.startsWith(apiAuthPrefix);
-  const isPublicRoute = publicRoutes.includes(nextUrl.pathname);
+  const isPublicRoute =
+    publicRoutes.includes(nextUrl.pathname) ||
+    nextUrl.pathname.startsWith(cmsPrefix) ||
+    nextUrl.pathname.startsWith(blogPrefix) ||
+    nextUrl.pathname.startsWith(marketplacePrefix);
   const isAuthRoute = authRoutes.includes(nextUrl.pathname);
 
   if (isApiAuthRoute) {

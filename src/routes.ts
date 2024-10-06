@@ -6,12 +6,12 @@
 export const publicRoutes = [
   "/",
   "/new-verification",
-  "/marketplace",
-  "/blog",
   "/legals/refunds",
   "/legals/privacy-policy",
   "/legals/terms",
   "/legals/license",
+  "/pricing",
+  "/contact",
 ];
 
 /**
@@ -34,6 +34,9 @@ export const authRoutes = [
  * @type {string}
  */
 export const apiAuthPrefix = "/api/auth";
+export const blogPrefix = "/blog";
+export const marketplacePrefix = "/marketplace";
+export const cmsPrefix = "/studio";
 
 /**
  * The default redirect path after a successful login.

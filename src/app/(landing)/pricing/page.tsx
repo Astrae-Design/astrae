@@ -1,15 +1,18 @@
 import ChatWidget from "@/components/common/chat-widget";
 import PricingCards from "@/components/common/pricing-cards";
+import AnimatedHero from "@/sections/animated-hero";
 import CallToAction from "@/sections/cta";
-import PricingHero from "@/sections/pricing-hero";
-import Reviews from "@/sections/reviews";
 import FaqCentral from "@/sections/faq";
+import Reviews from "@/sections/reviews";
 
 const PricingPage = () => {
   return (
     <div>
       <ChatWidget />
-      <PricingHero />
+      <AnimatedHero
+        title="The right price for you, with maximum value"
+        description=" Simple pricing that makes sense for your business. No hidden fees."
+      />
       <PricingCards />
       <FaqCentral />
       <Reviews />
