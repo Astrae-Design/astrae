@@ -13,13 +13,13 @@ const MobileNavigation = () => {
     setMobileNav(!mobileNav);
   };
   return (
-    <header className="sticky top-0 inset-x-0 p-0 md:hidden z-[2147483002]">
+    <header className="sticky top-0 inset-x-0 p-0 md:hidden z-[2147483003]">
       <nav className="container mx-auto">
         <motion.button
           initial="hide"
           animate={mobileNav ? "show" : "hide"}
           onClick={toggleMobileNav}
-          className="flex flex-col space-y-1.5 relative z-10"
+          className="flex flex-col space-y-1.5 relative z-[2147483004]"
         >
           <motion.span
             variants={{
@@ -90,7 +90,7 @@ const MobileNavigation = () => {
                 initial="hide"
                 animate="show"
                 exit="hide"
-                className="fixed inset-0 bg-[#000] px-[8px] flex flex-col justify-center space-y-10 lg:hidden"
+                className="fixed z-[2147483002] inset-0 bg-[#000] px-[8px] flex flex-col justify-center lg:hidden"
               >
                 <Link className="h-8 absolute top-5 container" href="/">
                   <div className="inline-flex gap-1.5 justify-center items-center">
@@ -152,7 +152,7 @@ const MobileNavigation = () => {
                       opacity: 1,
                     },
                   }}
-                  className="w-full container"
+                  className="w-full container mt-8 mb-6"
                 >
                   <PrimaryButton>Get Unlimited Access</PrimaryButton>
                 </motion.div>
@@ -169,8 +169,10 @@ const MobileNavigation = () => {
                   }}
                   className="list-none flex flex-col items-center justify-center container"
                 >
-                  <p className=" text-sm text-white">Login</p>
-                  <div className=" inline-flex items-center mt-2 gap-4">
+                  <Link href="/welcome" className="mb-4">
+                    <p className=" text-base text-white">Login</p>
+                  </Link>
+                  <div className=" inline-flex items-center mt-4 gap-8">
                     <Link href="https://x.com/astraedesign0">
                       <div className="relative h-6 w-6 cursor-pointer opacity-70 hover:opacity-100 transition-all ease-in-out duration-300">
                         <Image
