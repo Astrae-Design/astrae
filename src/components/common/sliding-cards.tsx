@@ -6,28 +6,28 @@ import { useRef } from "react";
 
 const slider1 = [
   {
-    src: "1.jpg",
+    src: "13.jpg",
   },
   {
-    src: "2.jpg",
+    src: "14.jpg",
   },
   {
     src: "3.jpg",
   },
   {
-    src: "4.jpg",
+    src: "15.jpg",
   },
   {
     src: "5.jpg",
   },
   {
-    src: "6.jpg",
+    src: "2.jpg",
   },
   {
     src: "1.jpg",
   },
   {
-    src: "2.jpg",
+    src: "18.jpg",
   },
 ];
 
