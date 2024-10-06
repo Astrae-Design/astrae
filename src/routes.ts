@@ -3,7 +3,16 @@
  * These routes do not require authentication.
  * @type {string[]}
  */
-export const publicRoutes = ["/", "/new-verification", "/marketplace", "/blog"];
+export const publicRoutes = [
+  "/",
+  "/new-verification",
+  "/marketplace",
+  "/blog",
+  "/legals/refunds",
+  "/legals/privacy-policy",
+  "/legals/terms",
+  "/legals/license",
+];
 
 /**
  * An array of routes that are used for authentication.

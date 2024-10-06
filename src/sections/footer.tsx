@@ -112,7 +112,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <Separator orientation="horizontal" className=" w-full opacity-20 my-8" />
+      <Separator orientation="horizontal" className=" w-full opacity-20 mb-8 mt-12" />
       <p className=" text-white/70 text-sm lg:text-base">
         © 2024 Astrae Design. All Rights Reserved. Powered by{" "}
         <span className=" font-semibold text-white">Studio IX</span>
