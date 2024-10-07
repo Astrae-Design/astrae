@@ -49,10 +49,11 @@ const CardList = ({
             className="shrink-0 w-[320px] h-[220px] grid grid-cols-[7rem,_1fr] rounded-lg overflow-hidden relative"
           >
             <Image
-              quality={100}
+              quality={30}
               fill
               src={t.img}
               alt="Profile"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>

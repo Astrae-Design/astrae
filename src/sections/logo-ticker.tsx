@@ -26,6 +26,7 @@ const LogoTicker = () => {
                 <Image
                   width={170}
                   height={1}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   src={`/assets/company/${logo}`}
                   alt="Company logo"
                   className="object-contain scale-75 md:scale-100"

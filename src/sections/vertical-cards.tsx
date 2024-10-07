@@ -57,10 +57,11 @@ const CardItem = ({
             key={t.id}
             className="shrink-0 w-[400px] flex flex-col rounded-lg overflow-hidden relative mb-4"
           >
-            <div className=" w-full h-[32rem] relative">
+            <div className=" w-[400px] h-[32rem] relative">
               <Image
                 unoptimized
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 quality={40}
                 src={t.img}
                 alt="Profile"

@@ -21,7 +21,6 @@ export const revalidate = 60;
 
 const Blogs = async () => {
   const posts: Post[] = await getPosts();
-  console.log("Posts", posts);
   return (
     <section>
       <AnimatedHero

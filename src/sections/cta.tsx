@@ -100,6 +100,7 @@ const CallToAction = () => {
                 <div className=" relative h-10 w-10 md:h-14 md:w-14">
                   <Image
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     src="/assets/user-1.png"
                     alt="User"
                     className=" object-contain"
@@ -110,6 +111,7 @@ const CallToAction = () => {
                 <div className=" relative h-10 w-10 md:h-14 md:w-14">
                   <Image
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     src="/assets/user-2.png"
                     alt="User"
                     className=" object-contain"
@@ -120,6 +122,7 @@ const CallToAction = () => {
                 <div className=" relative h-10 w-10 md:h-14 md:w-14">
                   <Image
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     src="/assets/user-3.png"
                     alt="User"
                     className=" object-contain"
@@ -130,6 +133,7 @@ const CallToAction = () => {
                 <div className=" relative h-10 w-10 md:h-14 md:w-14">
                   <Image
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     src="/assets/user-4.png"
                     alt="User"
                     className=" object-contain"
@@ -140,6 +144,7 @@ const CallToAction = () => {
                 <div className=" relative h-10 w-10 md:h-14 md:w-14">
                   <Image
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     src="/assets/user-5.png"
                     alt="User"
                     className=" object-contain"
@@ -150,6 +155,7 @@ const CallToAction = () => {
                 <div className=" relative h-10 w-10 md:h-14 md:w-14">
                   <Image
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     src="/assets/user-6.png"
                     alt="User"
                     className=" object-contain"

@@ -30,10 +30,7 @@ const GalleryShowcase: React.FC = () => {
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
 
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 2,
-      touchMultiplier: 2,
-    });
+    const lenis = new Lenis();
 
     const raf = (time: number) => {
       lenis.raf(time);
@@ -57,7 +54,7 @@ const GalleryShowcase: React.FC = () => {
     <div>
       <div className="spacer"></div>
       <div className=" relative">
-        <div className="gallery" ref={gallery}>
+        <div className="gallery -ml-8 md:-ml-12" ref={gallery}>
           <Column
             galleryImages={[
               galleryImages[0],
@@ -94,7 +91,7 @@ const GalleryShowcase: React.FC = () => {
             y={y4}
           />
         </div>
-        <div className="w-full h-full absolute bg-black/40 backdrop-blur-[1px]  inset-0 flex items-center justify-center">
+        <div className="w-full h-full absolute bg-black/60 backdrop-blur-[1px]  inset-0 flex items-center justify-center">
           <h3 className=" text-white font-semibold text-5xl text-center md:text-7xl">
             Over 50+ Unique Templates
           </h3>

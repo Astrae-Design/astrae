@@ -13,13 +13,13 @@ const MobileNavigation = () => {
     setMobileNav(!mobileNav);
   };
   return (
-    <header className="sticky top-0 inset-x-0 p-0 md:hidden z-[2147483003]">
+    <header className="sticky top-0 inset-x-0 p-0 md:hidden">
       <nav className="container mx-auto">
         <motion.button
           initial="hide"
           animate={mobileNav ? "show" : "hide"}
           onClick={toggleMobileNav}
-          className="flex flex-col space-y-1.5 relative z-[2147483004]"
+          className="flex flex-col space-y-1.5 relative z-[2147483006]"
         >
           <motion.span
             variants={{
@@ -90,7 +90,7 @@ const MobileNavigation = () => {
                 initial="hide"
                 animate="show"
                 exit="hide"
-                className="fixed z-[2147483002] inset-0 bg-[#000] px-[8px] flex flex-col justify-center lg:hidden"
+                className="fixed top-0 inset-0 bg-[#000] px-[8px] flex flex-col justify-center "
               >
                 <Link className="h-8 absolute top-5 container" href="/">
                   <div className="inline-flex gap-1.5 justify-center items-center">

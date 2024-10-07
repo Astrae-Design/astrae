@@ -221,8 +221,8 @@ const PriceColumn = ({
       </div>
       <p className="mb-4 text-base font-normal text-white/70">{statement}</p>
       <div className="mb-4 space-y-2">
-        {items.map((i) => (
-          <CheckListItem key={i.children} checked={i.checked}>
+        {items.map((i, index) => (
+          <CheckListItem key={index} checked={i.checked}>
             {i.children}
           </CheckListItem>
         ))}

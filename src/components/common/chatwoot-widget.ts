@@ -1,4 +1,4 @@
-import { useEffect, forwardRef, ForwardedRef } from "react";
+import { ForwardedRef, forwardRef, useEffect } from "react";
 
 interface ChatwootSettings {
   hideMessageBubble: boolean;

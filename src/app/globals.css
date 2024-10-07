@@ -263,8 +263,8 @@ body {
   }
   .slidingImages .slider .project-item .imageContainer {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 570vw;
+    height: 52vw;
   }
   .slidingImages .slider .project-item .imageContainer img {
     object-fit: cover;
