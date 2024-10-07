@@ -3,11 +3,11 @@ import Image from "next/image";
 const Features = () => {
   return (
     <section className=" container">
-      <div className=" w-full grid grid-cols-1 md:grid-cols-2">
-        <div className="w-full h-[40rem]">
+      <div className=" w-full grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="w-full h-[40rem] border border-white/15 rounded-xl">
 
         </div>
-        <div className="w-full h-[40rem]">
+        <div className="w-full h-[40rem] border border-white/15 rounded-xl">
 
         </div>
       </div>
