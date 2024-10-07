@@ -2,7 +2,6 @@
 
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import PrimaryButton from "./primarybutton";
 
@@ -92,7 +91,7 @@ const MobileNavigation = () => {
                 exit="hide"
                 className="fixed top-0 inset-0 bg-[#000] px-[8px] flex flex-col justify-center "
               >
-                <Link className="h-8 absolute top-5 container" href="/">
+                <a className="h-8 absolute top-5 container" href="/">
                   <div className="inline-flex gap-1.5 justify-center items-center">
                     <div className="h-8 w-8 relative">
                       <Image fill src="/assets/logo.svg" alt="Logo" />
@@ -101,7 +100,7 @@ const MobileNavigation = () => {
                       Astrae
                     </span>
                   </div>
-                </Link>
+                </a>
                 <motion.ul
                   variants={{
                     hide: {
@@ -116,41 +115,41 @@ const MobileNavigation = () => {
                   className="list-none space-y-6 container"
                 >
                   <li>
-                    <Link
+                    <a
                       href="/marketplace"
                       className="text-4xl font-medium text-white"
                     >
                       Marketplace
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link href="#" className="text-4xl font-medium text-white">
+                    <a
+                      href="/pricing"
+                      className="text-4xl font-medium text-white"
+                    >
                       Pricing
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       href="/contact"
                       className="text-4xl font-medium text-white"
                     >
                       Contact
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
-                      href="/blog"
-                      className="text-4xl font-medium text-white"
-                    >
+                    <a href="/blog" className="text-4xl font-medium text-white">
                       Blog
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       href="https://studioix.agency"
                       className="text-4xl font-medium text-white"
                     >
                       Studio IX
-                    </Link>
+                    </a>
                   </li>
                 </motion.ul>
                 <motion.div
@@ -181,11 +180,11 @@ const MobileNavigation = () => {
                   }}
                   className="list-none flex flex-col items-center justify-center container"
                 >
-                  <Link href="/welcome" className="mb-4">
+                  <a href="/welcome" className="mb-4">
                     <p className=" text-base text-white">Login</p>
-                  </Link>
+                  </a>
                   <div className=" inline-flex items-center mt-4 gap-8">
-                    <Link href="https://x.com/astraedesign0">
+                    <a href="https://x.com/astraedesign0">
                       <div className="relative h-6 w-6 cursor-pointer opacity-70 hover:opacity-100 transition-all ease-in-out duration-300">
                         <Image
                           fill
@@ -193,9 +192,9 @@ const MobileNavigation = () => {
                           alt="Twitter/X"
                         />
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link href="">
+                    <a href="">
                       <div className="relative h-7 w-7 cursor-pointer opacity-70 hover:opacity-100 transition-all ease-in-out duration-300">
                         <Image
                           fill
@@ -203,9 +202,9 @@ const MobileNavigation = () => {
                           alt="YouTube"
                         />
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link href="https://instagram.com/astraedesign0">
+                    <a href="https://instagram.com/astraedesign0">
                       <div className="relative h-6 w-6 cursor-pointer opacity-70 hover:opacity-100 transition-all ease-in-out duration-300">
                         <Image
                           fill
@@ -213,9 +212,9 @@ const MobileNavigation = () => {
                           alt="Instagram"
                         />
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link href="">
+                    <a href="">
                       <div className="relative h-6 w-6 cursor-pointer opacity-70 hover:opacity-100 transition-all ease-in-out duration-300">
                         <Image
                           fill
@@ -223,7 +222,7 @@ const MobileNavigation = () => {
                           alt="Discord"
                         />
                       </div>
-                    </Link>
+                    </a>
                   </div>
                 </motion.ul>
               </motion.div>
