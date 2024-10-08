@@ -23,11 +23,21 @@ export async function generateMetadata({
     }
 
     return {
+      title: `${response?.title} | Astrae Design`,
+      description: `${response?.excerpt}`,
       openGraph: {
         title: response?.title,
         description: response?.excerpt,
         images: [imageUrl],
       },
+      twitter: {
+        card: "summary_large_image",
+        title: `${response?.title} | Astrae Design`,
+        description: response?.excerpt,
+        images: [imageUrl],
+        creator: "@astraedesign0",
+      },
+      icons: "/favicon.ico",
     };
   } catch (error) {
     console.log(error);

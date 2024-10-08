@@ -38,11 +38,7 @@ export const metadata: Metadata = {
     title: "Astrae Design | Premium React Templates",
     description:
       "Discover beautifully crafted landing page templates built with React & Next.js, Tailwind CSS, and Framer Motion. Astrae Design offers high-quality, responsive templates perfect for startups, creatives, and agencies. Boost your project with smooth animations and modern design.",
-    images: [
-      {
-        url: "/assets/thumbnail.png",
-      },
-    ],
+    images: ["/assets/thumbnail.png"],
   },
   twitter: {
     card: "summary_large_image",
