@@ -40,8 +40,8 @@ export const TwoFactorAuthenticationEmail = ({
     <Body style={main}>
       <Container style={container}>
         <Img
-          src="https://res.cloudinary.com/dlnsqeeos/image/upload/v1728165542/v29beiwqza48ymsk52cw.png"
-          width="108"
+          src="https://res.cloudinary.com/dlnsqeeos/image/upload/v1728419360/atl0dtnn1itnhmahbroy.png"
+          width="120"
           height="42"
           alt="Astrae"
           style={logo}
@@ -77,7 +77,7 @@ TwoFactorAuthenticationEmail.PreviewProps = {
 export default TwoFactorAuthenticationEmail;
 
 const main: CSSProperties = {
-  backgroundColor: "#000",
+  backgroundColor: "#ffffff",
   padding: "0 20px 0 20px",
   fontFamily:
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
@@ -100,7 +100,7 @@ const middleContainer: CSSProperties = {
   maxWidth: "100%",
 };
 const codeContainer: CSSProperties = {
-  background: "#161616",
+  background: "rgba(0,0,0,.1)",
   borderRadius: "4px",
   margin: "0x auto 0px",
   verticalAlign: "middle",
@@ -109,7 +109,6 @@ const codeContainer: CSSProperties = {
 };
 
 const codeStyle: CSSProperties = {
-  color: "#FFF",
   display: "inline-block",
   paddingBottom: "8px",
   paddingTop: "8px",
@@ -120,35 +119,31 @@ const codeStyle: CSSProperties = {
 };
 
 const header: CSSProperties = {
-  color: "#fff",
   fontWeight: "bold",
   fontSize: "18px",
   lineHeight: "26px",
 };
 const paragraph: CSSProperties = {
-  color: "#fff",
   fontSize: "16px",
   lineHeight: "26px",
 };
 const paragraphTwo: CSSProperties = {
   textAlign: "center",
-  color: "#fff",
   fontSize: "16px",
   lineHeight: "26px",
 };
 const paragraphThree: CSSProperties = {
   textAlign: "center",
-  color: "#B2B2B2",
   fontSize: "16px",
   lineHeight: "26px",
 };
 
 const hr: CSSProperties = {
-  borderColor: "#2B2B2B",
+  borderColor: "#cccccc",
   margin: "20px 0",
 };
 
 const footer: CSSProperties = {
-  color: "#ABABAB",
+  color: "#cccccc",
   fontSize: "14px",
 };

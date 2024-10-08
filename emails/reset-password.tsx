@@ -44,8 +44,8 @@ export const ResetPasswordEmail = ({
     <Body style={main}>
       <Container style={container}>
         <Img
-          src="https://res.cloudinary.com/dlnsqeeos/image/upload/v1728165542/v29beiwqza48ymsk52cw.png"
-          width="108"
+          src="https://res.cloudinary.com/dlnsqeeos/image/upload/v1728419360/atl0dtnn1itnhmahbroy.png"
+          width="120"
           height="42"
           alt="Astrae"
           style={logo}
@@ -81,7 +81,7 @@ ResetPasswordEmail.PreviewProps = {
 export default ResetPasswordEmail;
 
 const main = {
-  backgroundColor: "#000",
+  backgroundColor: "#ffffff",
   padding: "0 20px 0 20px",
   fontFamily:
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
@@ -97,7 +97,6 @@ const logo = {
 };
 
 const paragraph = {
-  color: "#fff",
   fontSize: "16px",
   lineHeight: "26px",
 };
@@ -119,11 +118,11 @@ const button = {
 };
 
 const hr = {
-  borderColor: "#2B2B2B",
+  borderColor: "#cccccc",
   margin: "20px 0",
 };
 
 const footer = {
-  color: "#ABABAB",
+  color: "#cccccc",
   fontSize: "14px",
 };
