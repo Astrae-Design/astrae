@@ -14,6 +14,9 @@ export async function generateMetadata({
   try {
     const response: Post = await getPost(params?.slug);
     const imageUrl = urlFor(response?.mainImage?.asset?._ref).url();
+    const baseUrl = "https://astrae.design";
+
+    const fullUrl = `${baseUrl}/blog/${params.slug}`;
 
     if (!response) {
       return {
@@ -29,6 +32,8 @@ export async function generateMetadata({
         title: response?.title,
         description: response?.excerpt,
         images: [imageUrl],
+        siteName: "Astrae Design",
+        url: `${fullUrl}`,
       },
       twitter: {
         card: "summary_large_image",

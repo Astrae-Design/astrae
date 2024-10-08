@@ -34,22 +34,22 @@ export const metadata: Metadata = {
     "React UI kits",
   ],
   title: "Astrae Design | Premium React Templates",
+  description:
+    "Discover beautifully crafted landing page templates built with React & Next.js, Tailwind CSS, and Framer Motion. Astrae Design offers high-quality, responsive templates perfect for startups, creatives, and agencies. Boost your project with smooth animations and modern design.",
   openGraph: {
     title: "Astrae Design | Premium React Templates",
+    siteName: "Astrae Design",
     description:
       "Discover beautifully crafted landing page templates built with React & Next.js, Tailwind CSS, and Framer Motion. Astrae Design offers high-quality, responsive templates perfect for startups, creatives, and agencies. Boost your project with smooth animations and modern design.",
     images: ["/assets/thumbnail.png"],
+    url: `${baseUrl}`,
   },
   twitter: {
     card: "summary_large_image",
     title: "Astrae Design | Premium React Templates",
     description:
       "Discover beautifully crafted landing page templates built with React & Next.js, Tailwind CSS, and Framer Motion. Astrae Design offers high-quality, responsive templates perfect for startups, creatives, and agencies. Boost your project with smooth animations and modern design.",
-    images: [
-      {
-        url: "/assets/thumbnail.png",
-      },
-    ],
+    images: ["/assets/thumbnail.png"],
     creator: "@astraedesign0",
   },
   icons: "/favicon.ico",
