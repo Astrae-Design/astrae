@@ -78,6 +78,7 @@ export const ResetForm = () => {
           </div>
           <FormError message={error} />
           <FormSuccess message={success} />
+          {!error && !success && <div className="h-3 text-white" />}
           <button
             type="submit"
             disabled={isPending}

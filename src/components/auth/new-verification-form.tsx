@@ -1,14 +1,14 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useState, useTransition } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
 
 import { CardWrapper } from "@/components/auth/card-wrapper";
-import { FormError } from "./form-error";
-import { FormSuccess } from "./form-success";
-import { newVerification } from "../../../actions/new-verification";
 import { Loader2 } from "lucide-react";
 import Link from "next/link";
+import { newVerification } from "../../../actions/new-verification";
+import { FormError } from "./form-error";
+import { FormSuccess } from "./form-success";
 
 export const NewVerificationForm = () => {
   const [error, setError] = useState<string | undefined>("");
@@ -17,11 +17,6 @@ export const NewVerificationForm = () => {
 
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
-  const router = useRouter();
-
-  const handleRetry = () => {
-    router.refresh();
-  };
 
   const onSubmit = useCallback(() => {
     if (success || error) return;
@@ -31,7 +26,6 @@ export const NewVerificationForm = () => {
       return;
     }
 
-    // Start the transition to track pending state
     startTransition(() => {
       newVerification(token)
         .then((data) => {
@@ -43,6 +37,12 @@ export const NewVerificationForm = () => {
         });
     });
   }, [token, success, error]);
+
+  const handleRetry = () => {
+    setError("");
+    setSuccess("");
+    onSubmit();
+  };
 
   useEffect(() => {
     onSubmit();
@@ -63,7 +63,7 @@ export const NewVerificationForm = () => {
           <Loader2 size={36} className=" text-white animate-spin mt-6 mb-2" />
         )}
         {success && (
-          <div>
+          <div className="w-full mt-2">
             <FormSuccess message={success} />
             {!isPending && !error && success && (
               <Link href="/login">
@@ -85,7 +85,7 @@ export const NewVerificationForm = () => {
           </div>
         )}
         {!success && (
-          <div>
+          <div className=" w-full mt-2">
             <FormError message={error} />
             {!isPending && !success && error && (
               <div className=" mb-4">

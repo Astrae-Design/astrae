@@ -33,7 +33,7 @@ export const login = async (
   }
 
   if (!existingUser.emailVerified) {
-    return { error: "Email not verified!" };
+    return { error: "Please verify your email!" };
   }
 
   if (existingUser.isTwoFactorEnabled && existingUser.email) {
