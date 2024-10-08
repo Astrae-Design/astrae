@@ -16,6 +16,24 @@ interface ResetPasswordEmailProps {
   name: string | undefined | null;
 }
 
+export const ResetPasswordEmailText = ({
+  name,
+  resetLink,
+}: ResetPasswordEmailProps) => `
+Hi ${name || "there"},
+
+Someone recently requested a password change for your Astrae Design account. If this was you, click the link below to set a new password:
+
+${resetLink}
+
+If you don't want to change your password or didn't request this, just ignore and delete this message.
+
+Happy Coding!
+
+The Astrae Design Team
+58 Okodee Road, KNUST Kumasi, Ghana
+`;
+
 export const ResetPasswordEmail = ({
   name,
   resetLink,
@@ -36,7 +54,7 @@ export const ResetPasswordEmail = ({
         <Text style={paragraph}>Hi {name},</Text>
         <Text style={paragraph}>
           Someone recently requested a password change for your Astrae Design
-          account. If this was you, you can set a new password here
+          account. If this was you, you can set a new password here:
         </Text>
         <Section style={btnContainer}>
           <Button style={button} href={resetLink}>

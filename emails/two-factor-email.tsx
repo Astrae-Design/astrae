@@ -16,6 +16,21 @@ interface TwoFactorAuthenticationEmailProps {
   token: string;
 }
 
+export const TwoFactorAuthenticationEmailText = ({
+  token,
+}: TwoFactorAuthenticationEmailProps) => `
+Here is your 2FA code for Astrae Design:
+
+Verification Code: ${token}
+
+This code is valid for 60 minutes.
+
+Thank you for securing your Astrae Design account.
+
+The Astrae Design Team
+58 Okodee Road, KNUST Kumasi, Ghana
+`;
+
 export const TwoFactorAuthenticationEmail = ({
   token,
 }: TwoFactorAuthenticationEmailProps) => (

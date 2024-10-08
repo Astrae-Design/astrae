@@ -16,6 +16,22 @@ interface AstraeWelcomeEmailProps {
   confirmLink: string | undefined;
 }
 
+export const AstraeWelcomeEmailText = ({
+  confirmLink,
+}: AstraeWelcomeEmailProps) => `
+Welcome to Astrae Design!
+
+Build class-leading websites with speed. Access an ever-growing collection of premium, meticulously crafted templates. Save time and focus on what matters — building standout websites that captivate your audience.
+
+Click the link below to confirm your email and get started:
+${confirmLink}
+
+Best,
+The Astrae Design Team
+
+58 Okodee Road KNUST, Kumasi, Ghana
+`;
+
 export const AstraeWelcomeEmail = ({
   confirmLink,
 }: AstraeWelcomeEmailProps) => (
@@ -37,7 +53,7 @@ export const AstraeWelcomeEmail = ({
         <Hr style={hr} />
         <Text style={paragraph}>Welcome to Astrae Design,</Text>
         <Text style={paragraph}>
-          Build class leading websites with speed. Access an ever-growing
+          Build class-leading websites with speed. Access an ever-growing
           collection of premium, meticulously crafted templates. Save time and
           focus on what matters — building standout websites that captivate your
           audience.
