@@ -28,7 +28,7 @@ const Blogs = async () => {
         description="Discover our latests articles and news about industry, best practices and latest developments in React, Next.js, tailwindcss, shadcn and framer-motion."
       />
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
           {posts?.length > 0 &&
             posts?.map((post) => <BlogCard key={post?._id} post={post} />)}
         </div>

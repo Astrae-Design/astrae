@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export const Header = () => {
   return (
-    <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-[2147483005]">
+    <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-[2147483000]">
       <div className=" absolute inset-0 backdrop-blur -z-10 md:hidden"></div>
       <div className="container">
         <div className="flex justify-between items-center md:border border-white/15 md:bg-black/80 md:backdrop-blur md:p-2.5 rounded-xl max-w-full mx-auto relative">
@@ -33,9 +33,9 @@ export const Header = () => {
               </Link>
               <Link
                 className="text-white/70 hover:text-white transition"
-                href="/contact"
+                href="/showcase"
               >
-                Contact
+                Showcase
               </Link>
               <Link
                 className="text-white/70 hover:text-white transition"

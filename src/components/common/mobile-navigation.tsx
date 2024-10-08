@@ -132,10 +132,10 @@ const MobileNavigation = () => {
                   </li>
                   <li>
                     <a
-                      href="/contact"
+                      href="/showcase"
                       className="text-4xl font-medium text-white"
                     >
-                      Contact
+                      Showcase
                     </a>
                   </li>
                   <li>

@@ -18,7 +18,7 @@ const Home = () => {
       <GalleryShowcase />
       <div className="h-[10rem]" />
       <Value />
-      <Features />
+      {/* <Features /> */}
       <Pricing />
       <FaqCentral />
       <Reviews />
