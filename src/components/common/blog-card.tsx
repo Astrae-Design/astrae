@@ -1,9 +1,9 @@
 import { urlFor } from "@/sanity/lib/image";
-import { Post } from "@/utils/Interface";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
+import { Post } from "@/utils/Interface";
 
 interface Props {
   post: Post;

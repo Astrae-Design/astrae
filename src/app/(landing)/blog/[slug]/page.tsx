@@ -1,4 +1,4 @@
-import { client } from "@/sanity/lib/client";
+import { getPost, getPosts } from "@/hooks/get-blogs";
 import { urlFor } from "@/sanity/lib/image";
 import BlogHero from "@/sections/blog-hero";
 import CallToAction from "@/sections/cta";
@@ -6,25 +6,51 @@ import { Post } from "@/utils/Interface";
 import { PortableText, SanityImageAssetDocument } from "next-sanity";
 import Image from "next/image";
 
-async function getPost(slug: string) {
-  const query = `
-    *[_type == "post" && slug.current == "${slug}"][0] {
-    title,
-    slug,
-    mainImage,
-    publishedAt,
-    excerpt,
-    body,
-    _id,
-    tags[]->{
-    _id,
-    slug,
-    name
-    }
-}`;
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  try {
+    const response: Post = await getPost(params?.slug);
+    const imageUrl = urlFor(response?.mainImage?.asset?._ref).url();
 
-  const post = await client.fetch(query);
-  return post;
+    if (!response) {
+      return {
+        title: "Not Found",
+        description: "The page you are looking for does not exist",
+      };
+    }
+
+    return {
+      openGraph: {
+        title: response?.title,
+        description: response?.excerpt,
+        images: [imageUrl],
+      },
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      title: "Not Found",
+      description: "The page you are looking for does not exist",
+    };
+  }
+}
+
+export async function generateStaticParams() {
+  try {
+    const response: Post[] = await getPosts();
+
+    if (response.length === 0) return [];
+
+    return response.map((post) => ({
+      slug: post.slug.current,
+    }));
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
 }
 
 export const revalidate = 60;

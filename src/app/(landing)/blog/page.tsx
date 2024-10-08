@@ -1,21 +1,8 @@
 import BlogCard from "@/components/common/blog-card";
-import { client } from "@/sanity/lib/client";
+import { getPosts } from "@/hooks/get-blogs";
 import AnimatedHero from "@/sections/animated-hero";
 import CallToAction from "@/sections/cta";
 import { Post } from "@/utils/Interface";
-
-async function getPosts() {
-  const query = `
-    *[_type == "post"] {
-    title,
-    slug,
-    mainImage,
-    publishedAt,
-    excerpt,
-    }`;
-  const data = await client.fetch(query);
-  return data;
-}
 
 export const revalidate = 60;
 

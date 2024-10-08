@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
+import { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,10 +14,49 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const baseUrl = "https://astrae.design";
+const wwwBaseUrl = "https://www.astrae.design";
+
 export const metadata: Metadata = {
-  title: "Astrae",
-  description:
-    "Build class leading websites with speed. Access an ever-growing collection of premium, meticulously crafted templates. Save time and focus on what matters—building standout websites that captivate your audience.",
+  metadataBase: new URL(`${baseUrl}`) || new URL(`${wwwBaseUrl}`),
+  keywords: [
+    "React landing page templates",
+    "Tailwind CSS templates",
+    "Framer Motion animations",
+    "responsive web design",
+    "landing page marketplace",
+    "startup website templates",
+    "modern web templates",
+    "Astrae Design",
+    "Next.js UI kits",
+    "Next.js landing page templates",
+    "template shop",
+    "React UI kits",
+  ],
+  title: "Astrae Design | Premium React Templates",
+  openGraph: {
+    title: "Astrae Design | Premium React Templates",
+    description:
+      "Discover beautifully crafted landing page templates built with React & Next.js, Tailwind CSS, and Framer Motion. Astrae Design offers high-quality, responsive templates perfect for startups, creatives, and agencies. Boost your project with smooth animations and modern design.",
+    images: [
+      {
+        url: "/assets/thumbnail.png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Astrae Design | Premium React Templates",
+    description:
+      "Discover beautifully crafted landing page templates built with React & Next.js, Tailwind CSS, and Framer Motion. Astrae Design offers high-quality, responsive templates perfect for startups, creatives, and agencies. Boost your project with smooth animations and modern design.",
+    images: [
+      {
+        url: "/assets/thumbnail.png",
+      },
+    ],
+    creator: "@astraedesign0",
+  },
+  icons: "/favicon.ico",
 };
 
 export default function RootLayout({
