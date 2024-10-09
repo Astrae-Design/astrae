@@ -1,160 +1,19 @@
-import { Button } from "@/components/ui/button";
-import { ChevronRight, Play } from "lucide-react";
+import FeatureFive from "@/components/common/feature-five";
+import FeatureFour from "@/components/common/feature-four";
+import FeatureOne from "@/components/common/feature-one";
+import FeatureThree from "@/components/common/feature-three";
+import FeatureTwo from "@/components/common/feature-two";
 import Image from "next/image";
 
 const Features = () => {
   return (
     <section className=" container mt-24">
       <div className=" w-full grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="w-full h-[40rem] border border-white/15 rounded-xl relative overflow-hidden">
-          <div className=" absolute z-10 pt-8">
-            <div className="flex flex-col items-start   ">
-              <h4 className=" text-3xl px-8 text-white font-semibold">
-                Fully Responsive
-              </h4>
-              <p className=" text-white/70 w-[34rem] pl-8 font-normal text-base mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti, ducimus quod. Nam quidem, accusamus quisquam ullam
-                velit delectus aliquam atque illo exercitationem impedit
-                nostrum. Ullam expedita laboriosam perferendis omnis voluptatem!
-              </p>
-              <Button
-                variant="link"
-                className=" hover:no-underline no-underline text-white w-fit px-8"
-              >
-                Explore marketplace
-                <ChevronRight className=" ml-0 group-hover:translate-x-2 transition-all ease-in-out duration-300" />
-              </Button>
-            </div>
-
-            <div className="flex items-start w-full gap-4 pl-8">
-              <div className="flex flex-col mt-12 shrink-0 w-fit">
-                <div className="w-[24rem] h-11 px-2 bg-white/20 gap-4 backdrop-blur-md rounded-lg flex items-center">
-                  <div className="w-7 aspect-square rounded-md bg-black/30 inline-flex items-center justify-center">
-                    <Play fill="white" size={16} />
-                  </div>
-                  <p>Desktop - 1440px</p>
-                </div>
-                <div className="w-[24rem] h-[32rem] relative mt-2">
-                  <Image
-                    fill
-                    src="/assets/gallery/6.jpg"
-                    className=" object-top object-cover rounded-lg"
-                    alt="Responsive"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col mt-12">
-                <div className="w-[16rem] h-11 px-2 bg-white/20 gap-4 backdrop-blur-md rounded-lg flex items-center">
-                  <div className="w-7 aspect-square rounded-md bg-black/30 inline-flex items-center justify-center">
-                    <Play fill="white" size={16} />
-                  </div>
-                  <p>Mobile - 390px</p>
-                </div>
-                <div className="w-[16rem] h-[32rem] relative mt-2">
-                  <Image
-                    fill
-                    src="/assets/gallery/6.jpg"
-                    className=" object-top object-cover rounded-lg"
-                    alt="Responsive"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className=" w-full absolute inset-0">
-            <div className="w-full h-full relative">
-              <Image
-                fill
-                src="/assets/gallery/6.jpg"
-                className=" object-top object-cover"
-                alt="Responsive"
-              />
-            </div>
-          </div>
-          <div className=" w-full absolute inset-0 bg-gradient-to-b from-[black] backdrop-blur-sm to-transparent" />
-        </div>
-        <div className="w-full h-[40rem] border border-white/15 rounded-xl relative overflow-hidden">
-          <div className="flex flex-col items-start pt-8">
-            <h4 className=" text-3xl px-8 text-white font-semibold">
-              SEO Optimized
-            </h4>
-            <p className=" text-white/70 w-[34rem] pl-8 font-normal text-base mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-              ducimus quod. Nam quidem, accusamus quisquam ullam velit delectus
-              aliquam atque illo exercitationem impedit nostrum. Ullam expedita
-              laboriosam perferendis omnis voluptatem!
-            </p>
-            <Button
-              variant="link"
-              className=" hover:no-underline no-underline text-white w-fit px-8"
-            >
-              Explore marketplace
-              <ChevronRight className=" ml-0 group-hover:translate-x-2 transition-all ease-in-out duration-300" />
-            </Button>
-          </div>
-        </div>
-        <div className="w-full h-[40rem] border border-white/15 rounded-xl relative overflow-hidden">
-          <div className="flex flex-col items-start pt-8">
-            <h4 className=" text-3xl px-8 text-white font-semibold">
-              CRO Optimized
-            </h4>
-            <p className=" text-white/70 w-[34rem] pl-8 font-normal text-base mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-              ducimus quod. Nam quidem, accusamus quisquam ullam velit delectus
-              aliquam atque illo exercitationem impedit nostrum. Ullam expedita
-              laboriosam perferendis omnis voluptatem!
-            </p>
-            <Button
-              variant="link"
-              className=" hover:no-underline no-underline text-white w-fit px-8"
-            >
-              Explore marketplace
-              <ChevronRight className=" ml-0 group-hover:translate-x-2 transition-all ease-in-out duration-300" />
-            </Button>
-          </div>
-        </div>
-        <div className="w-full h-[40rem] border border-white/15 rounded-xl relative overflow-hidden">
-          <div className="flex flex-col items-start pt-8">
-            <h4 className=" text-3xl px-8 text-white font-semibold">
-              Complex Animations
-            </h4>
-            <p className=" text-white/70 w-[34rem] pl-8 font-normal text-base mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-              ducimus quod. Nam quidem, accusamus quisquam ullam velit delectus
-              aliquam atque illo exercitationem impedit nostrum. Ullam expedita
-              laboriosam perferendis omnis voluptatem!
-            </p>
-            <Button
-              variant="link"
-              className=" hover:no-underline no-underline text-white w-fit px-8"
-            >
-              Explore marketplace
-              <ChevronRight className=" ml-0 group-hover:translate-x-2 transition-all ease-in-out duration-300" />
-            </Button>
-          </div>
-        </div>
-        <div className="w-full h-[40rem] md:h-[20rem] md:col-span-2 border border-white/15 rounded-xl relative overflow-hidden">
-          <div className="flex flex-col items-start pt-8">
-            <h4 className=" text-3xl px-8 text-white font-semibold">
-              Blazing Fast
-            </h4>
-            <p className=" text-white/70 w-[34rem] pl-8 font-normal text-base mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-              ducimus quod. Nam quidem, accusamus quisquam ullam velit delectus
-              aliquam atque illo exercitationem impedit nostrum. Ullam expedita
-              laboriosam perferendis omnis voluptatem!
-            </p>
-            <Button
-              variant="link"
-              className=" hover:no-underline no-underline text-white w-fit px-8"
-            >
-              Explore marketplace
-              <ChevronRight className=" ml-0 group-hover:translate-x-2 transition-all ease-in-out duration-300" />
-            </Button>
-          </div>
-        </div>
+        <FeatureOne />
+        <FeatureTwo />
+        <FeatureThree />
+        <FeatureFour />
+        <FeatureFive />
       </div>
       <div>
         <div className=" flex flex-col items-center w-full mt-32">
