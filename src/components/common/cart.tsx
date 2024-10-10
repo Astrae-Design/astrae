@@ -15,7 +15,7 @@ export function Cart() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <div className="h-6 w-6 relative opacity-70 cursor-pointer hover:opacity-100 transition">
+        <div className="h-6 w-6 relative md:opacity-70 cursor-pointer md:hover:opacity-100 transition">
           <Image fill src="/assets/icons/icon-cart.svg" alt="Cart" />
         </div>
       </SheetTrigger>

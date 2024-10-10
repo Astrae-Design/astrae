@@ -9,9 +9,9 @@ import { BorderBeam } from "../custom/border-beam";
 const FeatureOne = () => {
   return (
     <div className="w-full h-[40rem] border border-white/15 rounded-2xl relative overflow-hidden group">
-      <div className=" absolute z-10 pt-8">
+      <div className=" absolute z-10 pt-4 md:pt-8">
         <div className="flex flex-col items-start">
-          <h4 className=" text-3xl px-4 md:px-8 text-white font-semibold">
+          <h4 className=" text-2xl md:text-3xl px-4 md:px-8 text-white font-semibold">
             Fully Responsive
           </h4>
           <p className=" text-white/70 w-[84vw] md:w-[34rem] pl-4 md:pl-8 font-normal text-base mt-2">

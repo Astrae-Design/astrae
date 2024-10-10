@@ -1,4 +1,3 @@
-import FeatureFive from "@/components/common/feature-five";
 import FeatureFour from "@/components/common/feature-four";
 import FeatureOne from "@/components/common/feature-one";
 import FeatureThree from "@/components/common/feature-three";
@@ -13,7 +12,7 @@ const Features = () => {
         <FeatureTwo />
         <FeatureThree />
         <FeatureFour />
-        <FeatureFive />
+        {/* <FeatureFive /> */}
       </div>
       <div>
         <div className=" flex flex-col items-center w-full mt-32">

@@ -70,6 +70,9 @@ export const Header = () => {
               <PrimaryButton>Get Unlimited Access</PrimaryButton>
             </div>
 
+            <div className="md:hidden">
+              <Cart />
+            </div>
             <MobileNavigation />
           </div>
         </div>
