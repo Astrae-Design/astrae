@@ -6,9 +6,9 @@ import { twMerge } from "tailwind-merge";
 
 export const DragCards = () => {
   return (
-    <section className="relative grid w-full h-full place-content-center overflow-hidden bg-black">
+    <section className="relative grid w-full h-full place-content-center overflow-hidden">
       <h2 className="relative z-0 text-[20vw] font-black text-white/70 md:text-[100px]">
-        ASTRAE<span className="text-[#0245A6]">.</span>
+        ASTRAE<span className="text-[#0096FA]">.</span>
       </h2>
       <Cards />
     </section>

@@ -16,10 +16,10 @@ const FeatureTwo = () => {
             SEO Optimized
           </h4>
           <p className=" text-white/70 w-[84vw] md:w-[34rem] pl-4 md:pl-8 font-normal text-base mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-            ducimus quod. Nam quidem, accusamus quisquam ullam velit delectus
-            aliquam atque illo exercitationem impedit nostrum. Ullam expedita
-            laboriosam perferendis omnis voluptatem!
+            We prioritize high search engine rankings with SEO-friendly code and
+            structure. Our templates are meticulously crafted to give your
+            website the visibility it deserves on Google and other search
+            engines.
           </p>
           <Button
             variant="link"

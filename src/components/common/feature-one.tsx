@@ -15,10 +15,9 @@ const FeatureOne = () => {
             Fully Responsive
           </h4>
           <p className=" text-white/70 w-[84vw] md:w-[34rem] pl-4 md:pl-8 font-normal text-base mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-            ducimus quod. Nam quidem, accusamus quisquam ullam velit delectus
-            aliquam atque illo exercitationem impedit nostrum. Ullam expedita
-            laboriosam perferendis omnis voluptatem!
+            Our templates are designed to look stunning on any device, from
+            mobile screens to large desktops. Each layout adjusts seamlessly,
+            ensuring an exceptional user experience across all platforms.
           </p>
           <Button
             variant="link"

@@ -15,10 +15,10 @@ const FeatureFour = () => {
             Clean Code
           </h4>
           <p className=" text-white/70 w-[84vw] md:w-[34rem] pl-4 md:pl-8 font-normal text-base mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-            ducimus quod. Nam quidem, accusamus quisquam ullam velit delectus
-            aliquam atque illo exercitationem impedit nostrum. Ullam expedita
-            laboriosam perferendis omnis voluptatem!
+            With clean, well-documented code, you can easily customize and
+            maintain your site. Whether you prefer JavaScript or TypeScript, our
+            templates are built for developers who value simplicity and
+            efficiency.
           </p>
           <Button
             variant="link"

@@ -16,7 +16,7 @@ const Features = () => {
       </div>
       <div>
         <div className=" flex flex-col items-center w-full mt-32">
-          <h2 className="font-semibold text-5xl lg:text-6xl text-white text-center">
+          <h2 className="font-semibold text-4xl lg:text-5xl text-white text-center">
             What you will get
           </h2>
           <p className=" text-base md:text-lg text-white/70 mt-2 md:mt-2 text-center w-full md:max-w-xl mx-auto">

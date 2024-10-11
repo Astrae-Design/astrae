@@ -17,7 +17,7 @@ export const Header = () => {
               <div className="h-8 w-8 relative">
                 <Image fill src="/assets/logo.svg" alt="Logo" />
               </div>
-              <span className=" text-white font-semibold text-base md:text-lg">
+              <span className=" text-white font-semibold text-base md:text-lg hidden md:block">
                 Astrae
               </span>
             </div>
