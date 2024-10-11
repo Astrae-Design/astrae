@@ -11,7 +11,7 @@ import Value from "@/sections/value";
 
 const Home = () => {
   return (
-    <div>
+    <div className=" w-full">
       <ChatWidget />
       <Hero />
       <LogoTicker />
