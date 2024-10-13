@@ -55,8 +55,8 @@ const CallToAction = () => {
 
   const maskImage = useMotionTemplate`radial-gradient(50% 50% at ${mouseX}px ${mouseY}px, black, transparent)`;
   return (
-    <section className=" py-20 md:py-24" ref={sectionRef}>
-      <div className=" container">
+    <section className=" w-full py-20 md:py-24" ref={sectionRef}>
+      <div className=" w-full container">
         <motion.div
           style={{
             backgroundPositionY,

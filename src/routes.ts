@@ -36,6 +36,7 @@ export const authRoutes = [
 export const apiAuthPrefix = "/api/auth";
 export const blogPrefix = "/blog";
 export const marketplacePrefix = "/marketplace";
+export const showcasePrefix = "/showcase";
 export const cmsPrefix = "/studio";
 
 /**

@@ -1,9 +1,13 @@
+"use client";
+
 import PrimaryButton from "@/components/common/primarybutton";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathName = usePathname();
   return (
     <div className="flex flex-col container py-20">
       <div className="w-full flex flex-col md:flex-row items-start md:justify-between">
@@ -12,10 +16,14 @@ const Footer = () => {
             <div className="h-8 w-8 relative">
               <Image fill src="/assets/logo.svg" alt="Logo" />
             </div>
-            <h4 className=" text-white font-semibold text-base lg:text-lg">
-              Astrae
-              <span className=" opacity-70 font-medium"> Marketplace</span>
-            </h4>
+            <span className=" text-white font-semibold text-base md:text-lg hidden md:block">
+              Astrae{" "}
+              {pathName.startsWith("/marketplace") ? (
+                <span className=" font-medium opacity-50">Marketplace</span>
+              ) : (
+                <></>
+              )}
+            </span>
           </div>
           <p className="text-white text-sm lg:text-base mt-2 mb-6">
             Templates Beyond Ordinary

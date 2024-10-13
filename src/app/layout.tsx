@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "template shop",
     "React UI kits",
   ],
-  title: "Astrae Design | Premium React Templates",
+  title: "Astrae Design",
   description:
     "Discover beautifully crafted landing page templates built with React & Next.js, Tailwind CSS, and Framer Motion. Astrae Design offers high-quality, responsive templates perfect for startups, creatives, and agencies. Boost your project with smooth animations and modern design.",
   openGraph: {

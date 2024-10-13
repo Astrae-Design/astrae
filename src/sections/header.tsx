@@ -1,3 +1,5 @@
+"use client";
+
 import { Cart } from "@/components/common/cart";
 import { MarketplaceMenu } from "@/components/common/marketplace-menu";
 import MobileNavigation from "@/components/common/mobile-navigation";
@@ -5,8 +7,10 @@ import PrimaryButton from "@/components/common/primarybutton";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const Header = () => {
+  const pathName = usePathname();
   return (
     <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-[2147483000]">
       <div className=" absolute inset-0 backdrop-blur -z-10 md:hidden"></div>
@@ -18,7 +22,12 @@ export const Header = () => {
                 <Image fill src="/assets/logo.svg" alt="Logo" />
               </div>
               <span className=" text-white font-semibold text-base md:text-lg hidden md:block">
-                Astrae
+                Astrae{" "}
+                {pathName.startsWith("/marketplace") ? (
+                  <span className=" font-medium opacity-50">Marketplace</span>
+                ) : (
+                  <></>
+                )}
               </span>
             </div>
           </Link>
@@ -67,7 +76,9 @@ export const Header = () => {
                   </Button>
                 </Link>
               </div>
-              <PrimaryButton>Get Unlimited Access</PrimaryButton>
+              <Link className=" w-fit" href="/pricing">
+                <PrimaryButton>Get Unlimited Access</PrimaryButton>
+              </Link>
             </div>
 
             <div className="md:hidden">

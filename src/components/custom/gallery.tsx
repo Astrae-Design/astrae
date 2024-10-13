@@ -51,7 +51,7 @@ const GalleryShowcase: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className=" w-full overflow-hidden">
       <div className="spacer"></div>
       <div className=" relative">
         <div className="gallery -ml-8 md:-ml-12" ref={gallery}>
