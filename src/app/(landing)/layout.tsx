@@ -4,7 +4,7 @@ import InfoBanner from "@/sections/info-banner";
 
 const LandingLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-hidden w-full">
       <InfoBanner />
       <Header />
       {children}

@@ -99,8 +99,6 @@ body {
   gap: 1vw;
   box-sizing: border-box;
   overflow: hidden;
-  pointer-events: none;
-  touch-action: none;
 }
 
 .gallery .column {
