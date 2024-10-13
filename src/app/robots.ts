@@ -16,6 +16,6 @@ export default function robots(): MetadataRoute.Robots {
         "/password-reset-successful",
       ],
     },
-    sitemap: "https://astrae.design/sitemap.xml",
+    sitemap: "https://www.astrae.design/sitemap.xml",
   };
 }

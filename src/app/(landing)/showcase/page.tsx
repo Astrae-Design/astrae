@@ -54,7 +54,7 @@ const ShowcasePage = () => {
         title="Explore the Possibilities with Astrae Design"
         description="See how developers and designers around the world are building stunning websites using Astrae Design’s premium templates. From startups to agencies, our templates bring visions to life."
       />
-      <div className="w-full flex flex-col items-center -mt-16">
+      <div className="w-full flex flex-col items-center -mt-8 md:-mt-16">
         <div className=" w-fit flex items-center justify-center">
           <PrimaryButton>
             View Projects <ArrowDown className="ml-3" />
