@@ -2,7 +2,7 @@ import { getPosts } from "@/hooks/get-blogs";
 import { Post } from "@/utils/Interface";
 
 export default async function sitemap() {
-  const baseUrl = "https://astrae.design";
+  const baseUrl = "https://www.astrae.design";
 
   const response: Post[] = await getPosts();
   const blogPosts = response?.map((post) => {
