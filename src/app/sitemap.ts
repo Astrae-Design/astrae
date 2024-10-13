@@ -15,13 +15,13 @@ export default async function sitemap() {
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: "yearly",
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: `${baseUrl}/marketplace`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 0.8,
     },
     {
