@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 
 const MarketplacePage = () => {
   return (
-    <div>
+    <div className=" pt-12 md:pt-0">
       <Value />
       <ProductList />
       <Reviews />

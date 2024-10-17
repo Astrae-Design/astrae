@@ -87,7 +87,7 @@ const CallToAction = () => {
             }}
           ></motion.div>
           <div className=" relative">
-            <h2 className=" text-5xl md:text-6xl px-4 md:px-0 md:max-w-4xl mx-auto tracking-tighter text-center font-semibold text-white">
+            <h2 className=" text-4xl md:text-6xl px-4 md:px-0 md:max-w-4xl mx-auto tracking-tighter text-center font-semibold text-white">
               Want a custom website tailored to your needs? Let&apos;s talk
             </h2>
             <div className=" flex justify-center mt-4">

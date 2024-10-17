@@ -86,3 +86,40 @@ export const RegisterSchema = z.object({
     message: "Name is required",
   }),
 });
+
+export const ProductSchema = z.object({
+  title: z.string().min(4, {
+    message: "Title is required",
+  }),
+  price: z.string().min(1, {
+    message: "Enter valid price",
+  }),
+  category: z.string({
+    message: "Please select a category",
+  }),
+  pages: z.string().min(4, {
+    message: "Enter one or more pages",
+  }),
+  figmaLink: z.string().min(4, {
+    message: "Enter link to figma file",
+  }),
+  codeLink: z.string().min(4, {
+    message: "Enter link to source code",
+  }),
+  description: z
+    .string()
+    .min(150, {
+      message: "Description must be at least 150 characters.",
+    })
+    .max(250, {
+      message: "Description must not be longer than 250 characters.",
+    }),
+  detailedDescription: z
+    .string()
+    .min(500, {
+      message: "Description must be at least 500 characters.",
+    })
+    .max(850, {
+      message: "Description must not be longer than 850 characters.",
+    }),
+});

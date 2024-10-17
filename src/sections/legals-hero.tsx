@@ -24,7 +24,7 @@ const LegalsHero = ({
   );
 
   return (
-    <div ref={sectionRef}>
+    <div className=" mb-20 md:mb-8" ref={sectionRef}>
       <div className="">
         <motion.div
           style={{
@@ -47,7 +47,7 @@ const LegalsHero = ({
               {title}
             </h2>
             <div className=" flex justify-center mt-4">
-              <p className=" text-center text-lg md:text-xl md:max-w-xl mx-auto tracking-tight text-white/70 px-12 md:px-0">
+              <p className=" text-center text-lg md:text-xl md:max-w-xl mx-auto tracking-tight text-white/70 px-6 md:px-0">
                 {description}
               </p>
             </div>

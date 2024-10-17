@@ -10,7 +10,7 @@ const ProductDetails = () => {
   return (
     <div className=" w-full flex flex-col items-center">
       <div className="container">
-        <div className=" w-full py-20 flex items-start flex-none text-start">
+        <div className=" w-full py-12 md:py-20 flex flex-col md:flex-row items-start flex-none text-start">
           <div className=" w-full flex flex-col gap-6">
             <h2 className="font-semibold text-5xl lg:text-6xl w-full text-white max-w-full md:max-w-lg ">
               Plura — Digital Agency Template
@@ -75,14 +75,16 @@ const ProductDetails = () => {
               Designed with a seamless, intuitive interface, Plura allows your
               creativity to shine, making your portfolio the focal point.
             </p>
-            <div className="flex items-center gap-4 mt-6">
-              <Button>
+            <div className="flex flex-col-reverse md:flex-row items-center gap-4 mt-6">
+              <Button className=" w-full md:w-fit">
                 Live Preview <ExternalLink className=" ml-3" />
               </Button>
               <PrimaryButton>Purchase Template for $9.99</PrimaryButton>
             </div>
-            <div className="py-4 w-full flex items-center justify-end">
-              <h4>Or unlock everything with membership</h4>
+            <div className="py-4 w-full flex items-center justify-center md:justify-end">
+              <h4 className=" text-sm md:text-base">
+                Or unlock everything with membership
+              </h4>
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ const MobileNavigation = () => {
     setMobileNav(!mobileNav);
   };
   return (
-    <header className="sticky top-0 inset-x-0 p-0 md:hidden">
+    <header className="sticky top-0 inset-x-0 p-0 lg:hidden">
       <nav className="container mx-auto">
         <motion.button
           initial="hide"

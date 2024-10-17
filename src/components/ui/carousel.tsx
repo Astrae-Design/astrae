@@ -162,7 +162,7 @@ const CarouselContent = React.forwardRef<
         ref={ref}
         className={cn(
           "flex",
-          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
+          orientation === "horizontal" ? "-ml-5" : "-mt-5 flex-col",
           className
         )}
         {...props}
@@ -185,7 +185,7 @@ const CarouselItem = React.forwardRef<
       aria-roledescription="slide"
       className={cn(
         "min-w-0 shrink-0 grow-0 basis-full",
-        orientation === "horizontal" ? "pl-4" : "pt-4",
+        orientation === "horizontal" ? "pl-5" : "pt-5",
         className
       )}
       {...props}
@@ -206,9 +206,9 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute h-8 md:h-12 w-8 md:w-12 rounded-full hover:bg-[#0096FA] hover:text-white bg-black/50 backdrop-blur-md text-white border-none z-50",
+        "absolute h-10 md:h-12 w-10 md:w-12 rounded-full hover:bg-[#0096FA] hover:text-white bg-black/50 backdrop-blur-md text-white border-none z-50",
         orientation === "horizontal"
-          ? "left-[21rem] top-1/2 -translate-y-1/2"
+          ? " left-12 md:left-[21rem] top-1/2 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -216,7 +216,7 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <ChevronLeft className="h-4 w-4 md:h-6 md:w-6" />
+      <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -235,9 +235,9 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute h-8 md:h-12 w-8 md:w-12 rounded-full hover:bg-[#0096FA] hover:text-white bg-black/50 backdrop-blur-md text-white border-none z-50",
+        "absolute h-10 md:h-12 w-10 md:w-12 rounded-full hover:bg-[#0096FA] hover:text-white bg-black/50 backdrop-blur-md text-white border-none z-50",
         orientation === "horizontal"
-          ? "right-[21rem] top-1/2 -translate-y-1/2"
+          ? " right-12 md:right-[21rem] top-1/2 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -245,7 +245,7 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <ChevronRight className="h-4 w-4 md:h-6 md:w-6" />
+      <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
       <span className="sr-only">Next slide</span>
     </Button>
   );

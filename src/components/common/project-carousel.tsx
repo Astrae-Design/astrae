@@ -27,13 +27,13 @@ const ProjectCarousel = () => {
         }}
         className="w-full"
       >
-        <CarouselContent className="pl-6">
+        <CarouselContent className="md:pl-6 pl-5 pr-5 md:pr-0">
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem
               key={index}
-              className="pl-1 md:basis-1/2 lg:basis-[45%] px-4"
+              className="md:pl-1 md:basis-1/2 lg:basis-[45%] md:px-4"
             >
-              <div className="w-full h-[40rem] relative rounded-2xl">
+              <div className="w-full h-[24rem] md:h-[40rem] relative rounded-2xl">
                 <Image
                   quality={100}
                   fill

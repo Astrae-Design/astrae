@@ -7,7 +7,7 @@ const ProductInfo = () => {
   return (
     <div>
       <div className=" container py-20">
-        <div className="flex items-start justify-between gap-20 w-full">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-20 w-full">
           <div className=" w-full flex flex-col items-start">
             <p className=" text-base md:text-lg text-white/70 mt-2 md:mt-2 text-start ">
               Plura is a sleek, one-page template crafted to showcase the work
@@ -29,7 +29,7 @@ const ProductInfo = () => {
 
             <FeaturesAccordion />
           </div>
-          <div className=" w-1/2 flex flex-col items-start">
+          <div className=" md:w-1/2 flex flex-col items-start">
             <div className=" w-full flex flex-col items-start">
               <h2 className="font-semibold text-2xl lg:text-3xl text-white">
                 Pages
@@ -37,19 +37,19 @@ const ProductInfo = () => {
 
               <div className="gap-4 grid grid-cols-3 w-full mt-6">
                 <Button size="sm">
-                  <Globe className=" mr-3" />
+                  <Globe className="  mr-3" />
                   Home
                 </Button>
                 <Button size="sm">
-                  <Globe className=" mr-3" />
+                  <Globe className="  mr-3" />
                   404
                 </Button>
                 <Button size="sm">
-                  <Globe className=" mr-3" />
+                  <Globe className="  mr-3" />
                   Contact
                 </Button>
                 <Button size="sm">
-                  <Globe className=" mr-3" />
+                  <Globe className="  mr-3" />
                   Work
                 </Button>
               </div>
@@ -61,7 +61,7 @@ const ProductInfo = () => {
               </h2>
 
               <Button size="sm" className="mt-6 w-fit px-4">
-                <Briefcase className=" mr-3" />
+                <Briefcase className="  mr-3" />
                 Agency Website
               </Button>
             </div>
