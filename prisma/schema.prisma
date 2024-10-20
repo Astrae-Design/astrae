@@ -80,3 +80,39 @@ model TwoFactorConfirmation {
 
   @@unique([userId])
 }
+
+enum Toolkit {
+  NEXT_JS
+  REACT
+  FIGMA
+  FRAMER_MOTION
+  GSAP
+}
+
+enum Category {
+  STARTUP_LANDING_PAGE
+  SAAS_LANDING_PAGE
+  SAAS_WAITLIST
+  AGENCY_WEBSITE
+  MARKETING_PAGE
+  DEV_PORTFOLIO
+}
+
+model Product {
+  id                  String    @id @default(uuid())
+  title               String
+  coverImage          String
+  imgOne              String
+  imgTwo              String
+  imgThree            String
+  imgFour             String
+  imgFive             String
+  price               String
+  description         String
+  detailedDescription String
+  pages               String
+  category            Category
+  figmaLink           String
+  codeLink            String
+  toolkit             Toolkit[]
+}

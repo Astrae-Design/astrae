@@ -94,9 +94,14 @@ export const ProductSchema = z.object({
   price: z.string().min(1, {
     message: "Enter valid price",
   }),
-  category: z.string({
+  category: z.string().min(1, {
     message: "Please select a category",
   }),
+  toolkit: z
+    .array(z.string())
+    .refine((value) => value.some((toolkit) => toolkit), {
+      message: "You have to select at least one technology.",
+    }),
   pages: z.string().min(4, {
     message: "Enter one or more pages",
   }),

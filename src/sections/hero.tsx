@@ -2,7 +2,9 @@
 
 import PrimaryButton from "@/components/common/primarybutton";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
 
 const Hero = () => {
@@ -21,7 +23,7 @@ const Hero = () => {
   return (
     <motion.section
       ref={sectionRef}
-      className="h-[540px] md:h-[800px] flex items-center overflow-hidden relative [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]"
+      className="h-[540px] md:h-[820px] flex items-center overflow-hidden relative [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]"
       style={{
         backgroundImage: 'url("/assets/stars.png")',
         backgroundPositionY,
@@ -134,16 +136,20 @@ const Hero = () => {
       </motion.div>
 
       <div className=" container relative mt-12 md:mt-0 z-10">
-        <div className="w-full flex items-center justify-center mb-8 md:-mt-4">
-          <div className=" relative inline-flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-0  focus:ring-offset-0 group">
-            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0096FA_0%,#0245A6_50%,#0096FA_100%)]" />
-            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#000B1A] px-4  text-base font-archivo font-medium text-white backdrop-blur-3xl">
-              <span className="mr-0.5">✨ 100+ templates available</span>
-            </span>
+        <Link href="/marketplace">
+          <div className="w-full flex items-center justify-center mb-8 md:-mt-4">
+            <div className=" relative inline-flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-0  focus:ring-offset-0 group">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0096FA_0%,#0245A6_50%,#0096FA_100%)]" />
+              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#000B1A] pl-4 pr-2.5  text-base font-archivo font-medium text-white backdrop-blur-3xl">
+                <span className="inline-flex items-center">
+                  ✨ 100+ templates available <ChevronRight className=" ml-3" />
+                </span>
+              </span>
+            </div>
           </div>
-        </div>
+        </Link>
         <h1 className=" -mt-4 md:-mt-0 text-5xl md:text-6xl lg:text-8xl md:leading-none font-semibold tracking-tighter text-transparent bg-clip-text text-center bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(2,69,166,.5))]">
-          React Template Marketplace For Stunning Sites
+          Beautifully Crafted React Templates for Stunning Websites
         </h1>
         <p className=" text-base md:text-xl text-white/70 mt-2 md:mt-2 text-center max-w-2xl mx-auto">
           Build class leading websites with speed. Access an ever-growing

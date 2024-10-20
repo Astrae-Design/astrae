@@ -5,7 +5,7 @@ import { BorderBeam } from "../custom/border-beam";
 
 const FeatureFour = () => {
   return (
-    <div className="w-full h-[40rem] group bg-gradient-to-b from-black/80 to-[#0245A6]/30 border border-white/15 rounded-xl relative overflow-hidden">
+    <div className="w-full h-[40rem] group bg-gradient-to-b from-black/80 to-[#0245A6]/30 border border-white/15 rounded-2xl relative overflow-hidden">
       <div className=" hidden group-hover:block rounded-2xl">
         <BorderBeam colorFrom="#0245A6" colorTo="#0096FA" />
       </div>

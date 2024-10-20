@@ -10,7 +10,7 @@ import AccountDropdown from "./account-dropdown";
 export const Navigation = () => {
   const user = useCurrentUser();
   return (
-    <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-[2147483000] w-full">
+    <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-[2147483000] w-full bg-black">
       <div className=" absolute inset-0 backdrop-blur -z-10 md:hidden"></div>
       <div className="container ">
         <div className="flex justify-between  items-center md:border border-white/15 md:bg-black/80 md:backdrop-blur md:px-2.5 md:py-1 rounded-xl max-w-full mx-auto relative">
@@ -25,7 +25,28 @@ export const Navigation = () => {
               </span>
             </div>
           </Link>
-
+          <div className="hidden lg:block">
+            <nav className=" flex gap-8 lg:-mr-14 items-center text-sm lg:text-base">
+              <Link
+                className="text-white/70 -ml-5 hover:text-white transition"
+                href="/pricing"
+              >
+                All Products
+              </Link>
+              <Link
+                className="text-white/70 hover:text-white transition"
+                href="/showcase"
+              >
+                Analytics
+              </Link>
+              <Link
+                className="text-white/70 hover:text-white transition"
+                href="https://studioix.agency"
+              >
+                Studio IX
+              </Link>
+            </nav>
+          </div>
           <div className="flex gap-4 w-fit items-center px-0 md:px-6">
             <div className=" w-fit">
               <PrimaryButton>

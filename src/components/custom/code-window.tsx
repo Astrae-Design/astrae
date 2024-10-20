@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Copy } from "lucide-react";
 import { Highlight } from "prism-react-renderer";
 import { MouseEventHandler, ReactNode, useState } from "react";
@@ -70,22 +69,11 @@ const Card = ({
   children?: ReactNode;
 }) => {
   return (
-    <motion.div
-      initial={{
-        filter: "blur(4px)",
-      }}
-      whileInView={{
-        filter: "blur(0px)",
-      }}
-      transition={{
-        duration: 0.5,
-        ease: "easeInOut",
-        delay: 0.25,
-      }}
+    <div
       className={`relative h-full w-full overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-[#161616]/70 backdrop-blur-sm to-black/70 p-6 ${className}`}
     >
       {children}
-    </motion.div>
+    </div>
   );
 };
 

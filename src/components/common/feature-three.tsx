@@ -5,9 +5,9 @@ import { BorderBeam } from "../custom/border-beam";
 
 const FeatureThree = () => {
   return (
-    <div className="w-full h-[40rem] group bg-gradient-to-b from-black/80 to-[#FF5C17]/30 border border-white/15 rounded-xl relative overflow-hidden">
+    <div className="w-full h-[40rem] group bg-gradient-to-b from-black/80 to-[#0245A6]/30 border border-white/15 rounded-2xl relative overflow-hidden">
       <div className=" hidden group-hover:block rounded-2xl">
-        <BorderBeam colorFrom="#FF8957" colorTo="#FF5C17" />
+      <BorderBeam colorFrom="#0245A6" colorTo="#0096FA" />
       </div>
       <div className=" flex flex-col h-full justify-between">
         <div className="flex flex-col items-start pt-4 md:pt-8 z-20 absolute">
