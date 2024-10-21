@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -25,52 +26,62 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { ProductSchema } from "@/schemas";
-import { Save } from "lucide-react";
+import { Loader2, Save } from "lucide-react";
 import { z } from "zod";
 import { Checkbox } from "../ui/checkbox";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
+import { Category, Toolkit } from "@prisma/client";
+import { addProduct } from "../../../actions/add-product";
 
 const AddProductForm = () => {
   const [error, setError] = useState<string | undefined>("");
   const [success, setSuccess] = useState<string | undefined>("");
   const [isPending, startTransition] = useTransition();
+  const [uploadedFileUrls, setUploadedFileUrls] = useState<string[]>([]);
 
   const form = useForm<z.infer<typeof ProductSchema>>({
     resolver: zodResolver(ProductSchema),
     defaultValues: {
       title: "",
       price: "",
-      category: "",
+      category: undefined,
       codeLink: "",
       figmaLink: "",
       description: "",
       detailedDescription: "",
       pages: "",
-      toolkit: [""],
+      toolkit: [],
     },
   });
 
   const onSubmit = (values: z.infer<typeof ProductSchema>) => {
     setError("");
     setSuccess("");
-    console.log(values);
+    console.log({ ...values, uploadedFileUrls }); // Include the file URLs in the submission
 
-    startTransition(() => {});
+    startTransition(() => {
+      addProduct(values, uploadedFileUrls).then((data) => {
+        setError(data.error);
+        setSuccess(data.success);
+      });
+    });
   };
 
   const toolkitOptions = [
-    { id: "NEXT_JS", label: "Next.js" },
-    { id: "REACT", label: "React" },
-    { id: "FIGMA", label: "Figma" },
-    { id: "FRAMER_MOTION", label: "Framer Motion" },
-    { id: "GSAP", label: "GSAP" },
+    { id: Toolkit.NEXT_JS, label: "Next.js" },
+    { id: Toolkit.REACT, label: "React" },
+    { id: Toolkit.FIGMA, label: "Figma" },
+    { id: Toolkit.FRAMER_MOTION, label: "Framer Motion" },
+    { id: Toolkit.GSAP, label: "GSAP" },
   ];
 
   return (
     <div className=" mt-4">
       <Form {...form}>
-        <FileUpload />
+        <FileUpload
+          onChange={(fileUrls: any) => setUploadedFileUrls(fileUrls)}
+        />
         <form onSubmit={form.handleSubmit(onSubmit)} className="mt-12">
           <FormField
             control={form.control}
@@ -224,12 +235,14 @@ const AddProductForm = () => {
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="startup-landing-page">
-                        Startup Landing Page
-                      </SelectItem>
-                      <SelectItem value="saas-landing-page">
-                        SAAS Landing Page
-                      </SelectItem>
+                      {Object.keys(Category).map((category) => (
+                        <SelectItem key={category} value={category}>
+                          {category
+                            .toLowerCase()
+                            .replace(/_/g, " ")
+                            .replace(/\b\w/g, (c) => c.toUpperCase())}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                   <FormMessage />
@@ -273,6 +286,7 @@ const AddProductForm = () => {
               )}
             />
           </div>
+          {error || success ? <div className=" mt-6" /> : null}
           <FormError message={error} />
           <FormSuccess message={success} />
 
@@ -287,9 +301,16 @@ const AddProductForm = () => {
                   <div className=" rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]" />
                   <div className=" absolute inset-0 shadow-[0_0_10px_rgb(0,150,250,.7)_inset] rounded-lg" />
                 </div>
-                <span className=" inline-flex items-center">
-                  <Save className="mr-3" size={20} /> Publish
-                </span>
+                {isPending && !error && !success ? (
+                  <span className=" inline-flex items-center">
+                    <Loader2 className=" animate-spin mr-3" /> Adding Product...
+                  </span>
+                ) : null}
+                {!isPending && (
+                  <span className=" inline-flex items-center">
+                    <Save className="mr-3" size={20} /> Publish
+                  </span>
+                )}
               </button>
             </div>
           </div>

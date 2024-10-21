@@ -53,10 +53,10 @@ const Dashboard = () => {
           <div className=" w-full container flex flex-col md:flex-row md:items-center justify-between bg-black">
             <p className=" text-2xl md:text-2xl font-semibold">All Products</p>
 
-            <div className="flex items-center mt-4 md:mt-0 gap-2">
+            <div className="flex items-center mt-4 md:mt-0 gap-2 md:gap-4">
               <Input
                 placeholder="Search all templates"
-                className="h-10 md:min-w-80 bg-black hover:bg-black border border-white/20"
+                className="h-10 md:min-w-80 "
                 startIcon={Search}
               />
               <div className=" w-fit text-nowrap">

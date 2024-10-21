@@ -1,5 +1,8 @@
+import { Category, Toolkit, UserRole } from "@prisma/client";
 import * as z from "zod";
-import { UserRole } from "@prisma/client";
+
+const categoryValues = Object.values(Category) as [Category, ...Category[]];
+const toolkitValues = Object.values(Toolkit) as [Toolkit, ...Toolkit[]];
 
 export const passwordSchema = z
   .string({
@@ -94,14 +97,12 @@ export const ProductSchema = z.object({
   price: z.string().min(1, {
     message: "Enter valid price",
   }),
-  category: z.string().min(1, {
-    message: "Please select a category",
+  category: z.enum(categoryValues, {
+    errorMap: () => ({ message: "Please select a valid category" }),
   }),
-  toolkit: z
-    .array(z.string())
-    .refine((value) => value.some((toolkit) => toolkit), {
-      message: "You have to select at least one technology.",
-    }),
+  toolkit: z.array(z.enum(toolkitValues)).refine((value) => value.length > 0, {
+    message: "You have to select at least one technology.",
+  }),
   pages: z.string().min(4, {
     message: "Enter one or more pages",
   }),

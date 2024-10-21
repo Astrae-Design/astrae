@@ -1,23 +1,21 @@
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
 import { ExtendedUser } from "../../../next-auth";
+import LogoutPopup from "./logout-popup";
 
 interface UserInfoProps {
   user?: ExtendedUser;
 }
 
-const AccountDropdown = ({ user }: UserInfoProps) => {
+const AdminAccountDropdown = ({ user }: UserInfoProps) => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <div className="flex items-center md:gap-4 w-full bg-transparent rounded-lg py-1 cursor-pointer outline-none ring-0">
+      <DropdownMenuTrigger asChild onSelect={(e) => e.preventDefault()}>
+        <div className="flex items-center h-fit md:gap-4 w-full bg-transparent rounded-lg py-1 cursor-pointer outline-none ring-0">
           {user?.image ? (
             <div className="relative h-11 md:h-10 aspect-square">
               <Image
@@ -36,21 +34,16 @@ const AccountDropdown = ({ user }: UserInfoProps) => {
           <div className=" hidden md:block">
             <div className="flex flex-col items-start -space-y-1">
               <h4>{user?.name}</h4>
-              <p className="text-white/70">Free Tier</p>
+              <p className="text-white/70">Admin</p>
             </div>
           </div>
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>Profile</DropdownMenuItem>
-        <DropdownMenuItem>Billing</DropdownMenuItem>
-        <DropdownMenuItem>Team</DropdownMenuItem>
-        <DropdownMenuItem>Subscription</DropdownMenuItem>
+      <DropdownMenuContent className=" ml-8">
+        <LogoutPopup />
       </DropdownMenuContent>
     </DropdownMenu>
   );
 };
 
-export default AccountDropdown;
+export default AdminAccountDropdown;

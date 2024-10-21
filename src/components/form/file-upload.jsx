@@ -2,9 +2,10 @@
 
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Upload } from "lucide-react";
+import { Loader2, Upload } from "lucide-react";
 import { useRef, useState } from "react";
 import { useDropzone } from "react-dropzone";
+import { uploadToCloudinary } from "../../../actions/upload-image";
 
 const mainVariant = {
   initial: {
@@ -27,19 +28,38 @@ const secondaryVariant = {
   },
 };
 
-export const FileUpload = ({
-  onChange,
-}: {
-  onChange?: (files: File[]) => void;
-}) => {
-  const [files, setFiles] = useState<File[]>([]);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+export const FileUpload = ({ onChange }) => {
+  const [files, setFiles] = useState([]);
+  const fileInputRef = useRef(null);
+  const [loading, setLoading] = useState(false);
 
-  const handleFileChange = (newFiles: File[]) => {
+  const handleFileChange = async (newFiles) => {
     const updatedFiles = [...files, ...newFiles];
     setFiles(updatedFiles);
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    onChange && onChange(updatedFiles);
+
+    setLoading(true);
+
+    try {
+      const fileUrls = await Promise.all(
+        newFiles.map(async (file) => {
+          const formData = new FormData();
+          formData.append("file", file);
+
+          const secureUrl = await uploadToCloudinary(formData);
+          return secureUrl;
+        })
+      );
+
+      console.log("Uploaded file URLs:", fileUrls);
+
+      if (onChange) {
+        onChange((prevUrls) => [...prevUrls, ...fileUrls]);
+      }
+    } catch (error) {
+      console.error("Upload failed:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleClick = () => {
@@ -60,7 +80,7 @@ export const FileUpload = ({
       <motion.div
         onClick={handleClick}
         whileHover="animate"
-        className="p-10 group/file block rounded-lg cursor-pointer w-full relative overflow-hidden border border-white/10 hover:border-[#0096FA] transition-all duration-300 ease-in-out border-dashed"
+        className="p-10 group/file block rounded-xl cursor-pointer w-full relative overflow-hidden border border-white/10 hover:border-[#0096FA] transition-all duration-300 ease-in-out border-dashed"
       >
         <input
           ref={fileInputRef}
@@ -71,7 +91,7 @@ export const FileUpload = ({
         />
 
         <div className="flex flex-col items-center justify-center">
-          <p className="relative z-20 font-semibold md:text-lg text-white text-base">
+          <p className="relative z-20 font-semibold md:text-xl text-white text-base">
             Upload Template Images
           </p>
           <p className="relative z-20 font-normal text-white/70 text-sm md:text-base mt-1">
@@ -84,12 +104,12 @@ export const FileUpload = ({
                   key={"file" + idx}
                   layoutId={idx === 0 ? "file-upload" : "file-upload-" + idx}
                   className={cn(
-                    "relative overflow-hidden z-40 bg-[#171717] flex flex-col items-start justify-start md:h-28 p-4 md:p-2 mt-4 w-full mx-auto rounded-md",
+                    "relative overflow-hidden z-40 bg-[#171717] flex flex-col items-start justify-start md:h-28 p-4 md:p-2 mt-4 w-full mx-auto rounded-xl",
                     "shadow-sm"
                   )}
                 >
                   <div className="flex items-center gap-6 justify-between w-full h-full">
-                    <div className=" w-fit h-full hidden md:block">
+                    <div className="w-fit h-full hidden md:block">
                       {file.type.startsWith("image/") && (
                         <motion.img
                           initial={{ opacity: 0 }}
@@ -101,13 +121,13 @@ export const FileUpload = ({
                         />
                       )}
                     </div>
-                    <div className=" w-full flex flex-col pr-2 md:pr-6">
+                    <div className="w-full flex flex-col pr-2 md:pr-6">
                       <div className="flex justify-between w-full items-center gap-4">
                         <motion.p
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           layout
-                          className="text-base text-white  truncate max-w-xs"
+                          className="text-base text-white truncate max-w-xs"
                         >
                           {file.name}
                         </motion.p>
@@ -115,13 +135,13 @@ export const FileUpload = ({
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           layout
-                          className="rounded-lg px-2 py-1 w-fit flex-shrink-0 text-sm text-white/70  -input"
+                          className="rounded-lg px-2 py-1 w-fit flex-shrink-0 text-sm text-white/70"
                         >
                           {(file.size / (1024 * 1024)).toFixed(2)} MB
                         </motion.p>
                       </div>
 
-                      <div className="flex text-sm md:flex-row flex-row items-start md:items-center w-full mt-2 justify-between text-white/70 ">
+                      <div className="flex text-sm md:flex-row flex-row items-start md:items-center w-full mt-2 justify-between text-white/70">
                         <motion.p
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
@@ -136,14 +156,27 @@ export const FileUpload = ({
                           animate={{ opacity: 1 }}
                           layout
                         >
-                          modified{" "}
-                          {new Date(file.lastModified).toLocaleDateString()}
+                          modified {new Date(file.lastModified).toLocaleDateString()}
                         </motion.p>
                       </div>
                     </div>
                   </div>
                 </motion.div>
               ))}
+
+            {loading && (
+              <div className="w-full flex flex-col justify-center items-center">
+                <motion.div
+                  className="text-white mt-4 inline-flex items-center text-center"
+                  animate={{ opacity: [0, 1], scale: [0.9, 1] }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Loader2 className="mr-2 animate-spin" /> Uploading, please
+                  wait...
+                </motion.div>
+              </div>
+            )}
+
             {!files.length && (
               <motion.div
                 layoutId="file-upload"
@@ -154,7 +187,7 @@ export const FileUpload = ({
                   damping: 20,
                 }}
                 className={cn(
-                  "relative group-hover/file:shadow-2xl z-40 bg-[#0F0F0F]  flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md",
+                  "relative group-hover/file:shadow-2xl z-40 bg-[#0F0F0F] flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md",
                   "shadow-[0px_10px_50px_rgba(0,0,0,0.1)]"
                 )}
               >
@@ -164,11 +197,11 @@ export const FileUpload = ({
                     animate={{ opacity: 1 }}
                     className="text-white/70 flex flex-col items-center"
                   >
-                    Drop it
-                    <Upload className="h-4 w-4 md:h-6 md:w-6 text-white/70 " />
+                    Drop file
+                    <Upload className="h-4 w-4 md:h-6 md:w-6 text-white/70" />
                   </motion.p>
                 ) : (
-                  <Upload className="h-4 w-4 md:h-6 md:w-6 text-white/70 " />
+                  <Upload className="h-4 w-4 md:h-6 md:w-6 text-white/70" />
                 )}
               </motion.div>
             )}
