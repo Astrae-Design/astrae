@@ -2,6 +2,8 @@ import AllProducts from "@/components/dashboard/all-products";
 import DashboardNavigation from "@/components/dashboard/dashboard-navigation";
 import { db } from "@/lib/db";
 
+export const revalidate = 0;
+
 const Dashboard = async () => {
   const products = await db.product.findMany();
   return (
