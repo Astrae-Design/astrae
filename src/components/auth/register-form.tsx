@@ -12,6 +12,8 @@ import { Input } from "@/components/ui/input";
 import { RegisterSchema } from "@/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -20,8 +22,6 @@ import { PasswordInput } from "../ui/password-input";
 import { Separator } from "../ui/separator";
 import { FormError } from "./form-error";
 import { FormSuccess } from "./form-success";
-import Image from "next/image";
-import Link from "next/link";
 
 export const RegisterForm = () => {
   const [error, setError] = useState<string | undefined>("");

@@ -14,7 +14,7 @@ const ProductPreview = () => {
           <Eye />
         </div>
       </DialogTrigger>
-      <DialogContent className="flex flex-col overflow-y-scroll max-w-full h-[86dvh] md:h-[96vh] p-0 w-[92vw] md:w-[90vw] border-none rounded-xl md:rounded-2xl overflow-clip mt-5">
+      <DialogContent className="flex flex-col overflow-y-scroll max-w-full h-[86dvh] md:h-[96vh] p-0 w-[92vw] md:w-[90vw] border-none rounded-xl md:rounded-2xl overflow-clip mt-5 md:mt-0">
         <div className=" w-full h-11 px-4 bg-[#111111] flex items-center justify-between rounded-t-xl md:rounded-t-2xl">
           <p className=" hidden md:block">Preview</p>
           <div className=" flex flex-row-reverse md:flex-row items-center gap-2 group">

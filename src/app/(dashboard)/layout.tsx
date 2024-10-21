@@ -8,7 +8,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
     <SessionProvider>
       <div className="flex flex-col h-screen w-full overflow-x-hidden items-center">
         <Navigation />
-        <div className="  h-screen w-full bg-black relative">{children}</div>
+        <div className="h-screen w-full bg-black relative">{children}</div>
         <div className=" w-full absolute bottom-0 py-2 bg-black/80 backdrop-blur-sm z-50">
           <Separator className=" w-full bg-white/20" orientation="horizontal" />
           <div className=" w-full flex items-center pb-3 pt-5 justify-center">
