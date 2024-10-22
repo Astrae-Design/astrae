@@ -26,7 +26,7 @@ const AdminAccountDropdown = ({ user }: UserInfoProps) => {
               />
             </div>
           ) : (
-            <div className=" h-11 md:h-10 aspect-square rounded-full bg-white/15 inline-flex items-center justify-center">
+            <div className=" h-11 md:h-10 aspect-square rounded-full bg-gradient-to-b from-[#0245A6] to-[#0096FA] inline-flex items-center justify-center">
               <span className="text-white">{user?.name?.charAt(0)}</span>
             </div>
           )}
