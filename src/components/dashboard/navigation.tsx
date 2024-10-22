@@ -8,6 +8,7 @@ import Link from "next/link";
 import PrimaryButton from "../common/primarybutton";
 import AccountDropdown from "./account-dropdown";
 import AdminAccountDropdown from "./admin-account-dropdown";
+import DashboardMobileNavigation from "./dashboard-mobile-navigation";
 
 export const Navigation = () => {
   const role = useCurrentRole();
@@ -81,6 +82,7 @@ export const Navigation = () => {
               </nav>
             )}
           </div>
+
           {role === "USER" && (
             <div className="flex gap-4 w-fit items-center px-0 md:px-6">
               <div className=" w-fit">
@@ -95,8 +97,9 @@ export const Navigation = () => {
           )}
           {role === "ADMIN" && (
             <div className="flex w-fit items-center px-0 md:px-6">
-              <div>
+              <div className="flex items-center gap-4">
                 <AdminAccountDropdown user={user} />
+                <DashboardMobileNavigation />
               </div>
             </div>
           )}

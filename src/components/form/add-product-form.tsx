@@ -94,7 +94,7 @@ const AddProductForm = () => {
                     Select tools this template is built with
                   </FormDescription>
                 </div>
-                <div className="flex flex-row w-full gap-6">
+                <div className="flex flex-row flex-wrap w-full gap-6">
                   {toolkitOptions.map((item) => (
                     <FormItem
                       key={item.id}
@@ -125,7 +125,7 @@ const AddProductForm = () => {
               </FormItem>
             )}
           />
-          <div className="grid grid-cols-2 w-full gap-x-8 gap-y-6 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-x-8 gap-y-6 mt-8">
             <FormField
               control={form.control}
               name="title"
@@ -290,8 +290,8 @@ const AddProductForm = () => {
           <FormError message={error} />
           <FormSuccess message={success} />
 
-          <div className="flex w-full items-center justify-end mt-4 py-2">
-            <div className=" w-fit text-nowrap">
+          <div className="flex w-full items-center justify-end mt-6 md:mt-4 py-2">
+            <div className=" w-full md:w-fit text-nowrap">
               <button
                 type="submit"
                 className="relative  w-full h-10 inline-flex items-center justify-center hover:scale-105 ease-in-out transition-all duration-200 px-3 md:px-4 rounded-lg font-medium text-white text-sm md:text-base bg-gradient-to-b from-[#0245A6] to-[#0096FA] shadow-[0px_0px_12px_#0096FA]"

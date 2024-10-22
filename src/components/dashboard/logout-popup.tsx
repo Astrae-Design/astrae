@@ -22,7 +22,7 @@ const LogoutPopup = () => {
           Logout
         </DropdownMenuItem>
       </AlertDialogTrigger>
-      <AlertDialogContent className=" bg-[#0F0F0F]/90 backdrop-blur-sm border border-white/10 rounded-xl flex flex-col w-fit items-center max-w-none">
+      <AlertDialogContent className=" bg-[#0F0F0F] border border-white/10 rounded-xl flex flex-col w-[90vw] md:w-fit items-center max-w-none">
         <div className=" h-16 aspect-square rounded-full bg-[#606060]/10 flex items-center justify-center">
           <LogOut size={32} color="#FA4E4E" />
         </div>

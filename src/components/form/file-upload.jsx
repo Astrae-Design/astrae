@@ -213,6 +213,10 @@ export const FileUpload = ({ onChange }) => {
               ></motion.div>
             )}
           </div>
+          <p className="relative z-20 font-normal text-white/70 text-sm md:text-base mt-4">
+            ** Please upload exactly 6 images **
+          </p>
+
         </div>
       </motion.div>
     </div>
