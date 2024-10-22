@@ -4,10 +4,10 @@ const Loading = () => {
   return (
     <div className=" container">
       <div className="w-full h-full">
-        <div className=" w-full justify-between flex flex-row mt-8">
+        <div className=" w-full justify-between gap-4 md:gap-0 flex flex-row mt-8">
           <Skeleton className=" w-[320px] h-[2.5rem] rounded-xl" />
           <div className=" flex items-center gap-2">
-            <Skeleton className=" w-[200px] h-[2.5rem] rounded-xl" />
+            <Skeleton className=" w-[200px] h-[2.5rem] rounded-xl hidden md:block" />
             <Skeleton className=" w-[120px] h-[2.5rem] rounded-xl" />
           </div>
         </div>

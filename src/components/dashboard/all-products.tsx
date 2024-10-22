@@ -7,7 +7,7 @@ interface ProductListProps {
 
 const AllProducts: React.FC<ProductListProps> = ({ items }) => {
   return (
-    <div className="grid mt-10 container grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-10 w-full">
+    <div className="grid mt-10 container grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-10 w-full pb-20 md:pb-0">
       {items.map((item) => (
         <AdminProductCard key={item.id} data={item} />
       ))}

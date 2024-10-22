@@ -62,13 +62,13 @@ export const Navigation = () => {
             {role === "USER" && (
               <nav className=" flex gap-8 lg:-mr-14 items-center text-sm lg:text-base">
                 <Link
-                  className="text-white/70 -ml-5 hover:text-white transition"
+                  className="text-white/70 hover:text-white transition"
                   href="/"
                 >
                   Home
                 </Link>
                 <Link
-                  className="text-white/70 -ml-5 hover:text-white transition"
+                  className="text-white/70 hover:text-white transition"
                   href="/dashboard"
                 >
                   My Products
