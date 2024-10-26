@@ -4,7 +4,6 @@ import useCart from "@/hooks/use-cart";
 import { Product } from "@/types";
 import { Trash2 } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 interface CartItem {
