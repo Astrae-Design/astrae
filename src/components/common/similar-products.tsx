@@ -1,4 +1,3 @@
-import ProductCard from "./product-card";
 
 const SimilarProducts = () => {
   return (
@@ -7,12 +6,7 @@ const SimilarProducts = () => {
         Similar Templates
       </h4>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 mt-12">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        
       </div>
     </div>
   );
