@@ -33,12 +33,15 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Category, Toolkit } from "@prisma/client";
 import { addProduct } from "../../../actions/add-product";
+import { useRouter } from "next/navigation";
 
 const AddProductForm = () => {
   const [error, setError] = useState<string | undefined>("");
   const [success, setSuccess] = useState<string | undefined>("");
   const [isPending, startTransition] = useTransition();
   const [uploadedFileUrls, setUploadedFileUrls] = useState<string[]>([]);
+
+  const router = useRouter();
 
   const form = useForm<z.infer<typeof ProductSchema>>({
     resolver: zodResolver(ProductSchema),
@@ -48,6 +51,7 @@ const AddProductForm = () => {
       category: undefined,
       codeLink: "",
       figmaLink: "",
+      previewLink: "",
       description: "",
       detailedDescription: "",
       pages: "",
@@ -58,12 +62,17 @@ const AddProductForm = () => {
   const onSubmit = (values: z.infer<typeof ProductSchema>) => {
     setError("");
     setSuccess("");
-    console.log({ ...values, uploadedFileUrls }); // Include the file URLs in the submission
 
     startTransition(() => {
       addProduct(values, uploadedFileUrls).then((data) => {
-        setError(data.error);
-        setSuccess(data.success);
+        if (data?.success) {
+          form.reset();
+          setSuccess(data.success);
+          router.push("/admin/dashboard");
+        }
+        if (data?.error) {
+          setError(data.error);
+        }
       });
     });
   };
@@ -73,7 +82,7 @@ const AddProductForm = () => {
     { id: Toolkit.REACT, label: "React" },
     { id: Toolkit.FIGMA, label: "Figma" },
     { id: Toolkit.FRAMER_MOTION, label: "Framer Motion" },
-    { id: Toolkit.GSAP, label: "GSAP" },
+    { id: Toolkit.TAILWIND, label: "Tailwindcss" },
   ];
 
   return (
@@ -279,6 +288,24 @@ const AddProductForm = () => {
                       {...field}
                       disabled={isPending}
                       placeholder="https://"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="previewLink"
+              render={({ field }) => (
+                <FormItem className=" col-span-2">
+                  <FormLabel>Live Preview Link</FormLabel>
+                  <FormControl>
+                    <Input
+                      className="border border-white/0 bg-[#171717] hover:bg-[#171717]"
+                      {...field}
+                      disabled={isPending}
+                      placeholder="https://example.vercel.app"
                     />
                   </FormControl>
                   <FormMessage />

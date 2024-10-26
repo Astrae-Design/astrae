@@ -35,7 +35,7 @@ const AccountDropdown = ({ user }: UserInfoProps) => {
 
           <div className=" hidden md:block">
             <div className="flex flex-col items-start -space-y-1">
-              <h4>{user?.name}</h4>
+              <h4 className=" max-w-[18ch] truncate">{user?.name}</h4>
               <p className="text-white/70">Free Tier</p>
             </div>
           </div>

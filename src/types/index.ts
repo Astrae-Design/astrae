@@ -4,11 +4,11 @@ export interface Product {
   id: string;
   title: string;
   coverImage: string;
-  imageOne: string;
-  imageTwo: string;
-  imageThree: string;
-  imageFour: string;
-  imageFive: string;
+  imageOne?: string;
+  imageTwo?: string;
+  imageThree?: string;
+  imageFour?: string;
+  imageFive?: string;
   price: string;
   description: string;
   detailedDescription: string;
@@ -16,6 +16,8 @@ export interface Product {
   category: string;
   figmaLink: string;
   codeLink: string;
+  createdAt: Date;
+  previewLink: string;
   toolkit: Toolkit[];
 }
 

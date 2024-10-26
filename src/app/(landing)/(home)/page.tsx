@@ -1,3 +1,5 @@
+"use client";
+
 import ChatWidget from "@/components/common/chat-widget";
 import GalleryShowcase from "@/components/custom/gallery";
 import CallToAction from "@/sections/cta";

@@ -9,8 +9,14 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
+import React from "react";
 
-const ProjectCarousel = () => {
+interface ProjectCarouselProps {
+  images: string[];
+}
+
+const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images }) => {
+  const loopedImages = [...images, images[0]];
   return (
     <div className=" w-full relative">
       <div className="absolute top-0 bottom-0 left-0 w-28 md:w-52 z-[2] bg-gradient-to-r from-black to-transparent" />
@@ -28,7 +34,7 @@ const ProjectCarousel = () => {
         className="w-full"
       >
         <CarouselContent className="md:pl-6 pl-5 pr-5 md:pr-0">
-          {Array.from({ length: 5 }).map((_, index) => (
+          {loopedImages.map((image, index) => (
             <CarouselItem
               key={index}
               className="md:pl-1 md:basis-1/2 lg:basis-[45%] md:px-4"
@@ -37,9 +43,9 @@ const ProjectCarousel = () => {
                 <Image
                   quality={100}
                   fill
-                  src={`/assets/gallery/${index + 1}.jpg`}
+                  src={image}
                   className="rounded-xl object-cover"
-                  alt="Gallery"
+                  alt={`Product image ${index + 1}`}
                 />
               </div>
             </CarouselItem>

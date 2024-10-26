@@ -1,30 +1,37 @@
-import { Briefcase, Globe } from "lucide-react";
+import { Product } from "@/types";
+import {
+  Briefcase,
+  Building2,
+  FileCode,
+  Globe,
+  LayoutList,
+  Loader,
+} from "lucide-react";
 import { Button } from "../ui/button";
 import FeaturesAccordion from "./features-accordion";
 import SimilarProducts from "./similar-products";
 
-const ProductInfo = () => {
+const ProductInfo = (data: Product) => {
+  const date = data.createdAt;
+  const formattedDate = date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  const formattedTime = date.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
   return (
     <div>
       <div className=" container py-20">
         <div className="flex flex-col md:flex-row items-start justify-between gap-20 w-full">
           <div className=" w-full flex flex-col items-start">
-            <p className=" text-base md:text-lg text-white/70 mt-2 md:mt-2 text-start ">
-              Plura is a sleek, one-page template crafted to showcase the work
-              of creative studios and visionaries with elegance and style.
-              Designed with a seamless, intuitive interface, Plura allows your
-              creativity to shine, making your portfolio the focal point.
-            </p>
-            <p className=" text-base md:text-lg text-white/70 mt-2 md:mt-6 text-start ">
-              The template features a smooth, intuitive interface that&apos;s
-              not only easy to navigate but also enhances user engagement.
-              Plura&apos;s minimalistic yet impactful design ensures that your
-              creativity remains the star, providing a professional and polished
-              platform where your work can truly shine. Whether you&apos;re a
-              designer, photographer, or creative agency, Plura adapts
-              beautifully to your needs, offering a versatile and visually
-              captivating way to present your portfolio in the best light
-              possible.
+            <p
+              className=" text-base md:text-lg text-white/70 mt-2 md:mt-2 text-start"
+              style={{ whiteSpace: "pre-wrap" }}
+            >
+              {data.detailedDescription}
             </p>
 
             <FeaturesAccordion />
@@ -36,22 +43,12 @@ const ProductInfo = () => {
               </h2>
 
               <div className="gap-4 grid grid-cols-3 w-full mt-6">
-                <Button size="sm">
-                  <Globe className="  mr-3" />
-                  Home
-                </Button>
-                <Button size="sm">
-                  <Globe className="  mr-3" />
-                  404
-                </Button>
-                <Button size="sm">
-                  <Globe className="  mr-3" />
-                  Contact
-                </Button>
-                <Button size="sm">
-                  <Globe className="  mr-3" />
-                  Work
-                </Button>
+                {data.pages.split(",").map((page) => (
+                  <Button key={page.trim()} size="sm">
+                    <Globe className="mr-3" />
+                    {page.trim()}
+                  </Button>
+                ))}
               </div>
             </div>
 
@@ -60,10 +57,37 @@ const ProductInfo = () => {
                 Category
               </h2>
 
-              <Button size="sm" className="mt-6 w-fit px-4">
-                <Briefcase className="  mr-3" />
-                Agency Website
-              </Button>
+              {data.category === "MARKETING_PAGE" ? (
+                <Button size="sm" className="mt-6 w-fit px-4">
+                  <Briefcase className="  mr-3" />
+                  Marketing Page
+                </Button>
+              ) : data.category === "STARTUP_LANDING_PAGE" ? (
+                <Button size="sm" className="mt-6 w-fit px-4">
+                  <Building2 className="  mr-3" />
+                  Startup Landing Page
+                </Button>
+              ) : data.category === "SAAS_LANDING_PAGE" ? (
+                <Button size="sm" className="mt-6 w-fit px-4">
+                  <LayoutList className="  mr-3" />
+                  SaaS Landing Page
+                </Button>
+              ) : data.category === "SAAS_WAITLIST" ? (
+                <Button size="sm" className="mt-6 w-fit px-4">
+                  <Loader className="  mr-3" />
+                  SaaS Waitlist
+                </Button>
+              ) : data.category === "AGENCY_WEBSITE" ? (
+                <Button size="sm" className="mt-6 w-fit px-4">
+                  <Briefcase className="  mr-3" />
+                  Agency Website
+                </Button>
+              ) : data.category === "DEV_PORTFOLIO" ? (
+                <Button size="sm" className="mt-6 w-fit px-4">
+                  <FileCode className="  mr-3" />
+                  Dev Portfolio
+                </Button>
+              ) : null}
             </div>
 
             <div className=" w-full flex flex-col items-start mt-12">
@@ -89,7 +113,7 @@ const ProductInfo = () => {
 
             <div className=" w-full flex flex-col items-start mt-12">
               <p className="text-sm md:text-lg text-white/70">
-                Added September 27, 2024
+                Added {formattedDate} at {formattedTime}
               </p>
             </div>
           </div>

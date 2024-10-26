@@ -1,6 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+import React from "react";
 import ProductCard from "./product-card";
 
-const ProductList = () => {
+interface ProductListProps {
+  items: any[];
+}
+const ProductList: React.FC<ProductListProps> = ({ items }) => {
   return (
     <div className=" container py-12">
       <h4 className=" text-4xl md:text-5xl text-white font-semibold">
@@ -9,10 +15,10 @@ const ProductList = () => {
       <p className=" text-white/70 font-normal text-base md:text-lg mt-2">
         The latest templates from the Astrae community.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 mt-12">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+      <div className="grid mt-10 grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-10 w-full pb-20 md:pb-0">
+        {items.map((item) => (
+          <ProductCard key={item.id} data={item} />
+        ))}
       </div>
     </div>
   );

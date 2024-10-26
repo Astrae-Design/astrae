@@ -18,7 +18,7 @@ const Footer = () => {
             </div>
             <span className=" text-white font-semibold text-base md:text-lg hidden md:block">
               Astrae{" "}
-              {pathName.startsWith("/marketplace") ? (
+              {pathName.startsWith("/products") ? (
                 <span className=" font-medium opacity-50">Marketplace</span>
               ) : (
                 <></>
@@ -28,7 +28,7 @@ const Footer = () => {
           <p className="text-white text-sm lg:text-base mt-2 mb-6">
             Templates Beyond Ordinary
           </p>
-          <Link href="/marketplace">
+          <Link href="/products">
             <div className=" w-fit">
               <PrimaryButton>Explore Our Collection</PrimaryButton>
             </div>

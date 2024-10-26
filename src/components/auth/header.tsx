@@ -31,7 +31,7 @@ export const Header = ({ label, imgSrc, title }: HeaderProps) => {
       >
         {title}
       </h1>
-      <p className="text-white/70 tracking-tight text-sm md:text-base">
+      <p className="text-white/70 tracking-tight text-sm md:text-base text-center mt-0.5">
         {label}
       </p>
     </div>

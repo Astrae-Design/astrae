@@ -50,8 +50,6 @@ export const FileUpload = ({ onChange }) => {
         })
       );
 
-      console.log("Uploaded file URLs:", fileUrls);
-
       if (onChange) {
         onChange((prevUrls) => [...prevUrls, ...fileUrls]);
       }

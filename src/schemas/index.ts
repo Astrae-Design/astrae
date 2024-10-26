@@ -112,6 +112,9 @@ export const ProductSchema = z.object({
   codeLink: z.string().min(4, {
     message: "Enter link to source code",
   }),
+  previewLink: z.string().min(4, {
+    message: "Enter live preview link",
+  }),
   description: z
     .string()
     .min(150, {

@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/dialog";
 import { ExternalLink, Eye, X } from "lucide-react";
 
-const ProductPreview = () => {
+const ProductPreview = ({ previewLink }: { previewLink: string }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -19,7 +19,7 @@ const ProductPreview = () => {
           <p className=" hidden md:block">Preview</p>
           <div className=" flex flex-row-reverse md:flex-row items-center gap-2 group">
             <h4 className=" group-hover:underline underline-offset-4 cursor-pointer">
-              https://www.example.com
+              {previewLink}
             </h4>
             <ExternalLink className=" ml-0 mr-2 md:mr-0 md:ml-2" />
           </div>
@@ -29,7 +29,7 @@ const ProductPreview = () => {
         </div>
         <iframe
           className="-mt-4 w-full h-full bg-black"
-          src="https://www.builtwithatlas.com"
+          src={previewLink}
           title="Website"
         ></iframe>
       </DialogContent>

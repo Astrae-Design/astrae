@@ -19,7 +19,7 @@ export default async function sitemap() {
       priority: 1,
     },
     {
-      url: `${baseUrl}/marketplace`,
+      url: `${baseUrl}/products`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,

@@ -1,7 +1,7 @@
 "use client";
 
 import { Cart } from "@/components/common/cart";
-import { MarketplaceMenu } from "@/components/common/marketplace-menu";
+import { MarketplaceMenu } from "@/components/common/products-menu";
 import MobileNavigation from "@/components/common/mobile-navigation";
 import PrimaryButton from "@/components/common/primarybutton";
 import { Button } from "@/components/ui/button";
@@ -23,7 +23,7 @@ export const Header = () => {
               </div>
               <span className=" text-white font-semibold text-base md:text-lg hidden md:block">
                 Astrae{" "}
-                {pathName.startsWith("/marketplace") ? (
+                {pathName.startsWith("/products") ? (
                   <span className=" font-medium opacity-50">Marketplace</span>
                 ) : (
                   <></>

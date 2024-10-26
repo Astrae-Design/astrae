@@ -1,5 +1,6 @@
-"use client"
+"use client";
 
+import PrimaryButton from "@/components/common/primarybutton";
 import AddProductForm from "@/components/form/add-product-form";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
@@ -11,7 +12,7 @@ const AddProduct = () => {
     <div className=" h-screen w-full flex flex-col bg-black">
       <div className=" w-full bg-black border-b border-b-white/10 sticky top-16 pt-8 pb-4 z-50">
         <div className=" container w-full flex flex-col md:flex-row md:items-center justify-between bg-black">
-          <p className=" inline-flex items-center gap-2 md:gap-3 text-2xl md:text-2xl font-semibold">
+          <div className=" inline-flex items-center gap-2 md:gap-3 text-2xl font-semibold">
             <Button
               onClick={() => router.back()}
               variant="ghost"
@@ -20,7 +21,10 @@ const AddProduct = () => {
               <ChevronLeft />
             </Button>
             Add New Template
-          </p>
+          </div>
+          <div className=" w-fit">
+            <PrimaryButton>Go to Marketplace</PrimaryButton>
+          </div>
         </div>
       </div>
       <div className="container pt-8 pb-28">

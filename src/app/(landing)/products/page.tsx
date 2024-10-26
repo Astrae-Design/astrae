@@ -1,4 +1,5 @@
 import ProductList from "@/components/common/product-list";
+import { db } from "@/lib/db";
 import CallToAction from "@/sections/cta";
 import Reviews from "@/sections/reviews";
 import Value from "@/sections/value";
@@ -23,11 +24,11 @@ export const metadata: Metadata = {
     "modern web templates",
     "startup website templates for sale",
   ],
-  title: "Marketplace",
+  title: "Products",
   description:
     "Browse Astrae Design's marketplace for premium React templates built with Next.js, Tailwind CSS, and Framer Motion. Discover high-quality, responsive templates perfect for startups, agencies, and creatives.",
   openGraph: {
-    title: "Marketplace | Astrae Design",
+    title: "Products | Astrae Design",
     siteName: "Astrae Design",
     description:
       "Explore Astrae Design's marketplace for beautifully crafted web templates. Find premium landing page templates built with React, Tailwind CSS, and Framer Motion.",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marketplace | Astrae Design",
+    title: "Products | Astrae Design",
     description:
       "Discover Astrae Design's marketplace filled with high-quality web templates built with React, Tailwind CSS, and Framer Motion. Perfect for startups, agencies, and creatives.",
     images: ["/assets/marketplace-thumbnail.png"],
@@ -45,15 +46,18 @@ export const metadata: Metadata = {
   icons: "/favicon.ico",
 };
 
-const MarketplacePage = () => {
+const ProductsPage = async () => {
+  const allProducts = await db.product.findMany();
+
   return (
     <div className=" pt-12 md:pt-0">
       <Value />
-      <ProductList />
+      <ProductList items={allProducts} />
+      <div className="h-[8rem]" />
       <Reviews />
       <CallToAction />
     </div>
   );
 };
 
-export default MarketplacePage;
+export default ProductsPage;

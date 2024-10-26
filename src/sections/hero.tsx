@@ -136,7 +136,7 @@ const Hero = () => {
       </motion.div>
 
       <div className=" container relative mt-12 md:mt-0 z-10">
-        <Link href="/marketplace">
+        <Link href="/products">
           <div className="w-full flex items-center justify-center mb-8 md:-mt-4">
             <div className=" relative inline-flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-0  focus:ring-offset-0 group">
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0096FA_0%,#0245A6_50%,#0096FA_100%)]" />
