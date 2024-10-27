@@ -8,60 +8,55 @@ import {
 export function FaqItems() {
   return (
     <Accordion type="multiple" className="w-full md:max-w-3xl mt-10 md:mb-20">
-      <AccordionItem value="item-1">
+      <AccordionItem className="bg-black border border-white/10" value="item-1">
         <AccordionTrigger>
-          What if I just want a single website?
+          What do I get when I purchase a template?
         </AccordionTrigger>
         <AccordionContent>
-          At Studio IX, we value collaboration and believe in working closely
-          with our partners throughout the project lifecycle. By choosing us,
-          you benefit from a cohesive team approach, encompassing design,
-          development, and project management expertise for a streamlined and
-          comprehensive solution.
+          When you purchase a template, you get complete access to all the code
+          and assets necessary to set up and customize the website. Each
+          template includes detailed documentation to guide you through
+          installation and setup.
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-2">
+      <AccordionItem className="bg-black border border-white/10" value="item-2">
         <AccordionTrigger>
-          What if I just want a single website?
+          Can I customize the templates to fit my brand?
         </AccordionTrigger>
         <AccordionContent>
-          Turnaround time for most tasks typically depends on the scope and
-          complexity of the project, but we strive to deliver efficient and
-          timely results, communicating transparently with partners throughout
-          the process.
+          Yes, our templates are fully customizable! You can adjust colors,
+          layouts, content, and more to align with your brand. All templates are
+          built with Next.js, making it easy to tailor the code to your needs.
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-3">
+      <AccordionItem className="bg-black border border-white/10" value="item-3">
         <AccordionTrigger>
-          What if I just want a single website?
+          Do I need coding knowledge to use these templates?
         </AccordionTrigger>
         <AccordionContent>
-          If you&apos;re seeking to have just a single website developed, Studio
-          IX can still accommodate your needs efficiently, offering tailored
-          solutions to meet your specific requirements and goals.
+          Basic knowledge of HTML, CSS, and JavaScript is recommended for
+          customization, but each template comes with detailed instructions,
+          making it accessible for both beginners and advanced developers.
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-4">
+      <AccordionItem className="bg-black border border-white/10" value="item-4">
         <AccordionTrigger>
-          What if I don&apos;t like the design?
+          Will I receive updates if the template is improved?
         </AccordionTrigger>
         <AccordionContent>
-          If you&apos;re not satisfied with the initial design, we offer
-          revision rounds to ensure we meet your expectations, working closely
-          with you to refine the design until it aligns perfectly with your
-          vision and preferences at no additional cost.
+          Yes, when you purchase a template, you get lifetime access to any
+          updates or improvements we make. We&apos;ll notify you about updates
+          and provide instructions for implementing them.
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-5">
+      <AccordionItem className="bg-black border border-white/10" value="item-5">
         <AccordionTrigger>
-          What if I just want a single website?
+          What if I need help setting up the template?
         </AccordionTrigger>
         <AccordionContent>
-          Studio IX&apos;s dedication to excellence, experienced team, and
-          commitment to client satisfaction may seem remarkable, but it&apos;s a
-          result of our genuine passion for what we do, years of expertise, and
-          a track record of successful projects that speak to the quality of our
-          services.
+          We offer dedicated support to help you get started! If you encounter
+          any issues or have questions, reach out to us, and our team will
+          assist you with setup and customization.
         </AccordionContent>
       </AccordionItem>
     </Accordion>

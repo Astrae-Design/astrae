@@ -25,7 +25,7 @@ const Footer = () => {
               )}
             </span>
           </div>
-          <p className="text-white text-sm lg:text-base mt-2 mb-6">
+          <p className="text-white text-sm lg:text-lg mt-2 mb-6">
             Templates Beyond Ordinary
           </p>
           <Link href="/products">

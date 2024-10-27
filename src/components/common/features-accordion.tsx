@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Code, Proportions, Replace, ScanSearch } from "lucide-react";
+import { Code, Proportions, Puzzle, ScanSearch } from "lucide-react";
 
 const FeaturesAccordion = () => {
   return (
@@ -13,56 +13,63 @@ const FeaturesAccordion = () => {
         Features
       </h2>
       <Accordion type="multiple" className="w-full mt-6">
-        <AccordionItem value="item-1">
+        <AccordionItem
+          className=" bg-black border border-white/10"
+          value="item-1"
+        >
           <AccordionTrigger>
             <div className="flex items-center gap-4">
-              <Code /> What if I just want a single website?
+              <Code /> Animations / Effects
             </div>
           </AccordionTrigger>
           <AccordionContent>
-            At Studio IX, we value collaboration and believe in working closely
-            with our partners throughout the project lifecycle. By choosing us,
-            you benefit from a cohesive team approach, encompassing design,
-            development, and project management expertise for a streamlined and
-            comprehensive solution.
+            Includes expressive animations. Tweak effects with a few clicks and
+            capture your audience&apos;s attention when they land on your
+            website.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-2">
+        <AccordionItem
+          className=" bg-black border border-white/10"
+          value="item-2"
+        >
           <AccordionTrigger>
             <div className="flex items-center gap-4">
-              <ScanSearch /> What if I just want a single website?
+              <Proportions /> Responsive Design
             </div>
           </AccordionTrigger>
           <AccordionContent>
-            Turnaround time for most tasks typically depends on the scope and
-            complexity of the project, but we strive to deliver efficient and
-            timely results, communicating transparently with partners throughout
-            the process.
+            Fully responsive out of the box. Visually tweak your breakpoints and
+            design your site on a familiar free-form canvas.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-3">
+        <AccordionItem
+          className=" bg-black border border-white/10"
+          value="item-3"
+        >
           <AccordionTrigger>
             <div className="flex items-center gap-4">
-              <Replace /> What if I just want a single website?
+              <ScanSearch /> SEO & Performance
             </div>
           </AccordionTrigger>
           <AccordionContent>
-            If you&apos;re seeking to have just a single website developed,
-            Studio IX can still accommodate your needs efficiently, offering
-            tailored solutions to meet your specific requirements and goals.
+            Sites that rank on search engines are fast, have well-structured
+            content, and are accessible to everyone. Framer uses powerful
+            technologies and all the tricks in the book to make your template
+            perform by default.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-4">
+        <AccordionItem
+          className=" bg-black border border-white/10"
+          value="item-4"
+        >
           <AccordionTrigger>
             <div className="flex items-center gap-4">
-              <Proportions /> What if I just want a single website?
+              <Puzzle /> Components
             </div>
           </AccordionTrigger>
           <AccordionContent>
-            If you&apos;re not satisfied with the initial design, we offer
-            revision rounds to ensure we meet your expectations, working closely
-            with you to refine the design until it aligns perfectly with your
-            vision and preferences at no additional cost.
+            Components offer reusability across pages, with changes applied to
+            all instances. They also offer an easy way to create animations.
           </AccordionContent>
         </AccordionItem>
       </Accordion>

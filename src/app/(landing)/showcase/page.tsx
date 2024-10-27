@@ -1,9 +1,7 @@
 import ChatWidget from "@/components/common/chat-widget";
-import PrimaryButton from "@/components/common/primarybutton";
 import ShowcaseList from "@/components/common/showcase";
 import AnimatedHero from "@/sections/animated-hero";
 import CallToAction from "@/sections/cta";
-import { ArrowDown } from "lucide-react";
 import { Metadata } from "next";
 
 const baseUrl = "https://astrae.design";
@@ -54,13 +52,7 @@ const ShowcasePage = () => {
         title="Explore the Possibilities with Astrae Design"
         description="See how developers and designers around the world are building stunning websites using Astrae Design’s premium templates. From startups to agencies, our templates bring visions to life."
       />
-      <div className="w-full flex flex-col items-center -mt-8 md:-mt-16">
-        <div className=" w-fit flex items-center justify-center">
-          <PrimaryButton>
-            View Projects <ArrowDown className="ml-3" />
-          </PrimaryButton>
-        </div>
-      </div>
+      <div className="w-full flex flex-col items-center -mt-8 md:-mt-16"></div>
       <ShowcaseList />
       <CallToAction />
     </div>

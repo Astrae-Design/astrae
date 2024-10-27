@@ -1,11 +1,13 @@
-import PrimaryButton from "@/components/common/primarybutton";
+import AddToCartButton from "@/components/common/add-to-cart";
 import ProductInfo from "@/components/common/product-info";
+import ProductNotFound from "@/components/common/product-not-found";
 import ProjectCarousel from "@/components/common/project-carousel";
 import { Button } from "@/components/ui/button";
 import { db } from "@/lib/db";
 import CallToAction from "@/sections/cta";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export const revalidate = 0;
 
@@ -39,7 +41,11 @@ const ProductDetails: React.FC<ProductPageProps> = async ({ params }) => {
   ].filter((image): image is string => !!image);
 
   if (!product) {
-    return null;
+    return (
+      <div className=" min-h-screen">
+        <ProductNotFound />
+      </div>
+    );
   }
   return (
     <div className=" w-full flex flex-col items-center">
@@ -77,17 +83,19 @@ const ProductDetails: React.FC<ProductPageProps> = async ({ params }) => {
             </div>
           </div>
           <div className=" w-full">
-            <p className=" text-base md:text-lg text-white/70 mt-2 md:mt-2 md:max-w-xl text-start ">
+            <p className=" text-base md:text-lg text-white mt-2 md:mt-2 md:max-w-xl text-start ">
               {product.description}
             </p>
             <div className="flex flex-col-reverse md:flex-row items-center gap-4 mt-6">
-              <Button className=" w-full md:w-fit">
-                Live Preview <ExternalLink className=" ml-3" />
-              </Button>
-              <PrimaryButton>Purchase Template for $9.99</PrimaryButton>
+              <AddToCartButton data={product} />
+              <Link href={product.previewLink}>
+                <Button className=" w-full md:w-fit">
+                  Live Preview <ExternalLink className=" ml-3" />
+                </Button>
+              </Link>
             </div>
-            <div className="py-4 w-full flex items-center justify-center md:justify-end">
-              <h4 className=" text-sm md:text-base">
+            <div className="py-4 w-full flex items-center justify-center md:justify-start">
+              <h4 className=" text-sm md:text-base text-white/70">
                 Or unlock everything with membership
               </h4>
             </div>

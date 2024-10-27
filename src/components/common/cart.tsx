@@ -66,21 +66,13 @@ export function Cart() {
               <Separator className="mb-4 opacity-15" orientation="horizontal" />
               <div className=" w-full flex items-center justify-between text-white">
                 <p>Total</p>
-                <h4 className=" font-medium text-2xl">$0.00</h4>
+                <h4 className=" font-medium text-xl">$0.00</h4>
               </div>
               <Separator className="mt-4 opacity-15" orientation="horizontal" />
-              <div className="flex items-center space-x-2 w-full text-white mt-8 mb-4">
-                <Checkbox id="terms" />
-                <label
-                  htmlFor="terms"
-                  className="text-sm lg:text-base font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  Accept terms and conditions
-                </label>
-              </div>
+
               <SheetClose className="mt-4" asChild>
                 <div className="w-full">
-                  <PrimaryButton>Checkout</PrimaryButton>
+                  <PrimaryButton>Close</PrimaryButton>
                 </div>
               </SheetClose>
             </div>

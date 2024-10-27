@@ -91,27 +91,6 @@ const ProductInfo = (data: Product) => {
             </div>
 
             <div className=" w-full flex flex-col items-start mt-12">
-              <h2 className="font-semibold text-2xl lg:text-3xl text-white">
-                Support
-              </h2>
-
-              <Button
-                size="sm"
-                variant="link"
-                className="mt-6 w-fit px-0 text-white/70 hover:text-white"
-              >
-                Contact Us
-              </Button>
-              <Button
-                size="sm"
-                variant="link"
-                className="w-fit px-0 text-white/70 hover:text-white"
-              >
-                How to use
-              </Button>
-            </div>
-
-            <div className=" w-full flex flex-col items-start mt-12">
               <p className="text-sm md:text-lg text-white/70">
                 Added {formattedDate} at {formattedTime}
               </p>
@@ -119,7 +98,7 @@ const ProductInfo = (data: Product) => {
           </div>
         </div>
       </div>
-      <SimilarProducts />
+      <SimilarProducts id={data.id} />
       <div className="mt-20" />
     </div>
   );

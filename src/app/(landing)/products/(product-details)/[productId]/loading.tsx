@@ -18,10 +18,10 @@ const LoadingProductDetails = () => {
           <div className=" flex flex-col items-start w-full">
             <Skeleton className=" w-full h-32" />
             <div className=" w-full inline-flex items-center gap-4 mt-4">
-              <Skeleton className=" w-[40%] h-10" />
               <Skeleton className=" w-full h-10" />
+              <Skeleton className=" w-[40%] h-10" />
             </div>
-            <div className=" w-full flex flex-col items-end mt-2">
+            <div className=" w-full flex flex-col items-start mt-2">
               <Skeleton className=" w-[40%] h-10" />
             </div>
           </div>

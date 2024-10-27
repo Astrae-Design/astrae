@@ -31,10 +31,10 @@ const CartItem: React.FC<CartItem> = ({ data }) => {
           quality={100}
           src={data.coverImage}
           className=" object-cover rounded-xl group-hover:scale-110 transition-all ease-in-out duration-300"
-          alt="Showcase card"
+          alt={data?.title}
         />
       </div>
-      <h3 className=" text-white text-2xl mt-2">{data?.title}</h3>
+      <h3 className=" text-white text-xl mt-2">{data?.title}</h3>
       <p className=" text-xl text-white/70 group-hover:text-white transition-all ease-in-out duration-300 line-clamp-4">
         {data?.price}
       </p>
