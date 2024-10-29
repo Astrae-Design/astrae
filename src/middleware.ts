@@ -11,6 +11,7 @@ import {
   marketplacePrefix,
   publicRoutes,
   showcasePrefix,
+  webhookPrefix,
 } from "./routes";
 
 const { auth } = NextAuth(authConfig);
@@ -25,6 +26,7 @@ export default auth((req) => {
     nextUrl.pathname.startsWith(cmsPrefix) ||
     nextUrl.pathname.startsWith(blogPrefix) ||
     nextUrl.pathname.startsWith(showcasePrefix) ||
+    nextUrl.pathname.startsWith(webhookPrefix) ||
     nextUrl.pathname.startsWith(marketplacePrefix);
   const isAuthRoute = authRoutes.includes(nextUrl.pathname);
 

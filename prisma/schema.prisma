@@ -12,6 +12,12 @@ enum UserRole {
   USER
 }
 
+enum SubscriptionType {
+  FREE
+  BASIC
+  ADVANCE
+}
+
 model User {
   id                    String                 @id @default(cuid())
   name                  String?
@@ -23,6 +29,7 @@ model User {
   accounts              Account[]
   isTwoFactorEnabled    Boolean                @default(false)
   twoFactorConfirmation TwoFactorConfirmation?
+  Subscription          Subscription[]
 }
 
 model Account {
@@ -116,4 +123,21 @@ model Product {
   codeLink            String
   createdAt           DateTime  @default(now())
   toolkit             Toolkit[]
+}
+
+model Subscription {
+  id               Int              @id @default(autoincrement())
+  lemonSqueezyId   String           @unique @db.Text
+  orderId          Int              @db.Integer
+  name             String           @db.Text
+  email            String           @db.Text
+  status           String           @db.Text
+  renewsAt         String?          @db.Text
+  endsAt           String?          @db.Text
+  trialEndsAt      String?          @db.Text
+  price            String           @db.Text
+  isPaused         Boolean          @default(false) @db.Boolean
+  subscriptionType SubscriptionType
+  userId           String           @db.Text
+  user             User             @relation(fields: [userId], references: [id])
 }

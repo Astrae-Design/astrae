@@ -34,6 +34,7 @@ export const authRoutes = [
  * @type {string}
  */
 export const apiAuthPrefix = "/api/auth";
+export const webhookPrefix = "/api/webhook";
 export const blogPrefix = "/blog";
 export const marketplacePrefix = "/products";
 export const showcasePrefix = "/showcase";

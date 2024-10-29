@@ -3,13 +3,18 @@
 import PrimaryButton from "@/components/common/primarybutton";
 import { BorderBeam } from "@/components/custom/border-beam";
 import { Button } from "@/components/ui/button";
+import axios from "axios";
 import { AnimatePresence, motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Loader2 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 type PriceColumnProps = {
   highlight?: boolean;
   secondaryButton?: boolean;
   title: string;
+  productId?: string;
   price: string;
   buttonText: string;
   statement: string;
@@ -34,7 +39,7 @@ const Pricing = () => {
           <span className=" text-[#0096FA]">Reach out</span>
         </p>
         <div className=" w-full flex flex-col items-center mt-4">
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-4 items-start w-full">
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-4 items-start w-full h-full">
             <PriceColumn
               secondaryButton
               buttonText="Get Started"
@@ -69,9 +74,10 @@ const Pricing = () => {
               ]}
             />
             <PriceColumn
-              buttonText="Get Plan"
+              buttonText="Get Basic Plan"
+              productId="576111"
               title="Basic"
-              price="$29"
+              price="$149"
               statement="Paid yearly"
               items={[
                 {
@@ -101,10 +107,11 @@ const Pricing = () => {
               ]}
             />
             <PriceColumn
-              buttonText="Get Plan"
+              buttonText="Get Advance Plan"
               highlight
+              productId="576125"
               title="Advanced"
-              price="$149"
+              price="$169"
               statement="One-time purchase"
               items={[
                 {
@@ -174,14 +181,82 @@ const PriceColumn = ({
   highlight,
   title,
   price,
+  productId,
   statement,
   items,
   buttonText,
   secondaryButton,
 }: PriceColumnProps) => {
+  const router = useRouter();
+  const id = productId;
+
+  const [loading, setLoading] = useState(false);
+
+  const getPlan = async () => {
+    setLoading(true);
+    try {
+      const response = await axios.post("/api/lemonsqueezy", {
+        productId: id,
+      });
+      if (response.data.checkoutUrl) {
+        toast.success("Redirecting you to checkout...", {
+          style: {
+            border: "1px solid #262626",
+            padding: "16px",
+            background: "#161616",
+            color: "#FFF",
+          },
+          iconTheme: {
+            primary: "#10b981",
+            secondary: "#FFF",
+          },
+        });
+        router.push(response.data.checkoutUrl);
+      } else {
+        const callbackUrl = `/pricing`;
+        router.push(`/login?callbackUrl=${encodeURIComponent(callbackUrl)}`);
+        toast.error("Please login first");
+      }
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        if (error.response?.status === 401) {
+          const callbackUrl = `/pricing`;
+          router.push(`/login?callbackUrl=${encodeURIComponent(callbackUrl)}`);
+        } else {
+          toast.error("Something went wrong!", {
+            style: {
+              border: "1px solid #262626",
+              padding: "16px",
+              background: "#161616",
+              color: "#FFF",
+            },
+            iconTheme: {
+              primary: "#ef4444",
+              secondary: "#FFF",
+            },
+          });
+        }
+      } else {
+        toast.error("Couldn't load lemonsqueezy checkout!", {
+          style: {
+            border: "1px solid #262626",
+            padding: "16px",
+            background: "#161616",
+            color: "#FFF",
+          },
+          iconTheme: {
+            primary: "#ef4444",
+            secondary: "#FFF",
+          },
+        });
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div
-      className={`relative w-full rounded-xl px-4 py-6 md:px-4 md:py-6 md:hover:-translate-y-6 md:ease-in-out md:transition-all md:duration-500 ${
+      className={`relative w-full rounded-xl h-full px-4 py-6 md:px-4 md:py-6 md:hover:-translate-y-6 md:ease-in-out md:transition-all md:duration-500 ${
         highlight
           ? "bg-gradient-to-b from-[#0245A6] to-[#0096FA] shadow-[0px_0px_8px_#0096FA]"
           : "border border-white/10 bg-[#161616]/50 backdrop-blur-sm group"
@@ -237,10 +312,11 @@ const PriceColumn = ({
       </div>
       {highlight ? (
         <Button
+          onClick={getPlan}
           variant="secondary"
-          className=" bg-white hover:scale-105 ease-in-out transition-all duration-200 mt-2 w-full text-black hover:text-black hover:bg-white/90 relative"
+          className=" bg-white mt-1.5 w-full text-black hover:text-black hover:bg-white/90 relative"
         >
-          {buttonText}
+          {loading ? <Loader2 className=" animate-spin" /> : buttonText}
         </Button>
       ) : secondaryButton ? (
         <Button
@@ -250,7 +326,11 @@ const PriceColumn = ({
           {buttonText}
         </Button>
       ) : (
-        <PrimaryButton>{buttonText}</PrimaryButton>
+        <div onClick={getPlan} className=" w-full h-fit">
+          <PrimaryButton>
+            {loading ? <Loader2 className=" animate-spin" /> : buttonText}
+          </PrimaryButton>
+        </div>
       )}
     </div>
   );

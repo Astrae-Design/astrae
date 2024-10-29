@@ -2,12 +2,13 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Gem, Settings, User2 } from "lucide-react";
 import Image from "next/image";
 import { ExtendedUser } from "../../../next-auth";
+import LogoutPopup from "./logout-popup";
 
 interface UserInfoProps {
   user?: ExtendedUser;
@@ -41,13 +42,21 @@ const AccountDropdown = ({ user }: UserInfoProps) => {
           </div>
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+      <DropdownMenuContent className=" ml-9">
+        <DropdownMenuItem>
+          <User2 className="mr-3" />
+          Account
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Gem className="mr-3" />
+          Manage Billing
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Settings className="mr-3" />
+          Settings
+        </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>Profile</DropdownMenuItem>
-        <DropdownMenuItem>Billing</DropdownMenuItem>
-        <DropdownMenuItem>Team</DropdownMenuItem>
-        <DropdownMenuItem>Subscription</DropdownMenuItem>
+        <LogoutPopup />
       </DropdownMenuContent>
     </DropdownMenu>
   );

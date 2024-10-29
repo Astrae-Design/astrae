@@ -8,8 +8,13 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useCurrentUser } from "@/hooks/use-current-user";
+import { ArrowUpRight } from "lucide-react";
+import { useCurrentRole } from "@/hooks/use-current-role";
 
 export const Header = () => {
+  const { user, isLoading } = useCurrentUser();
+  const { role, loadingRole } = useCurrentRole();
   const pathName = usePathname();
   return (
     <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-[2147483000]">
@@ -67,18 +72,34 @@ export const Header = () => {
                   <Cart />
                 </div>
 
-                <Link href="/welcome">
-                  <Button
-                    variant="secondary"
-                    className="hidden md:block bg-transparent hover:bg-transparent  "
+                {!user && !isLoading ? (
+                  <>
+                    <Link href="/welcome">
+                      <Button
+                        variant="secondary"
+                        className="hidden md:block bg-transparent hover:bg-transparent"
+                      >
+                        Login
+                      </Button>
+                    </Link>
+                    <Link className="w-fit" href="/pricing">
+                      <PrimaryButton>Get Unlimited Access</PrimaryButton>
+                    </Link>
+                  </>
+                ) : (
+                  <Link
+                    href={
+                      role === "ADMIN" && !loadingRole
+                        ? "/admin/dashboard"
+                        : "/dashboard"
+                    }
                   >
-                    Login
-                  </Button>
-                </Link>
+                    <PrimaryButton>
+                      Dashboard <ArrowUpRight className="ml-2" />
+                    </PrimaryButton>
+                  </Link>
+                )}
               </div>
-              <Link className=" w-fit" href="/pricing">
-                <PrimaryButton>Get Unlimited Access</PrimaryButton>
-              </Link>
             </div>
 
             <div className="md:hidden">
