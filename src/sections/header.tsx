@@ -40,7 +40,7 @@ export const Header = () => {
             <nav className=" flex gap-8 lg:-mr-14 items-center text-sm lg:text-base">
               <MarketplaceMenu />
               <Link
-                className="text-white/70 -ml-5 hover:text-white transition"
+                className="text-white/70 -ml-4 hover:text-white transition"
                 href="/pricing"
               >
                 Pricing
@@ -56,12 +56,6 @@ export const Header = () => {
                 href="/blog"
               >
                 Blog
-              </Link>
-              <Link
-                className="text-white/70 hover:text-white transition"
-                href="https://studioix.agency"
-              >
-                Studio IX
               </Link>
             </nav>
           </div>

@@ -40,12 +40,6 @@ export const Navigation = () => {
               >
                 My Products
               </Link>
-              <Link
-                className="text-white/70 hover:text-white transition"
-                href="https://studioix.agency"
-              >
-                Studio IX
-              </Link>
             </nav>
           </div>
 

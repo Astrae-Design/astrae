@@ -1,8 +1,7 @@
 "use client";
 
 import PrimaryButton from "@/components/common/primarybutton";
-import { Button } from "@/components/ui/button";
-import { ArrowUpRight } from "lucide-react";
+import { Zap } from "lucide-react";
 import Image from "next/image";
 
 import {
@@ -12,8 +11,8 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { RefObject, useEffect, useRef } from "react";
 import Link from "next/link";
+import { RefObject, useEffect, useRef } from "react";
 
 const useRelativeMousePosition = (to: RefObject<HTMLElement>) => {
   const mouseX = useMotionValue(0);
@@ -165,15 +164,12 @@ const CallToAction = () => {
             </div>
             <div className=" justify-center w-full inline-flex items-center gap-4 mt-4">
               <Link href="/pricing">
-                <div className=" w-fit">
-                  <PrimaryButton>Get Started Now</PrimaryButton>
+                <div className=" w-fit md:w-[240px]">
+                  <PrimaryButton>
+                    <Zap fill="white" color="none" className=" mr-2" /> Get
+                    Astrae Now
+                  </PrimaryButton>
                 </div>
-              </Link>
-              <Link href="https://studioix.agency">
-                <Button className=" h-11 bg-transparent" variant="secondary">
-                  Studio IX
-                  <ArrowUpRight className=" ml-3" />
-                </Button>
               </Link>
             </div>
           </div>

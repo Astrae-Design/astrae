@@ -44,7 +44,7 @@ const PricingCards = () => {
   }, []);
   return (
     <div className="w-full flex flex-col items-center container -mt-20">
-      <section className="mx-auto w-full md:max-w-7xl">
+      <section className="mx-auto w-full md:max-w-7xl pb-24">
         <div className=" w-full flex flex-col items-center mt-4">
           <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-4 items-start w-full h-full">
             <PriceColumn

@@ -58,7 +58,6 @@ const Footer = () => {
               <p>Marketplace</p>
               <p>Pricing</p>
               <p>Contact</p>
-              <p>Studio IX</p>
               <p>Blog</p>
             </div>
           </div>
