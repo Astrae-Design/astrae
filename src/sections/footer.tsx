@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div className="flex flex-col container py-20">
       <div className="w-full flex flex-col md:flex-row items-start md:justify-between">
-        <div className="flex flex-col items-start w-full">
+        <div className="flex flex-col items-start w-full md:w-fit">
           <div className="h-10 inline-flex gap-1.5 justify-center items-center">
             <div className="h-8 w-8 relative">
               <Image fill src="/assets/logo.svg" alt="Logo" />
@@ -25,7 +25,7 @@ const Footer = () => {
               )}
             </span>
           </div>
-          <p className="text-white text-sm lg:text-lg mt-2 mb-6">
+          <p className="text-white text-sm lg:text-lg mt-2 mb-6 lg:text-nowrap">
             Templates Beyond Ordinary
           </p>
           <Link href="/products">
@@ -60,6 +60,45 @@ const Footer = () => {
               <p>Contact</p>
               <p>Studio IX</p>
               <p>Blog</p>
+            </div>
+          </div>
+          <div className="flex flex-col items-start gap-4">
+            <h4 className=" font-semibold text-base lg:text-lg text-white">
+              By Makers Of Astrae
+            </h4>
+            <div className="flex flex-col items-start gap-2 text-sm lg:text-base font-normal text-white/70">
+              <Link
+                href="https://www.builtwithatlas.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" hover:text-white"
+              >
+                <p>Atlas Labs</p>
+              </Link>
+              <Link
+                href="https://usemidas.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" hover:text-white"
+              >
+                <p>Midas</p>
+              </Link>
+              <Link
+                href="https://stakenetwaitlist.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" hover:text-white"
+              >
+                <p>Stakenet</p>
+              </Link>
+              <Link
+                href="https://www.studioix.agency/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" hover:text-white"
+              >
+                <p>Studio IX</p>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col items-start gap-4">

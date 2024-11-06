@@ -10,9 +10,13 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
+import { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
+
 type PriceColumnProps = {
   highlight?: boolean;
   secondaryButton?: boolean;
+  bookCallButton?: boolean;
   title: string;
   productId?: string;
   price: string;
@@ -27,6 +31,17 @@ type CheckListItemType = {
 };
 
 const Pricing = () => {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "60mins" });
+      cal("ui", {
+        theme: "dark",
+        styles: { branding: { brandColor: "#0096FA" } },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
   return (
     <div className="w-full flex flex-col items-center container">
       <section className="mx-auto  w-full md:max-w-7xl py-24">
@@ -138,10 +153,10 @@ const Pricing = () => {
               ]}
             />
             <PriceColumn
+              bookCallButton
               buttonText="Book Call"
-              title="Custom"
+              title="Enterprise"
               price="Custom"
-              secondaryButton
               statement="Paid yearly"
               items={[
                 {
@@ -186,6 +201,7 @@ const PriceColumn = ({
   items,
   buttonText,
   secondaryButton,
+  bookCallButton,
 }: PriceColumnProps) => {
   const router = useRouter();
   const id = productId;
@@ -320,6 +336,16 @@ const PriceColumn = ({
         </Button>
       ) : secondaryButton ? (
         <Button
+          variant="secondary"
+          className=" bg-[#161616] hover:bg-[#161616]/80 w-full"
+        >
+          {buttonText}
+        </Button>
+      ) : bookCallButton ? (
+        <Button
+          data-cal-namespace="60mins"
+          data-cal-link="astrae/60mins"
+          data-cal-config='{"layout":"month_view","theme":"dark"}'
           variant="secondary"
           className=" bg-[#161616] hover:bg-[#161616]/80 w-full"
         >
