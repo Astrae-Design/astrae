@@ -95,7 +95,7 @@ const BlogDetailPage = async ({ params }: Params) => {
             alt={altText}
           />
         </div>
-        <div className="  prose prose-lg mx-auto text-justify max-w-4xl prose-mb-2 prose-code:bg-[#262626] prose-code:text-[#0096FA] prose-p:text-white/70 prose-p:font-normal prose-headings:text-white">
+        <div className="prose prose-lg mx-auto text-justify max-w-4xl prose-mb-2 prose-code:bg-[#262626] prose-code:text-[#0096FA] prose-p:text-white/70 prose-p:font-normal prose-li:text-white/70 prose-strong:text-white prose-headings:text-white">
           <PortableText
             value={post?.body}
             components={portableTextComponents}

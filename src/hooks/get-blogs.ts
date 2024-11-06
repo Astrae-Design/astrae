@@ -2,12 +2,12 @@ import { client } from "@/sanity/lib/client";
 
 export async function getPosts() {
   const query = `
-      *[_type == "post"] {
-      title,
-      slug,
-      mainImage,
-      publishedAt,
-      excerpt,
+      *[_type == "post"] | order(publishedAt desc) {
+        title,
+        slug,
+        mainImage,
+        publishedAt,
+        excerpt,
       }`;
   const data = await client.fetch(query);
   return data;
