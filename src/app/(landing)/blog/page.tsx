@@ -4,6 +4,9 @@ import AnimatedHero from "@/sections/animated-hero";
 import CallToAction from "@/sections/cta";
 import { Post } from "@/utils/Interface";
 import { Metadata } from "next";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 export const revalidate = 60;
 
@@ -48,8 +51,18 @@ export const metadata: Metadata = {
   icons: "/favicon.ico",
 };
 
-const Blogs = async () => {
+const Blogs = async ({ searchParams }: { searchParams: { page?: string } }) => {
+  const currentPage = Number(searchParams.page) || 1;
+  const postsPerPage = 3;
+
   const posts: Post[] = await getPosts();
+  const totalPages = Math.ceil(posts.length / postsPerPage);
+
+  const paginatedPosts = posts.slice(
+    (currentPage - 1) * postsPerPage,
+    currentPage * postsPerPage
+  );
+
   return (
     <section>
       <AnimatedHero
@@ -58,8 +71,30 @@ const Blogs = async () => {
       />
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
-          {posts?.length > 0 &&
-            posts?.map((post) => <BlogCard key={post?._id} post={post} />)}
+          {paginatedPosts?.length > 0 &&
+            paginatedPosts?.map((post) => (
+              <BlogCard key={post?._id} post={post} />
+            ))}
+        </div>
+
+        <div className="flex justify-center gap-2 mt-8 mb-12">
+          <Button
+            className={`${currentPage === 1 && "pointer-events-none opacity-50"}`}
+            asChild
+          >
+            <Link href={`/blog?page=${currentPage - 1}`}>
+              <ChevronLeft />
+            </Link>
+          </Button>
+
+          <Button
+            className={`${currentPage >= totalPages && "pointer-events-none opacity-50"}`}
+            asChild
+          >
+            <Link href={`/blog?page=${currentPage + 1}`}>
+              <ChevronRight />
+            </Link>
+          </Button>
         </div>
       </div>
       <CallToAction />

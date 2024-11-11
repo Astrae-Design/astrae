@@ -24,7 +24,7 @@ const AnimatedHero = ({
   );
 
   return (
-    <section className="-mt-28" ref={sectionRef}>
+    <section className="-mt-28 md:-mt-36" ref={sectionRef}>
       <div className=" ">
         <motion.div
           style={{

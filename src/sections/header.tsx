@@ -21,23 +21,25 @@ export const Header = () => {
       <div className=" absolute inset-0 backdrop-blur -z-10 md:hidden"></div>
       <div className="container">
         <div className="flex justify-between items-center md:border border-white/15 md:bg-black/80 md:backdrop-blur md:p-2.5 rounded-xl max-w-full mx-auto relative">
-          <Link className="h-8" href="/">
-            <div className="inline-flex gap-1.5 justify-center items-center">
-              <div className="h-8 w-8 relative">
-                <Image fill src="/assets/logo.svg" alt="Logo" />
+          <div className=" w-full flex items-center">
+            <Link className="h-8" href="/">
+              <div className="inline-flex gap-1.5 justify-center items-center">
+                <div className="h-8 w-8 relative">
+                  <Image fill src="/assets/logo.svg" alt="Logo" />
+                </div>
+                <span className=" text-white font-semibold text-base md:text-lg hidden md:block">
+                  Astrae{" "}
+                  {pathName.startsWith("/products") ? (
+                    <span className=" font-medium opacity-50">Marketplace</span>
+                  ) : (
+                    <></>
+                  )}
+                </span>
               </div>
-              <span className=" text-white font-semibold text-base md:text-lg hidden md:block">
-                Astrae{" "}
-                {pathName.startsWith("/products") ? (
-                  <span className=" font-medium opacity-50">Marketplace</span>
-                ) : (
-                  <></>
-                )}
-              </span>
-            </div>
-          </Link>
-          <div className="hidden lg:block">
-            <nav className=" flex gap-8 lg:-mr-14 items-center text-sm lg:text-base">
+            </Link>
+          </div>
+          <div className="hidden lg:block w-full">
+            <nav className=" flex gap-8 items-center justify-center text-sm lg:text-base w-fit">
               <MarketplaceMenu />
               <Link
                 className="text-white/70 -ml-4 hover:text-white transition"
@@ -59,7 +61,7 @@ export const Header = () => {
               </Link>
             </nav>
           </div>
-          <div className="flex gap-4 items-center">
+          <div className="flex gap-4 items-center justify-end w-full">
             <div className="flex items-center gap-2">
               <div className=" inline-flex items-center gap-3">
                 <div className=" hidden md:block">

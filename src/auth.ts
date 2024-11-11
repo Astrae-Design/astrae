@@ -1,11 +1,11 @@
-import NextAuth from "next-auth";
-import { UserRole } from "@prisma/client";
 import { PrismaAdapter } from "@auth/prisma-adapter";
+import { SubscriptionType, UserRole } from "@prisma/client";
+import NextAuth from "next-auth";
 
-import { getUserById } from "@/data/user";
 import authConfig from "@/auth.config";
-import { getTwoFactorConfirmationByUserId } from "./data/two-factor-confirmation";
 import { getAccountByUserId } from "@/data/account";
+import { getUserById } from "@/data/user";
+import { getTwoFactorConfirmationByUserId } from "./data/two-factor-confirmation";
 import { db } from "./lib/db";
 
 export const {
@@ -54,25 +54,37 @@ export const {
 
       return true;
     },
-
     async session({ token, session }) {
       if (token.sub && session.user) {
-        session.user.id = token.sub ?? "";
+        session.user.id = token.sub;
       }
 
       if (token.role && session.user) {
         session.user.role = token.role as UserRole;
       }
 
+      const userWithSubscriptions = await db.user.findUnique({
+        where: { id: token.sub },
+        include: {
+          Subscription: true,
+        },
+      });
+
       if (session.user) {
         session.user.name = token.name ?? session.user.name;
         session.user.email = token.email ?? session.user.email;
         session.user.isOAuth = token.isOAuth as boolean;
         session.user.isTwoFactorEnabled = token.isTwoFactorEnabled as boolean;
+        session.user.subscriptionType =
+          (token.subscriptionType as SubscriptionType) ??
+          session.user.subscriptionType;
+        session.user.subscription =
+          userWithSubscriptions?.Subscription?.[0] ?? null;
       }
 
       return session;
     },
+
     async jwt({ token }) {
       if (!token.sub) return token;
 
@@ -80,12 +92,12 @@ export const {
 
       if (!existingUser) return token;
 
-      const existingAccount = await getAccountByUserId(existingUser.id);
-
-      token.isOAuth = !!existingAccount;
+      token.isOAuth = !!(await getAccountByUserId(existingUser.id));
       token.name = existingUser.name ?? token.name;
       token.email = existingUser.email ?? token.email;
       token.role = existingUser.role;
+      token.subscriptionType =
+        existingUser.subscriptionType as SubscriptionType;
       token.isTwoFactorEnabled = existingUser.isTwoFactorEnabled;
 
       return token;

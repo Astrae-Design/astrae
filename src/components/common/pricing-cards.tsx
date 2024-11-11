@@ -223,7 +223,19 @@ const PriceColumn = ({
       } else {
         const callbackUrl = `/pricing`;
         router.push(`/login?callbackUrl=${encodeURIComponent(callbackUrl)}`);
-        toast.error("Please login first");
+        toast.error("Please login first!", {
+          style: {
+            border: "1px solid #262626",
+            zIndex: "214748300545 !important",
+            padding: "16px",
+            background: "#161616",
+            color: "#FFF",
+          },
+          iconTheme: {
+            primary: "#ef4444",
+            secondary: "#FFF",
+          },
+        });
       }
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -234,6 +246,7 @@ const PriceColumn = ({
           toast.error("Something went wrong!", {
             style: {
               border: "1px solid #262626",
+              zIndex: "214748300544 !important",
               padding: "16px",
               background: "#161616",
               color: "#FFF",
@@ -248,6 +261,7 @@ const PriceColumn = ({
         toast.error("Couldn't load lemonsqueezy checkout!", {
           style: {
             border: "1px solid #262626",
+            zIndex: "214748300544 !important",
             padding: "16px",
             background: "#161616",
             color: "#FFF",
@@ -264,7 +278,7 @@ const PriceColumn = ({
   };
   return (
     <div
-      className={`relative w-full rounded-xl h-full px-4 py-6 md:px-4 md:py-6 md:hover:-translate-y-6 md:ease-in-out md:transition-all md:duration-500 ${
+      className={`relative  w-full rounded-xl h-full px-4 py-6 md:px-4 md:py-6 md:hover:-translate-y-6 md:ease-in-out md:transition-all md:duration-500 ${
         highlight
           ? "bg-gradient-to-b from-[#0245A6] to-[#0096FA] shadow-[0px_0px_8px_#0096FA]"
           : "border border-white/10 bg-[#161616]/50 backdrop-blur-sm group"

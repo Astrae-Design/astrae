@@ -51,15 +51,15 @@ export const RegisterForm = () => {
 
   return (
     <CardWrapper
-      imgSrc={success || error ? "" : "/assets/logo.svg"}
-      headerTitle={success || error ? "" : "Create Account"}
+      imgSrc={success ? "" : "/assets/logo.svg"}
+      headerTitle={success ? "" : "Create Account"}
       backButtonHighlight="Login"
-      headerLabel={success || error ? "" : "Enter details for your new account"}
+      headerLabel={success ? "" : "Enter details for your new account"}
       backButtonLabel="Already have an account?"
       backButtonHref="/login"
-      showSocial={success || error ? false : true}
-      showHeader={success || error ? false : true}
-      showFooter={success || error ? false : true}
+      showSocial={success ? false : true}
+      showHeader={success ? false : true}
+      showFooter={success ? false : true}
     >
       <div>
         {!success ? (
