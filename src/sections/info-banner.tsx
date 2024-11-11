@@ -46,13 +46,12 @@ const InfoBanner = () => {
     localStorage.setItem("discountBanner", "Hide");
   };
 
-  const discountBanner = localStorage.getItem("discountBanner");
-
   useEffect(() => {
+    const discountBanner = localStorage.getItem("discountBanner");
     if (discountBanner === "Hide") {
       setIsVisible(false);
     }
-  }, [discountBanner]);
+  }, []);
 
   return (
     isVisible && (
