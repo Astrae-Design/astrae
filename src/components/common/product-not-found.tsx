@@ -53,7 +53,7 @@ const ProductNotFound = () => {
                   fill
                   quality={100}
                   className=" object-contain"
-                  src="/assets/not-found-img.png"
+                  src="/assets/not-found-img.webp"
                   alt="404 image"
                 />
               </div>

@@ -49,12 +49,11 @@ const ChatwootWidget = forwardRef<HTMLDivElement, unknown>(
             baseUrl: BASE_URL,
           } as ChatwootSDKSettings);
 
-          // Override z-index here
           const widgetBubble = document.querySelector(
             ".woot-widget-bubble"
           ) as HTMLElement;
           if (widgetBubble) {
-            widgetBubble.setAttribute("style", "z-index: 10 !important");
+            widgetBubble.setAttribute("style", "z-index: 1 !important");
           }
         };
       })(document, "script");

@@ -15,7 +15,7 @@ const AdminDashboard = async () => {
             <Image
               fill
               className=" object-contain"
-              src="/assets/not-found-img.png"
+              src="/assets/not-found-img.webp"
               alt="Empty cart"
               quality={100}
             />

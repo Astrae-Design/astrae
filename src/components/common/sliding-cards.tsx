@@ -6,55 +6,55 @@ import { useRef } from "react";
 
 const slider1 = [
   {
-    src: "13.jpg",
+    src: "13.webp",
   },
   {
-    src: "14.jpg",
+    src: "14.webp",
   },
   {
-    src: "3.jpg",
+    src: "3.webp",
   },
   {
-    src: "15.jpg",
+    src: "15.webp",
   },
   {
-    src: "5.jpg",
+    src: "5.webp",
   },
   {
-    src: "2.jpg",
+    src: "2.webp",
   },
   {
-    src: "1.jpg",
+    src: "1.webp",
   },
   {
-    src: "18.jpg",
+    src: "18.webp",
   },
 ];
 
 const slider2 = [
   {
-    src: "7.jpg",
+    src: "7.webp",
   },
   {
-    src: "8.jpg",
+    src: "8.webp",
   },
   {
-    src: "9.jpg",
+    src: "9.webp",
   },
   {
-    src: "10.jpg",
+    src: "10.webp",
   },
   {
-    src: "11.jpg",
+    src: "11.webp",
   },
   {
-    src: "12.jpg",
+    src: "12.webp",
   },
   {
-    src: "7.jpg",
+    src: "7.webp",
   },
   {
-    src: "8.jpg",
+    src: "8.webp",
   },
 ];
 

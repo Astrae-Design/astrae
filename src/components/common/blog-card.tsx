@@ -15,7 +15,7 @@ const BlogCard = ({ post }: Props) => {
   return (
     <Link className=" group" href={`/blog/${post?.slug?.current}`}>
       <div className=" w-full h-fit flex flex-col">
-        <div className=" w-full h-[16rem] relative overflow-clip rounded-xl">
+        <div className=" w-full h-[16rem] relative overflow-clip rounded-xl border border-white/10">
           <Image
             fill
             quality={100}

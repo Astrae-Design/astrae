@@ -19,6 +19,7 @@ const MobileNavigation = () => {
           animate={mobileNav ? "show" : "hide"}
           onClick={toggleMobileNav}
           className="flex flex-col space-y-1.5 relative z-[2147483006]"
+          aria-label={mobileNav ? "Close menu" : "Open menu"}
         >
           <motion.span
             variants={{
@@ -56,6 +57,7 @@ const MobileNavigation = () => {
             className="w-6 bg-white rounded-full h-[1.5px] block"
           ></motion.span>
         </motion.button>
+
         <AnimatePresence>
           {mobileNav && (
             <MotionConfig

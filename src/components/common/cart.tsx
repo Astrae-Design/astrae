@@ -28,13 +28,18 @@ export function Cart() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <div className="cursor-pointer group relative h-12 aspect-square flex items-center justify-center">
-          <ShoppingBag className="opacity-70  group-hover:opacity-100" />
+        <div
+          className="cursor-pointer group relative h-12 aspect-square flex items-center justify-center"
+          role="button"
+          aria-label="Shopping cart with items"
+        >
+          <ShoppingBag className="opacity-70 group-hover:opacity-100" />
           <span
             className={cn(
               "absolute top-[0.35rem] right-[0.35rem] rounded-full bg-[#0096FA] text-white flex items-center justify-center text-xs",
               `${cart.items.length <= 10 ? " h-4 aspect-square" : "h-4 w-5 px-0.5"}`
             )}
+            aria-live="polite"
           >
             {cart.items.length}
           </span>
@@ -52,7 +57,7 @@ export function Cart() {
                 <Image
                   fill
                   className=" object-contain"
-                  src="/assets/empty-cart.png"
+                  src="/assets/empty-cart.webp"
                   alt="Empty cart"
                   quality={100}
                 />

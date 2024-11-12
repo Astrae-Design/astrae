@@ -55,7 +55,7 @@ const InfoBanner = () => {
 
   return (
     isVisible && (
-      <div className="w-full bg-[#0245A6] hidden md:block group">
+      <div className="w-full bg-[#0245A6] hidden md:block group z-50">
         <div className="px-4 py-1.5 flex items-center justify-between">
           <div />
           <h4

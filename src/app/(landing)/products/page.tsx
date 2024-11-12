@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Astrae Design",
     description:
       "Explore Astrae Design's marketplace for beautifully crafted web templates. Find premium landing page templates built with React, Tailwind CSS, and Framer Motion.",
-    images: ["/assets/marketplace-thumbnail.png"],
+    images: ["/assets/marketplace-thumbnail.webp"],
     url: `${baseUrl}/marketplace`,
   },
   twitter: {
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Products | Astrae Design",
     description:
       "Discover Astrae Design's marketplace filled with high-quality web templates built with React, Tailwind CSS, and Framer Motion. Perfect for startups, agencies, and creatives.",
-    images: ["/assets/marketplace-thumbnail.png"],
+    images: ["/assets/marketplace-thumbnail.webp"],
     creator: "@astraedesign0",
   },
   icons: "/favicon.ico",

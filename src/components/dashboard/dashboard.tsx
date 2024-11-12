@@ -9,7 +9,7 @@ const UserDashboard = () => {
         <Image
           fill
           className=" object-contain"
-          src="/assets/empty-cart.png"
+          src="/assets/empty-cart.webp"
           alt="Empty cart"
           quality={100}
         />

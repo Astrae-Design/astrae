@@ -1,27 +1,27 @@
 export const galleryImages = [
-  "1.jpg",
+  "1.webp",
 
-  "2.jpg",
+  "2.webp",
 
-  "3.jpg",
+  "3.webp",
 
-  "4.jpg",
+  "4.webp",
 
-  "5.jpg",
+  "5.webp",
 
-  "6.jpg",
+  "6.webp",
 
-  "7.jpg",
+  "7.webp",
 
-  "8.jpg",
+  "8.webp",
 
-  "9.jpg",
+  "9.webp",
 
-  "10.jpg",
+  "10.webp",
 
-  "11.jpg",
+  "11.webp",
 
-  "12.jpg",
+  "12.webp",
 ];
 
 export const companyLogo = [

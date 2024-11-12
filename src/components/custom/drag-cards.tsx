@@ -22,7 +22,7 @@ const Cards = () => {
     <div className="absolute inset-0 z-10" ref={containerRef}>
       <Card
         containerRef={containerRef}
-        src="/assets/gallery/4.jpg"
+        src="/assets/gallery/4.webp"
         alt="Example image"
         rotate="6deg"
         top="20%"
@@ -31,7 +31,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="/assets/gallery/2.jpg"
+        src="/assets/gallery/2.webp"
         alt="Example image"
         rotate="12deg"
         top="45%"
@@ -40,7 +40,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="/assets/gallery/6.jpg"
+        src="/assets/gallery/6.webp"
         alt="Example image"
         rotate="-6deg"
         top="20%"
@@ -49,7 +49,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="/assets/gallery/8.jpg"
+        src="/assets/gallery/8.webp"
         alt="Example image"
         rotate="8deg"
         top="50%"
@@ -58,7 +58,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="/assets/gallery/11.jpg"
+        src="/assets/gallery/11.webp"
         alt="Example image"
         rotate="18deg"
         top="20%"
@@ -67,7 +67,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="/assets/gallery/10.jpg"
+        src="/assets/gallery/10.webp"
         alt="Example image"
         rotate="-3deg"
         top="35%"

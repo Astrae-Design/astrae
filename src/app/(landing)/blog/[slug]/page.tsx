@@ -86,7 +86,7 @@ const BlogDetailPage = async ({ params }: Params) => {
         description={new Date(post?.publishedAt).toDateString()}
       />
       <div className=" container -mt-6 md:-mt-12">
-        <div className=" w-full max-w-4xl mx-auto h-[18rem] md:h-[32rem] relative overflow-clip rounded-xl mb-14">
+        <div className=" border border-white/10 w-full max-w-4xl mx-auto h-[18rem] md:h-[32rem] relative overflow-clip rounded-xl mb-14">
           <Image
             fill
             quality={100}
@@ -95,7 +95,7 @@ const BlogDetailPage = async ({ params }: Params) => {
             alt={altText}
           />
         </div>
-        <div className="prose prose-lg mx-auto text-justify max-w-4xl prose-mb-2 prose-code:bg-[#262626] prose-code:text-[#0096FA] prose-p:text-white/70 prose-p:font-normal prose-li:text-white/70 prose-strong:text-white prose-headings:text-white">
+        <div className="prose prose-lg mx-auto text-justify max-w-4xl prose-mb-2 prose-a:text-[#0096FA] prose-blockquote:text-white/80 prose-lead:text-white prose-li:marker:text-white prose-ol:text-white prose-ul:text-white prose-code:bg-[#262626] prose-code:text-white prose-p:text-white/80 prose-p:font-normal prose-li:text-white prose-strong:text-white prose-headings:text-white">
           <PortableText
             value={post?.body}
             components={portableTextComponents}

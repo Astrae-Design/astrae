@@ -48,7 +48,7 @@ const FeatureOne = () => {
             <div className="w-[32rem] h-[32rem] relative mt-2">
               <Image
                 fill
-                src="/assets/gallery/6.jpg"
+                src="/assets/gallery/6.webp"
                 className=" object-top object-cover rounded-lg"
                 alt="Responsive"
               />
@@ -64,7 +64,7 @@ const FeatureOne = () => {
             <div className="w-[18rem] h-[32rem] relative mt-2">
               <Image
                 fill
-                src="/assets/gallery/6.jpg"
+                src="/assets/gallery/6.webp"
                 className=" object-top object-cover rounded-lg"
                 alt="Responsive"
               />
@@ -80,7 +80,7 @@ const FeatureOne = () => {
             <div className="w-[12rem] h-[32rem] relative mt-2">
               <Image
                 fill
-                src="/assets/gallery/6.jpg"
+                src="/assets/gallery/6.webp"
                 className=" object-top object-cover rounded-lg"
                 alt="Responsive"
               />
@@ -96,7 +96,7 @@ const FeatureOne = () => {
             <div className="w-[32rem] h-[32rem] relative mt-2">
               <Image
                 fill
-                src="/assets/gallery/6.jpg"
+                src="/assets/gallery/6.webp"
                 className=" object-top object-cover rounded-lg"
                 alt="Responsive"
               />
@@ -112,7 +112,7 @@ const FeatureOne = () => {
             <div className="w-[18rem] h-[32rem] relative mt-2">
               <Image
                 fill
-                src="/assets/gallery/6.jpg"
+                src="/assets/gallery/6.webp"
                 className=" object-top object-cover rounded-lg"
                 alt="Responsive"
               />
@@ -128,7 +128,7 @@ const FeatureOne = () => {
             <div className="w-[12rem] h-[32rem] relative mt-2">
               <Image
                 fill
-                src="/assets/gallery/6.jpg"
+                src="/assets/gallery/6.webp"
                 className=" object-top object-cover rounded-lg"
                 alt="Responsive"
               />
@@ -141,7 +141,7 @@ const FeatureOne = () => {
         <div className="w-full h-full relative">
           <Image
             fill
-            src="/assets/gallery/6.jpg"
+            src="/assets/gallery/6.webp"
             className=" object-top object-cover"
             alt="Responsive"
           />

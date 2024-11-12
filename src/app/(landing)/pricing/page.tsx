@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "Astrae Design",
     description:
       "Discover Astrae Design's pricing options for premium web templates built with React, Tailwind CSS, and Framer Motion. Perfect for startups and creative agencies.",
-    images: ["/assets/pricing-thumbnail.png"],
+    images: ["/assets/pricing-thumbnail.webp"],
     url: `${baseUrl}/pricing`,
   },
   twitter: {
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Pricing | Astrae Design",
     description:
       "Explore affordable pricing options for Astrae Design's high-quality web templates built with React, Tailwind CSS, and Framer Motion.",
-    images: ["/assets/pricing-thumbnail.png"],
+    images: ["/assets/pricing-thumbnail.webp"],
     creator: "@astraedesign0",
   },
   icons: "/favicon.ico",

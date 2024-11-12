@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Astrae Design",
     description:
       "Explore the Astrae Design showcase to see how our templates are being used in real-world projects. Be inspired by websites built with React, Next.js, Tailwind CSS, and Framer Motion.",
-    images: ["/assets/marketplace-thumbnail.png"],
+    images: ["/assets/marketplace-thumbnail.webp"],
     url: `${baseUrl}/showcase`,
   },
   twitter: {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Showcase | Astrae Design",
     description:
       "See real-world examples of stunning websites built using Astrae Design's templates. Explore projects created with React, Next.js, Tailwind CSS, and Framer Motion.",
-    images: ["/assets/marketplace-thumbnail.png"],
+    images: ["/assets/marketplace-thumbnail.webp"],
     creator: "@astraedesign0",
   },
   icons: "/favicon.ico",

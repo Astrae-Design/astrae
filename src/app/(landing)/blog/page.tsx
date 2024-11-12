@@ -1,11 +1,11 @@
 import BlogCard from "@/components/common/blog-card";
+import { Button } from "@/components/ui/button";
 import { getPosts } from "@/hooks/get-blogs";
 import AnimatedHero from "@/sections/animated-hero";
 import CallToAction from "@/sections/cta";
 import { Post } from "@/utils/Interface";
-import { Metadata } from "next";
-import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
 
 export const revalidate = 60;
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Astrae Design",
     description:
       "Stay up-to-date with the latest trends in web design and development. Explore blog posts covering topics like React, Next.js, Tailwind CSS, Framer Motion, and UI/UX design from Astrae Design experts.",
-    images: ["/assets/blog-thumbnail.png"],
+    images: ["/assets/blog-thumbnail.webp"],
     url: `${baseUrl}/blog`,
   },
   twitter: {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "Astrae Design Blog | Web Design & Development Insights",
     description:
       "Discover the latest web design trends, tutorials, and insights on Astrae Design's blog. From React and Next.js to Tailwind CSS and Framer Motion, we've got you covered.",
-    images: ["/assets/blog-thumbnail.png"],
+    images: ["/assets/blog-thumbnail.webp"],
     creator: "@astraedesign0",
   },
   icons: "/favicon.ico",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 
 const Blogs = async ({ searchParams }: { searchParams: { page?: string } }) => {
   const currentPage = Number(searchParams.page) || 1;
-  const postsPerPage = 3;
+  const postsPerPage = 6;
 
   const posts: Post[] = await getPosts();
   const totalPages = Math.ceil(posts.length / postsPerPage);
@@ -63,11 +63,16 @@ const Blogs = async ({ searchParams }: { searchParams: { page?: string } }) => {
     currentPage * postsPerPage
   );
 
+  const pageNumbers = Array.from(
+    { length: totalPages },
+    (_, index) => index + 1
+  );
+
   return (
     <section>
       <AnimatedHero
         title="News & Insights"
-        description="Discover our latests articles and news about industry, best practices and latest developments in React, Next.js, tailwindcss, shadcn and framer-motion."
+        description="Discover our latest articles and news about industry, best practices and latest developments in React, Next.js, Tailwind CSS, ShadCN and Framer Motion."
       />
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
@@ -79,6 +84,7 @@ const Blogs = async ({ searchParams }: { searchParams: { page?: string } }) => {
 
         <div className="flex justify-center gap-2 mt-8 mb-12">
           <Button
+            size="icon"
             className={`${currentPage === 1 && "pointer-events-none opacity-50"}`}
             asChild
           >
@@ -87,7 +93,23 @@ const Blogs = async ({ searchParams }: { searchParams: { page?: string } }) => {
             </Link>
           </Button>
 
+          {pageNumbers.map((number) => (
+            <Button
+              key={number}
+              size="icon"
+              className={`${
+                currentPage === number
+                  ? "bg-[#0096FA] hover:bg-[#0096FA]/90 text-white"
+                  : ""
+              }`}
+              asChild
+            >
+              <Link href={`/blog?page=${number}`}>{number}</Link>
+            </Button>
+          ))}
+
           <Button
+            size="icon"
             className={`${currentPage >= totalPages && "pointer-events-none opacity-50"}`}
             asChild
           >

@@ -21,7 +21,7 @@ export const Header = () => {
       <div className=" absolute inset-0 backdrop-blur -z-10 md:hidden"></div>
       <div className="container">
         <div className="flex justify-between items-center md:border border-white/15 md:bg-black/80 md:backdrop-blur md:p-2.5 rounded-xl max-w-full mx-auto relative">
-          <div className=" w-full flex items-center">
+          <div className=" w-fit md:w-full flex items-center">
             <Link className="h-8" href="/">
               <div className="inline-flex gap-1.5 justify-center items-center">
                 <div className="h-8 w-8 relative">
@@ -38,7 +38,7 @@ export const Header = () => {
               </div>
             </Link>
           </div>
-          <div className="hidden lg:block w-full">
+          <div className="hidden lg:block md:w-full">
             <nav className=" flex gap-8 items-center justify-center text-sm lg:text-base w-fit">
               <MarketplaceMenu />
               <Link

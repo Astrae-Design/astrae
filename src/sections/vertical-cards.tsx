@@ -79,105 +79,105 @@ const card = {
   one: [
     {
       id: 1,
-      img: "/assets/gallery/1.jpg",
+      img: "/assets/gallery/1.webp",
     },
     {
       id: 2,
-      img: "/assets/gallery/2.jpg",
+      img: "/assets/gallery/2.webp",
     },
     {
       id: 3,
-      img: "/assets/gallery/3.jpg",
+      img: "/assets/gallery/3.webp",
     },
     {
       id: 4,
-      img: "/assets/gallery/4.jpg",
+      img: "/assets/gallery/4.webp",
     },
     {
       id: 5,
-      img: "/assets/gallery/5.jpg",
+      img: "/assets/gallery/5.webp",
     },
     {
       id: 6,
-      img: "/assets/gallery/6.jpg",
+      img: "/assets/gallery/6.webp",
     },
   ],
   two: [
     {
       id: 1,
-      img: "/assets/gallery/16.jpg",
+      img: "/assets/gallery/16.webp",
     },
     {
       id: 2,
-      img: "/assets/gallery/11.jpg",
+      img: "/assets/gallery/11.webp",
     },
     {
       id: 3,
-      img: "/assets/gallery/10.jpg",
+      img: "/assets/gallery/10.webp",
     },
     {
       id: 4,
-      img: "/assets/gallery/13.jpg",
+      img: "/assets/gallery/13.webp",
     },
     {
       id: 5,
-      img: "/assets/gallery/8.jpg",
+      img: "/assets/gallery/8.webp",
     },
     {
       id: 6,
-      img: "/assets/gallery/7.jpg",
+      img: "/assets/gallery/7.webp",
     },
   ],
   three: [
     {
       id: 1,
-      img: "/assets/gallery/6.jpg",
+      img: "/assets/gallery/6.webp",
     },
     {
       id: 2,
-      img: "/assets/gallery/5.jpg",
+      img: "/assets/gallery/5.webp",
     },
     {
       id: 3,
-      img: "/assets/gallery/4.jpg",
+      img: "/assets/gallery/4.webp",
     },
     {
       id: 4,
-      img: "/assets/gallery/3.jpg",
+      img: "/assets/gallery/3.webp",
     },
     {
       id: 5,
-      img: "/assets/gallery/2.jpg",
+      img: "/assets/gallery/2.webp",
     },
     {
       id: 6,
-      img: "/assets/gallery/1.jpg",
+      img: "/assets/gallery/1.webp",
     },
   ],
   four: [
     {
       id: 1,
-      img: "/assets/gallery/9.jpg",
+      img: "/assets/gallery/9.webp",
     },
     {
       id: 2,
-      img: "/assets/gallery/14.jpg",
+      img: "/assets/gallery/14.webp",
     },
     {
       id: 3,
-      img: "/assets/gallery/15.jpg",
+      img: "/assets/gallery/15.webp",
     },
     {
       id: 4,
-      img: "/assets/gallery/12.jpg",
+      img: "/assets/gallery/12.webp",
     },
     {
       id: 5,
-      img: "/assets/gallery/17.jpg",
+      img: "/assets/gallery/17.webp",
     },
     {
       id: 6,
-      img: "/assets/gallery/19.jpg",
+      img: "/assets/gallery/19.webp",
     },
   ],
 };
