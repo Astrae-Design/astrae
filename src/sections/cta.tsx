@@ -1,7 +1,6 @@
 "use client";
 
 import PrimaryButton from "@/components/common/primarybutton";
-import { Zap } from "lucide-react";
 import Image from "next/image";
 
 import {
@@ -165,10 +164,7 @@ const CallToAction = () => {
             <div className=" justify-center w-full inline-flex items-center gap-4 mt-4">
               <Link href="/pricing">
                 <div className=" w-fit md:w-[240px]">
-                  <PrimaryButton>
-                    <Zap fill="white" color="none" className=" mr-2" /> Get
-                    Astrae Now
-                  </PrimaryButton>
+                  <PrimaryButton>Get Astrae Now</PrimaryButton>
                 </div>
               </Link>
             </div>

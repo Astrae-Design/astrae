@@ -30,23 +30,31 @@ const GalleryShowcase: React.FC = () => {
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
 
   useEffect(() => {
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: "vertical",
+      gestureOrientation: "vertical",
+      touchMultiplier: 2,
+    });
 
-    const raf = (time: number) => {
+    function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
-    };
+    }
+
+    requestAnimationFrame(raf);
 
     const resize = () => {
       setDimension({ width: window.innerWidth, height: window.innerHeight });
     };
 
     window.addEventListener("resize", resize);
-    requestAnimationFrame(raf);
     resize();
 
     return () => {
       window.removeEventListener("resize", resize);
+      lenis.destroy();
     };
   }, []);
 

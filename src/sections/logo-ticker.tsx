@@ -17,19 +17,19 @@ const LogoTicker = () => {
               animate={{ translateX: "0%" }}
               transition={{
                 repeat: Infinity,
-                duration: 30,
+                duration: 45,
                 ease: "linear",
               }}
-              className=" flex flex-none gap-0 md:gap-14 -translate-x-1/2"
+              className="flex flex-none gap-8 md:gap-14 -translate-x-1/2"
             >
               {companyLogo.map((logo, idx) => (
                 <Image
-                  width={170}
+                  width={120}
                   height={1}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   src={`/assets/company/${logo}`}
                   alt="Company logo"
-                  className="object-contain scale-75 md:scale-100"
+                  className="object-contain"
                   key={idx}
                 />
               ))}
