@@ -52,7 +52,7 @@ const CardList = ({
               quality={30}
               fill
               src={t.img}
-              alt="Profile"
+              alt="Template preview"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
@@ -67,39 +67,39 @@ const showcaseItems = {
   top: [
     {
       id: 1,
-      img: "/assets/gallery/1.jpg",
+      img: "/assets/gallery/1.webp",
     },
     {
       id: 2,
-      img: "/assets/gallery/2.jpg",
+      img: "/assets/gallery/2.webp",
     },
 
     {
       id: 3,
-      img: "/assets/gallery/3.jpg",
+      img: "/assets/gallery/3.webp",
     },
     {
       id: 4,
-      img: "/assets/gallery/4.jpg",
+      img: "/assets/gallery/4.webp",
     },
   ],
 
   bottom: [
     {
       id: 1,
-      img: "/assets/gallery/5.jpg",
+      img: "/assets/gallery/5.webp",
     },
     {
       id: 2,
-      img: "/assets/gallery/6.jpg",
+      img: "/assets/gallery/6.webp",
     },
     {
       id: 3,
-      img: "/assets/gallery/7.jpg",
+      img: "/assets/gallery/7.webp",
     },
     {
       id: 4,
-      img: "/assets/gallery/8.jpg",
+      img: "/assets/gallery/8.webp",
     },
   ],
 };
