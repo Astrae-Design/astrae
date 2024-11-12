@@ -62,7 +62,7 @@ const GalleryShowcase: React.FC = () => {
     <main>
       <div className="spacer"></div>
       <div className=" relative">
-        <div className="gallery -ml-8 md:-ml-12" ref={gallery}>
+        <div className="gallery" ref={gallery}>
           <Column
             galleryImages={[
               galleryImages[0],
@@ -99,7 +99,6 @@ const GalleryShowcase: React.FC = () => {
             y={y4}
           />
         </div>
-        
       </div>
     </main>
   );
