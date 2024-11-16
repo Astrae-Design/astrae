@@ -9,7 +9,6 @@ import Hero from "@/sections/hero";
 import LogoTicker from "@/sections/logo-ticker";
 import Pricing from "@/sections/pricing";
 import Reviews from "@/sections/reviews";
-import Value from "@/sections/value";
 
 const Home = () => {
   return (
