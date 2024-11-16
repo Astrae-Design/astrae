@@ -14,6 +14,7 @@ const Column: React.FC<ColumnProps> = ({ galleryImages, y }) => {
           <div key={i} className="imageContainer">
             <Image
               fill
+              quality={50}
               priority={true}
               src={`/assets/gallery/${src}`}
               alt="Astrae gallery"

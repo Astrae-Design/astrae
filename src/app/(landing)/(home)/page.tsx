@@ -12,12 +12,11 @@ import Reviews from "@/sections/reviews";
 
 const Home = () => {
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full">
       <ChatWidget />
       <Hero />
       <LogoTicker />
       <GalleryShowcase />
-      {/* <Value /> */}
       <Features />
       <Pricing />
       <FaqCentral />

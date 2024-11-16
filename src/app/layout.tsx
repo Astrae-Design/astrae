@@ -66,7 +66,7 @@ export default function RootLayout({
     <SessionProvider>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased text-white bg-black select-none`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased text-white bg-black select-none overflow-x-hidden`}
         >
           <ToastProvider />
           {children}

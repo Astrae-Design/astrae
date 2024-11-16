@@ -93,7 +93,7 @@ const MobileNavigation = () => {
                 exit="hide"
                 className="fixed top-0 inset-0 bg-[#000] px-[8px] flex flex-col justify-center "
               >
-                <a className="h-8 absolute top-5 container" href="/">
+                <a className="h-8 absolute top-5 container w-fit" href="/">
                   <div className="inline-flex gap-1.5 justify-center items-center">
                     <div className="h-8 w-8 relative">
                       <Image fill src="/assets/logo.svg" alt="Logo" />
@@ -116,6 +116,11 @@ const MobileNavigation = () => {
                   }}
                   className="list-none space-y-6 container"
                 >
+                  <li>
+                    <a href="/" className="text-4xl font-medium text-white">
+                      Home
+                    </a>
+                  </li>
                   <li>
                     <a
                       href="/products"
@@ -143,14 +148,6 @@ const MobileNavigation = () => {
                   <li>
                     <a href="/blog" className="text-4xl font-medium text-white">
                       Blog
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://studioix.agency"
-                      className="text-4xl font-medium text-white"
-                    >
-                      Studio IX
                     </a>
                   </li>
                 </motion.ul>
