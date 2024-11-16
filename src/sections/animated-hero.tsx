@@ -50,11 +50,11 @@ const AnimatedHero = ({
           ></div>
 
           <div className=" relative mt-28">
-            <h2 className=" text-5xl md:text-6xl lg:text-7xl px-4 md:px-0 md:max-w-4xl mx-auto tracking-tighter text-center font-semibold text-white">
+            <h2 className="text-5xl lg:text-6xl px-4 md:px-0 md:max-w-2xl mx-auto tracking-tighter text-center font-semibold text-white">
               {title}
             </h2>
-            <div className=" flex justify-center mt-4">
-              <p className=" text-center text-lg md:text-xl md:max-w-2xl mx-auto tracking-tight text-white/70 px-12 md:px-0">
+            <div className=" flex justify-center mt-2">
+              <p className=" text-center text-sm md:text-base md:max-w-xl mx-auto tracking-tight text-white/70 px-12 md:px-0">
                 {description}
               </p>
             </div>

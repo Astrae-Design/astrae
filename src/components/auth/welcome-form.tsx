@@ -21,7 +21,7 @@ export const WelcomeForm = () => {
       <div className=" w-full mt-4 mb-4">
         <div className=" w-full flex items-center justify-center mb-4">
           <Separator className=" w-1/3 opacity-15" orientation="horizontal" />
-          <p className=" text-white text-sm opacity-70 mx-4">OR</p>
+          <p className=" text-white text-xs opacity-70 mx-4">OR</p>
           <Separator className=" w-1/3 opacity-15" orientation="horizontal" />
         </div>
         <Link href="/login">

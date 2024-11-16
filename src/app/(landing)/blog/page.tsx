@@ -74,7 +74,7 @@ const Blogs = async ({ searchParams }: { searchParams: { page?: string } }) => {
         title="News & Insights"
         description="Discover our latest articles and news about industry, best practices and latest developments in React, Next.js, Tailwind CSS, ShadCN and Framer Motion."
       />
-      <div className="container">
+      <div className="container md:-mt-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
           {paginatedPosts?.length > 0 &&
             paginatedPosts?.map((post) => (

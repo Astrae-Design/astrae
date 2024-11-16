@@ -65,8 +65,8 @@ const SlidingProjects = () => {
     offset: ["start end", "end start"],
   });
 
-  const x1 = useTransform(scrollYProgress, [0, 1], [0, 500]);
-  const x2 = useTransform(scrollYProgress, [0, 1], [0, -500]);
+  const x1 = useTransform(scrollYProgress, [0, 1], [0, 250]);
+  const x2 = useTransform(scrollYProgress, [0, 1], [0, -250]);
 
   return (
     <div

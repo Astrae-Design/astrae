@@ -7,16 +7,16 @@ const Reviews = () => {
   return (
     <div className="bg-black py-12">
       <div className="mb-8 px-4">
-        <h2 className="font-semibold text-5xl lg:text-6xl text-white text-center">
+        <h2 className="font-semibold text-5xl tracking-tighter text-white text-center">
           People love using Astrae
         </h2>
-        <p className=" text-base md:text-lg text-white/70 mt-2 md:mt-2 text-center max-w-xl mx-auto">
+        <p className=" text-sm text-white/70 mt-2 md:mt-2 text-center max-w-xs mx-auto">
           Thousands before you have successfully launched websites quickly using
           Astrae and loved it.
         </p>
       </div>
       <div className="p-4 overflow-x-hidden relative">
-        <div className="absolute top-0 bottom-0 left-0 w-28 md:w-40 z-[1] bg-gradient-to-r from-black to-transparent" />
+        <div className="absolute top-0 bottom-0 left-0 w-28 md:w-40 z-10 bg-gradient-to-r from-black to-transparent" />
 
         <div className="flex items-center mb-4">
           <TestimonialList list={testimonials.top} duration={125} />
@@ -34,7 +34,7 @@ const Reviews = () => {
           <TestimonialList list={testimonials.bottom} duration={275} />
         </div>
 
-        <div className="absolute top-0 bottom-0 right-0 w-28 md:w-40 z-[1] bg-gradient-to-l from-black to-transparent" />
+        <div className="absolute top-0 bottom-0 right-0 w-28 md:w-40 z-10 bg-gradient-to-l from-black to-transparent" />
       </div>
     </div>
   );
@@ -63,7 +63,7 @@ const TestimonialList = ({
             className="shrink-0 w-[400px] flex flex-col rounded-lg overflow-hidden relative border border-white/15"
           >
             <div className=" bg-[#161616]/80 backdrop-blur-md h-full flex flex-col justify-between p-4">
-              <span className="block text-lg text-white/70">{t.info}</span>
+              <span className="block text-base text-white/70">{t.info}</span>
               <div className="flex items-center gap-4 mt-4">
                 <div className=" w-12 aspect-square h-12 relative">
                   <Image
@@ -75,7 +75,7 @@ const TestimonialList = ({
                   />
                 </div>
                 <div>
-                  <span className="block font-semibold text-lg text-white">
+                  <span className="block font-medium text-lg text-white">
                     {t.name}
                   </span>
                   <span className="block text-white/70 text-sm font-medium">

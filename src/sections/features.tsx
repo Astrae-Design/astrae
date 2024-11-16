@@ -16,10 +16,10 @@ const Features = () => {
       </div>
       <div>
         <div className=" flex flex-col items-center w-full mt-32">
-          <h2 className="font-semibold text-4xl lg:text-5xl text-white text-center">
+          <h2 className="font-semibold text-4xl tracking-tighter text-white text-center">
             What you will get
           </h2>
-          <p className=" text-base md:text-lg text-white/70 mt-2 md:mt-2 text-center w-full md:max-w-xl mx-auto">
+          <p className=" text-sm text-white/70 mt-2 md:mt-2 text-center w-full md:max-w-xl mx-auto">
             We don&apos;t just give you templates, you get access to all assets,
             Figma file and source code.
           </p>
@@ -36,10 +36,10 @@ const Features = () => {
               />
             </div>
             <div className="flex flex-col items-start gap-0">
-              <h4 className=" text-xl md:text-2xl text-white tracking-tighter font-medium">
+              <h4 className=" text-xl text-white tracking-tighter font-medium">
                 Source Code
               </h4>
-              <p className=" text-base text-white/70">
+              <p className=" text-sm text-white/70">
                 Clean, modular code for easy customization and seamless
                 integration.
               </p>
@@ -56,10 +56,10 @@ const Features = () => {
               />
             </div>
             <div className="flex flex-col items-start gap-0">
-              <h4 className=" text-xl md:text-2xl text-white tracking-tighter font-medium">
+              <h4 className=" text-xl text-white tracking-tighter font-medium">
                 Figma File
               </h4>
-              <p className=" text-base text-white/70">
+              <p className=" text-sm text-white/70">
                 Fully customizable Figma designs, including all variants and
                 components.
               </p>
@@ -76,10 +76,10 @@ const Features = () => {
               />
             </div>
             <div className="flex flex-col items-start gap-0">
-              <h4 className=" text-xl md:text-2xl text-white tracking-tighter font-medium">
+              <h4 className=" text-xl text-white tracking-tighter font-medium">
                 Documentation
               </h4>
-              <p className=" text-base text-white/70">
+              <p className=" text-sm text-white/70">
                 Step-by-step guides to help you get started quickly and
                 effortlessly.
               </p>

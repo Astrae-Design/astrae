@@ -6,16 +6,16 @@ import { RadialChartMobile } from "./radial-chart-mobile";
 
 const FeatureTwo = () => {
   return (
-    <div className="w-full h-fit md:h-[40rem] pb-4 md:pb-8 group border border-white/15 bg-gradient-to-b from-black to-[#002A1A]/70 rounded-2xl relative overflow-hidden">
-      <div className=" hidden group-hover:block rounded-2xl">
+    <div className="w-full h-fit md:h-[40rem] pb-4 md:pb-8 group border border-white/15 bg-gradient-to-b from-black to-[#002A1A]/70 rounded-xl relative overflow-hidden">
+      <div className=" hidden group-hover:block rounded-xl">
         <BorderBeam colorFrom="#06E18D" colorTo="#00FF9D" />
       </div>
       <div className=" h-full flex flex-col justify-between">
         <div className="flex flex-col items-start pt-4 md:pt-8">
-          <h4 className=" text-2xl md:text-3xl px-4 md:px-8 text-white font-semibold">
+          <h4 className=" text-xl md:text-2xl px-4 md:px-8 text-white font-semibold">
             SEO Optimized
           </h4>
-          <p className=" text-white/70 w-[84vw] md:w-[34rem] pl-4 md:pl-8 font-normal text-base mt-2">
+          <p className=" text-white/70 w-[84vw] md:w-[33rem] pl-4 md:pl-8 font-normal text-sm mt-2">
             We prioritize high search engine rankings with SEO-friendly code and
             structure. Our templates are meticulously crafted to give your
             website the visibility it deserves on Google and other search
@@ -26,7 +26,7 @@ const FeatureTwo = () => {
             className=" hover:no-underline no-underline text-white w-fit px-4 md:px-8"
           >
             Explore marketplace
-            <ChevronRight className=" ml-0" />
+            <ChevronRight className="h-4 w-4 ml-1" />
           </Button>
         </div>
 

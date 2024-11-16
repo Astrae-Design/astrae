@@ -140,7 +140,7 @@ const Hero = () => {
           <div className="w-full flex items-center justify-center mb-8 md:-mt-4">
             <div className=" relative inline-flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-0  focus:ring-offset-0 group">
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0096FA_0%,#0245A6_50%,#0096FA_100%)]" />
-              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#000B1A] pl-4 pr-2.5  text-base font-archivo font-medium text-white backdrop-blur-3xl">
+              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#000B1A] pl-4 pr-2.5  text-sm font-archivo font-medium text-white backdrop-blur-3xl">
                 <span className="inline-flex items-center">
                   ✨ 100+ templates available <ChevronRight className=" ml-3" />
                 </span>
@@ -149,10 +149,10 @@ const Hero = () => {
           </div>
         </Link>
 
-        <h1 className=" -mt-4 md:-mt-0 text-5xl md:text-6xl lg:text-8xl md:leading-none font-semibold tracking-tighter text-transparent bg-clip-text text-center bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(2,69,166,.5))]">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl lg:max-w-[20ch] lg:mx-auto md:leading-none font-semibold tracking-tighter text-transparent bg-clip-text text-center bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(2,69,166,.5))]">
           Beautifully Crafted React Templates for Stunning Websites
         </h1>
-        <p className=" text-base md:text-xl text-white/70 mt-2 md:mt-2 text-center max-w-2xl mx-auto">
+        <p className=" text-sm md:text-base text-white/70 mt-2 md:mt-2 text-center max-w-2xl mx-auto">
           Build class leading websites with speed. Access an ever-growing
           collection of premium, meticulously crafted templates. Save time and
           focus on what matters — building standout websites that captivate your

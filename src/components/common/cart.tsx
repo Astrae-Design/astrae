@@ -33,11 +33,11 @@ export function Cart() {
           role="button"
           aria-label="Shopping cart with items"
         >
-          <ShoppingBag className="opacity-70 group-hover:opacity-100" />
+          <ShoppingBag className="opacity-70 group-hover:opacity-100 h-5 w-5" />
           <span
             className={cn(
-              "absolute top-[0.35rem] right-[0.35rem] rounded-full bg-[#0096FA] text-white flex items-center justify-center text-xs",
-              `${cart.items.length <= 10 ? " h-4 aspect-square" : "h-4 w-5 px-0.5"}`
+              "absolute top-[0.35rem] right-[0.35rem] rounded-full bg-[#0096FA] text-white flex items-center justify-center text-[10px]",
+              `${cart.items.length <= 10 ? " h-4 w-4 aspect-square" : "h-4 w-4"}`
             )}
             aria-live="polite"
           >

@@ -9,7 +9,9 @@ const LogoTicker = () => {
       <div className=" container">
         <div className="flex items-center gap-5">
           <div className=" flex-1 md:flex-none">
-            <h2 className=" text-white">Trusted by top innovated teams</h2>
+            <h2 className=" text-white text-sm">
+              Trusted by top innovated teams
+            </h2>
           </div>
           <div className="flex flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
             <motion.div
@@ -20,7 +22,7 @@ const LogoTicker = () => {
                 duration: 30,
                 ease: "linear",
               }}
-              className=" flex flex-none gap-0 md:gap-14 -translate-x-1/2"
+              className=" flex flex-none gap-0 md:gap-6 -translate-x-1/2"
             >
               {companyLogo.map((logo, idx) => (
                 <Image
@@ -29,7 +31,7 @@ const LogoTicker = () => {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   src={`/assets/company/${logo}`}
                   alt="Company logo"
-                  className="object-contain scale-75 md:scale-100"
+                  className="object-contain scale-75 md:scale-75"
                   key={idx}
                 />
               ))}

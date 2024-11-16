@@ -14,8 +14,7 @@ enum UserRole {
 
 enum SubscriptionType {
   FREE
-  BASIC
-  ADVANCE
+  PRO
 }
 
 model User {
@@ -145,13 +144,4 @@ model Subscription {
   customerId         Int?
 
   @@index([lemonSqueezyId])
-}
-
-model WebhookEvent {
-  id              Int      @id @default(autoincrement())
-  createdAt       DateTime @default(now())
-  eventName       String
-  processed       Boolean  @default(false)
-  body            Json
-  processingError String?
 }

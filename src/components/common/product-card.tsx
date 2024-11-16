@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import useCart from "@/hooks/use-cart";
 import { Product } from "@/types";
@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { MouseEventHandler } from "react";
 import ProductPreview from "./product-preview";
+import { useCurrentUser } from "@/hooks/use-current-user";
 
 interface ProductCard {
   data: Product;
@@ -20,6 +21,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
 
     cart.addItem(data);
   };
+
   return (
     <div className=" w-full group flex flex-col h-fit relative">
       <div
@@ -40,6 +42,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
       </div>
       <Link href={`/products/${data.id}`}>
         <h3 className=" text-white text-2xl mt-2">{data?.title}</h3>
+
         <p className=" text-xl text-white/70 group-hover:text-white transition-all ease-in-out duration-300 line-clamp-4">
           {data?.price}
         </p>

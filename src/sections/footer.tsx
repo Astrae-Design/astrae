@@ -11,9 +11,9 @@ const Footer = () => {
   return (
     <div className="flex flex-col container py-20">
       <div className="w-full flex flex-col md:flex-row items-start md:justify-between">
-        <div className="flex flex-col items-start w-full md:w-fit">
+        <div className="flex flex-col items-start w-1/2">
           <div className="h-10 inline-flex gap-1.5 justify-center items-center">
-            <div className="h-8 w-8 relative">
+            <div className="h-7 w-7 relative">
               <Image fill src="/assets/logo.svg" alt="Logo" />
             </div>
             <span className=" text-white font-semibold text-base md:text-lg hidden md:block">
@@ -25,7 +25,7 @@ const Footer = () => {
               )}
             </span>
           </div>
-          <p className="text-white text-sm lg:text-lg mt-2 mb-6 lg:text-nowrap">
+          <p className="text-white/70 text-sm mt-2 mb-6 lg:text-nowrap">
             Templates Beyond Ordinary
           </p>
           <Link href="/products">
@@ -35,12 +35,10 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div className="w-full flex flex-wrap items-start md:justify-end gap-12 md:gap-28 mt-12 md:mt-0">
-          <div className="flex flex-col items-start gap-4">
-            <h4 className=" font-semibold text-base lg:text-lg text-white">
-              Templates
-            </h4>
-            <div className="flex flex-col items-start gap-2 text-sm lg:text-base font-normal text-white/70">
+        <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-12 md:gap-x-28 mt-12 md:mt-0">
+          <div className="flex flex-col items-start gap-2">
+            <h4 className=" font-medium text-base text-white">Templates</h4>
+            <div className="flex flex-col items-start gap-2 text-sm font-normal text-white/70">
               <p>Startup Landing Page</p>
               <p>SAAS Landing Page</p>
               <p>SAAS Wailtlist</p>
@@ -49,11 +47,9 @@ const Footer = () => {
               <p>Dev Portfolio</p>
             </div>
           </div>
-          <div className="flex flex-col items-start gap-4">
-            <h4 className=" font-semibold text-base lg:text-lg text-white">
-              Pages
-            </h4>
-            <div className="flex flex-col items-start gap-2 text-sm lg:text-base font-normal text-white/70">
+          <div className="flex flex-col items-start gap-2">
+            <h4 className=" font-medium text-base text-white">Navigate</h4>
+            <div className="flex flex-col items-start gap-2 text-sm font-normal text-white/70">
               <p>Home</p>
               <p>Marketplace</p>
               <p>Pricing</p>
@@ -61,11 +57,11 @@ const Footer = () => {
               <p>Blog</p>
             </div>
           </div>
-          <div className="flex flex-col items-start gap-4">
-            <h4 className=" font-semibold text-base lg:text-lg text-white">
+          <div className="flex flex-col items-start gap-2">
+            <h4 className=" font-medium text-base text-white">
               By Makers Of Astrae
             </h4>
-            <div className="flex flex-col items-start gap-2 text-sm lg:text-base font-normal text-white/70">
+            <div className="flex flex-col items-start gap-2 text-sm font-normal text-white/70">
               <Link
                 href="https://www.builtwithatlas.com/"
                 target="_blank"
@@ -100,11 +96,9 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="flex flex-col items-start gap-4">
-            <h4 className=" font-semibold text-base lg:text-lg text-white">
-              Legals
-            </h4>
-            <div className="flex flex-col items-start gap-2 text-sm lg:text-base font-normal text-white/70">
+          <div className="flex flex-col items-start gap-2">
+            <h4 className=" font-medium text-base text-white">Legals</h4>
+            <div className="flex flex-col items-start gap-2 text-sm font-normal text-white/70">
               <Link href="/legals/license" className=" hover:text-white">
                 <p>License</p>
               </Link>
@@ -117,43 +111,39 @@ const Footer = () => {
               <Link href="/legals/terms" className=" hover:text-white">
                 <p>Terms & Conditions</p>
               </Link>
-              <div className=" inline-flex items-center mt-2 gap-4">
-                <Link href="https://x.com/astraedesign0">
-                  <div className="relative h-6 w-6 cursor-pointer opacity-70 hover:opacity-100 transition-all ease-in-out duration-300">
-                    <Image
-                      fill
-                      src="/assets/icons/icon-x.svg"
-                      alt="Twitter/X"
-                    />
-                  </div>
-                </Link>
+            </div>
+          </div>
+          <div className="flex flex-col items-start gap-2">
+            <h4 className=" font-medium text-base text-white">Socials</h4>
 
-                <Link href="">
-                  <div className="relative h-7 w-7 cursor-pointer opacity-70 hover:opacity-100 transition-all ease-in-out duration-300">
-                    <Image fill src="/assets/icons/icon-yt.svg" alt="YouTube" />
-                  </div>
-                </Link>
+            <div className=" inline-flex items-center mt-2 gap-4">
+              <Link href="https://x.com/astraedesign0">
+                <div className="relative h-6 w-6 cursor-pointer opacity-70 hover:opacity-100 transition-all ease-in-out duration-300">
+                  <Image fill src="/assets/icons/icon-x.svg" alt="Twitter/X" />
+                </div>
+              </Link>
 
-                <Link href="https://instagram.com/astraedesign0">
-                  <div className="relative h-6 w-6 cursor-pointer opacity-70 hover:opacity-100 transition-all ease-in-out duration-300">
-                    <Image
-                      fill
-                      src="/assets/icons/icon-ig.svg"
-                      alt="Instagram"
-                    />
-                  </div>
-                </Link>
+              <Link href="">
+                <div className="relative h-7 w-7 cursor-pointer opacity-70 hover:opacity-100 transition-all ease-in-out duration-300">
+                  <Image fill src="/assets/icons/icon-yt.svg" alt="YouTube" />
+                </div>
+              </Link>
 
-                <Link href="">
-                  <div className="relative h-6 w-6 cursor-pointer opacity-70 hover:opacity-100 transition-all ease-in-out duration-300">
-                    <Image
-                      fill
-                      src="/assets/icons/icon-discord.svg"
-                      alt="Discord"
-                    />
-                  </div>
-                </Link>
-              </div>
+              <Link href="https://instagram.com/astraedesign0">
+                <div className="relative h-6 w-6 cursor-pointer opacity-70 hover:opacity-100 transition-all ease-in-out duration-300">
+                  <Image fill src="/assets/icons/icon-ig.svg" alt="Instagram" />
+                </div>
+              </Link>
+
+              <Link href="">
+                <div className="relative h-6 w-6 cursor-pointer opacity-70 hover:opacity-100 transition-all ease-in-out duration-300">
+                  <Image
+                    fill
+                    src="/assets/icons/icon-discord.svg"
+                    alt="Discord"
+                  />
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -162,7 +152,7 @@ const Footer = () => {
         orientation="horizontal"
         className=" w-full opacity-20 mb-8 mt-12"
       />
-      <p className=" text-white/70 text-sm lg:text-base">
+      <p className=" text-white/70 text-sm w-full text-center">
         © 2024 Astrae Design. All Rights Reserved.
       </p>
     </div>

@@ -22,6 +22,7 @@ import { PasswordInput } from "../ui/password-input";
 import { Separator } from "../ui/separator";
 import { FormError } from "./form-error";
 import { FormSuccess } from "./form-success";
+import PrimaryButton from "../common/primarybutton";
 
 export const RegisterForm = () => {
   const [error, setError] = useState<string | undefined>("");
@@ -133,7 +134,7 @@ export const RegisterForm = () => {
               <button
                 type="submit"
                 disabled={isPending}
-                className="relative w-full h-10 inline-flex items-center justify-center hover:scale-105 ease-in-out transition-all duration-200 px-3 md:px-4 rounded-lg font-medium text-white text-sm md:text-base bg-gradient-to-b from-[#0245A6] to-[#0096FA] shadow-[0px_0px_12px_#0096FA]"
+                className="relative w-full h-10 inline-flex items-center justify-center hover:scale-105 ease-in-out transition-all duration-200 px-3 md:px-4 rounded-lg font-medium text-white text-sm bg-gradient-to-b from-[#0245A6] to-[#0096FA] shadow-[0px_0px_12px_#0096FA]"
               >
                 <div className=" absolute inset-0">
                   <div className=" rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
@@ -155,16 +156,15 @@ export const RegisterForm = () => {
             <h3 className="text-2xl mt-6 tracking-tighter font-semibold text-white">
               Check your inbox
             </h3>
-            <p className="text-white/70 tracking-tight text-sm md:text-base text-center">
+            <p className="text-white/70 tracking-tight text-sm text-center">
               We sent you an activation link, click it to activate your account.
-              Please be sure to check your spam folder too just to be sure.
+              Please be sure to check your spam folder too.
             </p>
-            <p className="text-white/70 tracking-tight text-sm md:text-base mt-4">
-              <Link href="">
-                <span className="mr-1 text-[#0096FA]">Click here</span>
+            <div className="w-full mt-4 md:mt-6">
+              <Link href="/login">
+                <PrimaryButton>Already verified? Login</PrimaryButton>
               </Link>
-              if you didn&apos;t receive the email.
-            </p>
+            </div>
           </div>
         )}
       </div>

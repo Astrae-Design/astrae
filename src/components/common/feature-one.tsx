@@ -8,13 +8,13 @@ import { BorderBeam } from "../custom/border-beam";
 
 const FeatureOne = () => {
   return (
-    <div className="w-full h-[40rem] border border-white/15 rounded-2xl relative overflow-hidden group">
+    <div className="w-full h-[40rem] border border-white/15 rounded-xl relative overflow-hidden group">
       <div className=" absolute z-10 pt-4 md:pt-8">
         <div className="flex flex-col items-start">
-          <h4 className=" text-2xl md:text-3xl px-4 md:px-8 text-white font-semibold">
+          <h4 className=" text-xl md:text-2xl px-4 md:px-8 text-white font-semibold">
             Fully Responsive
           </h4>
-          <p className=" text-white/70 w-[84vw] md:w-[34rem] pl-4 md:pl-8 font-normal text-base mt-2">
+          <p className=" text-white/70 w-[84vw] md:w-[33rem] pl-4 md:pl-8 font-normal text-sm mt-2">
             Our templates are designed to look stunning on any device, from
             mobile screens to large desktops. Each layout adjusts seamlessly,
             ensuring an exceptional user experience across all platforms.
@@ -24,7 +24,7 @@ const FeatureOne = () => {
             className=" hover:no-underline no-underline text-white w-fit px-4 md:px-8"
           >
             Explore marketplace
-            <ChevronRight className=" ml-0" />
+            <ChevronRight className="h-4 w-4 ml-1" />
           </Button>
         </div>
 
@@ -148,7 +148,7 @@ const FeatureOne = () => {
         </div>
       </div>
       <div className=" w-full absolute inset-0 bg-gradient-to-b from-[black] backdrop-blur-sm to-transparent" />
-      <div className=" hidden group-hover:block rounded-2xl inset-0 z-20">
+      <div className=" hidden group-hover:block rounded-xl inset-0 z-20">
         <BorderBeam colorFrom="#FF5551" colorTo="#FF3530" />
       </div>
     </div>

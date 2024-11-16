@@ -3,14 +3,15 @@
 import PrimaryButton from "@/components/common/primarybutton";
 import { BorderBeam } from "@/components/custom/border-beam";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import axios from "axios";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check, Loader2 } from "lucide-react";
-import axios from "axios";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import toast from "react-hot-toast";
 
 import { getCalApi } from "@calcom/embed-react";
+import Link from "next/link";
 import { useEffect } from "react";
 
 type PriceColumnProps = {
@@ -43,10 +44,10 @@ const PricingCards = () => {
     })();
   }, []);
   return (
-    <div className="w-full flex flex-col items-center container -mt-20">
-      <section className="mx-auto w-full md:max-w-7xl pb-24">
-        <div className=" w-full flex flex-col items-center mt-4">
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-4 items-start w-full h-full">
+    <div className="w-full flex flex-col items-center container -mt-10">
+      <section className="mx-auto  w-full md:max-w-7xl pb-12">
+        <div className=" w-full flex flex-col items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-4 items-start w-full h-full">
             <PriceColumn
               secondaryButton
               buttonText="Get Started"
@@ -60,18 +61,6 @@ const PricingCards = () => {
                 },
                 {
                   children: "Buy only templates you need",
-                  checked: true,
-                },
-                {
-                  children: "1 year of updates",
-                  checked: true,
-                },
-                {
-                  children: "Copy paste, no complications",
-                  checked: true,
-                },
-                {
-                  children: "Built with Next.js & React",
                   checked: true,
                 },
                 {
@@ -99,16 +88,9 @@ const PricingCards = () => {
                   children: "1 year of new templates",
                   checked: true,
                 },
-                {
-                  children: "Copy paste, no complications",
-                  checked: true,
-                },
+
                 {
                   children: "Built with Next.js & React",
-                  checked: true,
-                },
-                {
-                  children: "Cancel Anytime",
                   checked: true,
                 },
               ]}
@@ -136,6 +118,10 @@ const PricingCards = () => {
                 },
                 {
                   children: "Built with Next.js & React",
+                  checked: true,
+                },
+                {
+                  children: "Frequent Updates",
                   checked: true,
                 },
                 {
@@ -178,7 +164,7 @@ const PricingCards = () => {
               ]}
             />
           </div>
-        </div>{" "}
+        </div>
       </section>
     </div>
   );
@@ -223,10 +209,9 @@ const PriceColumn = ({
       } else {
         const callbackUrl = `/pricing`;
         router.push(`/login?callbackUrl=${encodeURIComponent(callbackUrl)}`);
-        toast.error("Please login first!", {
+        toast.error("Please login first", {
           style: {
             border: "1px solid #262626",
-            zIndex: "214748300545 !important",
             padding: "16px",
             background: "#161616",
             color: "#FFF",
@@ -246,7 +231,6 @@ const PriceColumn = ({
           toast.error("Something went wrong!", {
             style: {
               border: "1px solid #262626",
-              zIndex: "214748300544 !important",
               padding: "16px",
               background: "#161616",
               color: "#FFF",
@@ -261,7 +245,6 @@ const PriceColumn = ({
         toast.error("Couldn't load lemonsqueezy checkout!", {
           style: {
             border: "1px solid #262626",
-            zIndex: "214748300544 !important",
             padding: "16px",
             background: "#161616",
             color: "#FFF",
@@ -278,7 +261,7 @@ const PriceColumn = ({
   };
   return (
     <div
-      className={`relative  w-full rounded-xl h-full px-4 py-6 md:px-4 md:py-6 md:hover:-translate-y-6 md:ease-in-out md:transition-all md:duration-500 ${
+      className={`relative  w-full rounded-xl h-full px-4 py-6 md:px-4 md:py-6 lg:hover:-translate-y-6 lg:ease-in-out lg:transition-all lg:duration-500 ${
         highlight
           ? "bg-gradient-to-b from-[#0245A6] to-[#0096FA] shadow-[0px_0px_8px_#0096FA]"
           : "border border-white/10 bg-[#161616]/50 backdrop-blur-sm group"
@@ -290,87 +273,100 @@ const PriceColumn = ({
         </div>
       )}
 
-      {highlight && (
-        <div className=" absolute inset-0">
-          <div className=" rounded-xl border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
-          <div className=" rounded-xl border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]" />
-          <div className=" absolute inset-0 shadow-[0_0_10px_rgb(0,150,250,.7)_inset] rounded-xl" />
+      <div className="flex flex-col justify-between h-full">
+        {highlight && (
+          <div className=" absolute inset-0">
+            <div className=" rounded-xl border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
+            <div className=" rounded-xl border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]" />
+            <div className=" absolute inset-0 shadow-[0_0_10px_rgb(0,150,250,.7)_inset] rounded-xl" />
+          </div>
+        )}
+        <div>
+          <p className="mb-0 text-base font-normal text-white/70">{title}</p>
+          <div className="mb-1 flex items-end gap-3">
+            <AnimatePresence mode="popLayout">
+              <motion.span
+                initial={{
+                  y: 24,
+                  opacity: 0,
+                }}
+                animate={{
+                  y: 0,
+                  opacity: 1,
+                }}
+                exit={{
+                  y: -24,
+                  opacity: 0,
+                }}
+                key={price}
+                transition={{
+                  duration: 0.25,
+                  ease: "easeInOut",
+                }}
+                className="block text-3xl font-semibold text-white"
+              >
+                {price}
+              </motion.span>
+            </AnimatePresence>
+          </div>
+          <p className="mb-4 text-sm font-normal text-white/70">{statement}</p>
+          <div className="mb-4 space-y-2">
+            {items.map((i) => (
+              <CheckListItem key={i.children} checked={i.checked}>
+                {i.children}
+              </CheckListItem>
+            ))}
+          </div>
         </div>
-      )}
-      <p className="mb-0 text-lg font-normal text-white/70">{title}</p>
-      <div className="mb-1 flex items-end gap-3">
-        <AnimatePresence mode="popLayout">
-          <motion.span
-            initial={{
-              y: 24,
-              opacity: 0,
-            }}
-            animate={{
-              y: 0,
-              opacity: 1,
-            }}
-            exit={{
-              y: -24,
-              opacity: 0,
-            }}
-            key={price}
-            transition={{
-              duration: 0.25,
-              ease: "easeInOut",
-            }}
-            className="block text-4xl font-semibold text-white"
+        {highlight ? (
+          <Button
+            onClick={getPlan}
+            variant="secondary"
+            className=" bg-white mt-1.5 w-full text-black hover:text-black hover:bg-white/90 relative"
           >
-            {price}
-          </motion.span>
-        </AnimatePresence>
-      </div>
-      <p className="mb-4 text-base font-normal text-white/70">{statement}</p>
-      <div className="mb-4 space-y-2">
-        {items.map((i) => (
-          <CheckListItem key={i.children} checked={i.checked}>
-            {i.children}
-          </CheckListItem>
-        ))}
-      </div>
-      {highlight ? (
-        <Button
-          onClick={getPlan}
-          variant="secondary"
-          className=" bg-white mt-1.5 w-full text-black hover:text-black hover:bg-white/90 relative"
-        >
-          {loading ? <Loader2 className=" animate-spin" /> : buttonText}
-        </Button>
-      ) : secondaryButton ? (
-        <Button
-          variant="secondary"
-          className=" bg-[#161616] hover:bg-[#161616]/80 w-full"
-        >
-          {buttonText}
-        </Button>
-      ) : bookCallButton ? (
-        <Button
-          data-cal-namespace="60mins"
-          data-cal-link="astrae/60mins"
-          data-cal-config='{"layout":"month_view","theme":"dark"}'
-          variant="secondary"
-          className=" bg-[#161616] hover:bg-[#161616]/80 w-full"
-        >
-          {buttonText}
-        </Button>
-      ) : (
-        <div onClick={getPlan} className=" w-full h-fit">
-          <PrimaryButton>
             {loading ? <Loader2 className=" animate-spin" /> : buttonText}
-          </PrimaryButton>
-        </div>
-      )}
+          </Button>
+        ) : secondaryButton ? (
+          <Link href="/welcome">
+            <Button
+              variant="secondary"
+              className=" bg-[#161616] hover:bg-[#161616]/80 w-full"
+            >
+              {buttonText}
+            </Button>
+          </Link>
+        ) : bookCallButton ? (
+          <Button
+            data-cal-namespace="60mins"
+            data-cal-link="astrae/60mins"
+            data-cal-config='{"layout":"month_view","theme":"dark"}'
+            variant="secondary"
+            className=" bg-[#161616] hover:bg-[#161616]/80 w-full"
+          >
+            {buttonText}
+          </Button>
+        ) : (
+          <div onClick={getPlan} className=" w-full h-fit">
+            <PrimaryButton>
+              {loading ? <Loader2 className=" animate-spin" /> : buttonText}
+            </PrimaryButton>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
+
 const CheckListItem = ({ children, checked }: CheckListItemType) => {
+  // Determine the appropriate alignment class based on the character count of children
+  const alignmentClass =
+    typeof children === "string" && children.length > 40
+      ? "items-start"
+      : "items-center";
+
   return (
-    <div className="flex items-start gap-2 text-base text-white">
-      {checked && <Check className=" shrink-0 text-base opacity-70" />}
+    <div className={`flex ${alignmentClass} gap-2 text-sm text-white`}>
+      {checked && <Check className="shrink-0 h-4 w-4 text-sm opacity-70" />}
       {children}
     </div>
   );

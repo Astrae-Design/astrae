@@ -92,7 +92,7 @@ const GalleryShowcase: React.FC = () => {
           />
         </div>
         <div className="w-full h-full absolute bg-black/60 backdrop-blur-[1px] inset-0 flex items-center justify-center">
-          <h3 className=" text-white font-semibold text-5xl text-center md:text-7xl tracking-tighter">
+          <h3 className=" text-white font-semibold text-5xl text-center tracking-tighter">
             Over 50+ Unique Templates
           </h3>
         </div>

@@ -85,11 +85,11 @@ const CallToAction = () => {
             }}
           ></motion.div>
           <div className=" relative">
-            <h2 className=" text-4xl md:text-6xl px-4 md:px-0 md:max-w-4xl mx-auto tracking-tighter text-center font-semibold text-white">
+            <h2 className=" text-5xl px-4 md:px-0 md:max-w-2xl mx-auto tracking-tighter text-center font-semibold text-white">
               Want a custom website tailored to your needs? Let&apos;s talk
             </h2>
             <div className=" flex justify-center mt-4">
-              <p className=" text-center text-lg md:text-xl md:max-w-sm mx-auto tracking-tight text-white/70 px-12 md:px-0">
+              <p className=" text-center text-sm mx-auto tracking-tight text-white/70 px-12 md:px-0">
                 We have helped hundreds of businesses with their website needs
               </p>
             </div>
@@ -163,7 +163,7 @@ const CallToAction = () => {
             </div>
             <div className=" justify-center w-full inline-flex items-center gap-4 mt-4">
               <Link href="/pricing">
-                <div className=" w-fit md:w-[240px]">
+                <div className=" w-fit">
                   <PrimaryButton>Get Astrae Now</PrimaryButton>
                 </div>
               </Link>

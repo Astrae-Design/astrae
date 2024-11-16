@@ -4,8 +4,13 @@ import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import PrimaryButton from "./primarybutton";
+import { useCurrentUser } from "@/hooks/use-current-user";
+import { useCurrentRole } from "@/hooks/use-current-role";
 
 const MobileNavigation = () => {
+  const { user, isLoading } = useCurrentUser();
+  const { role, loadingRole } = useCurrentRole();
+
   const [mobileNav, setMobileNav] = useState(false);
 
   const toggleMobileNav = () => {
@@ -13,7 +18,7 @@ const MobileNavigation = () => {
   };
   return (
     <header className="sticky top-0 inset-x-0 p-0 lg:hidden">
-      <nav className="container mx-auto">
+      <nav className="mx-auto">
         <motion.button
           initial="hide"
           animate={mobileNav ? "show" : "hide"}
@@ -91,18 +96,8 @@ const MobileNavigation = () => {
                 initial="hide"
                 animate="show"
                 exit="hide"
-                className="fixed top-0 inset-0 bg-[#000] px-[8px] flex flex-col justify-center "
+                className="fixed top-0 inset-0 w-full h-screen bg-[#000] px-[8px] flex flex-col justify-center "
               >
-                <a className="h-8 absolute top-5 container w-fit" href="/">
-                  <div className="inline-flex gap-1.5 justify-center items-center">
-                    <div className="h-8 w-8 relative">
-                      <Image fill src="/assets/logo.svg" alt="Logo" />
-                    </div>
-                    <span className=" text-white font-semibold text-base md:text-lg">
-                      Astrae
-                    </span>
-                  </div>
-                </a>
                 <motion.ul
                   variants={{
                     hide: {
@@ -164,7 +159,20 @@ const MobileNavigation = () => {
                   }}
                   className="w-full container mt-8 mb-6"
                 >
-                  <PrimaryButton>Get Unlimited Access</PrimaryButton>
+                  {user && !isLoading ? (
+                    <a
+                      className=" hidden md:block"
+                      href={
+                        role === "ADMIN" && !loadingRole
+                          ? "/admin/dashboard"
+                          : "/dashboard"
+                      }
+                    >
+                      <PrimaryButton>My Dashboard</PrimaryButton>
+                    </a>
+                  ) : (
+                    <PrimaryButton>Get Unlimited Access</PrimaryButton>
+                  )}
                 </motion.div>
                 <motion.ul
                   variants={{
@@ -179,9 +187,11 @@ const MobileNavigation = () => {
                   }}
                   className="list-none flex flex-col items-center justify-center container"
                 >
-                  <a href="/welcome" className="mb-4">
-                    <p className=" text-base text-white">Login</p>
-                  </a>
+                  {!user && !isLoading ? (
+                    <a href="/welcome" className="mb-4">
+                      <p className=" text-base text-white">Login</p>
+                    </a>
+                  ) : null}
                   <div className=" inline-flex items-center mt-4 gap-8">
                     <a href="https://x.com/astraedesign0">
                       <div className="relative h-6 w-6 cursor-pointer opacity-70 hover:opacity-100 transition-all ease-in-out duration-300">

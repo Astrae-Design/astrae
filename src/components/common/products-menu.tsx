@@ -65,7 +65,7 @@ export function MarketplaceMenu() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>
             <Link
-              className="text-white/70 hover:text-white transition text-sm md:text-base"
+              className="text-white/70 hover:text-white transition text-sm md:text-sm"
               href="/products"
             >
               Products

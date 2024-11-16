@@ -1,7 +1,7 @@
 "use client";
 
 import { X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import toast from "react-hot-toast";
 
 const InfoBanner = () => {
@@ -9,7 +9,7 @@ const InfoBanner = () => {
 
   const handleCopy = () => {
     navigator.clipboard
-      .writeText("AZMZU1NG") // Copy to clipboard
+      .writeText("AZMZU1NG")
       .then(() => {
         toast.success("Discount code copied!", {
           style: {
@@ -46,21 +46,14 @@ const InfoBanner = () => {
     localStorage.setItem("discountBanner", "Hide");
   };
 
-  useEffect(() => {
-    const discountBanner = localStorage.getItem("discountBanner");
-    if (discountBanner === "Hide") {
-      setIsVisible(false);
-    }
-  }, []);
-
   return (
     isVisible && (
-      <div className="w-full bg-[#0245A6] hidden md:block group z-50">
+      <div className="w-full bg-[#0245A6] hidden lg:block z-50">
         <div className="px-4 py-1.5 flex items-center justify-between">
-          <div />
+          <div className=" w-full" />
           <h4
             onClick={handleCopy}
-            className="text-white uppercase text-sm font-medium cursor-pointer"
+            className="text-white group text-sm font-medium cursor-pointer w-full text-center"
           >
             Use code{" "}
             <span className=" group-hover:underline underline-offset-4 group-hover:font-semibold">
@@ -68,8 +61,12 @@ const InfoBanner = () => {
             </span>{" "}
             for 10% off any plan
           </h4>
-          <button onClick={handleClose} aria-label="Close banner">
-            <X className="text-white" />
+          <button
+            className=" w-full justify-end items-center inline-flex opacity-70 hover:opacity-100 ease-in-out transition-opacity duration-75"
+            onClick={handleClose}
+            aria-label="Close banner"
+          >
+            <X className="text-white h-4- w-4" />
           </button>
         </div>
       </div>

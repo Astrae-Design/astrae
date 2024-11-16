@@ -25,13 +25,13 @@ export const Header = ({ label, imgSrc, title }: HeaderProps) => {
       </Link>
       <h1
         className={cn(
-          "text-2xl mt-6 tracking-tighter font-semibold text-white",
+          "text-xl mt-6 tracking-tighter font-semibold text-white",
           font.className
         )}
       >
         {title}
       </h1>
-      <p className="text-white/70 tracking-tight text-sm md:text-base text-center mt-0.5">
+      <p className="text-white/70 tracking-tight text-sm text-center mt-0.5">
         {label}
       </p>
     </div>

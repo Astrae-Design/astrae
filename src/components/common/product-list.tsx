@@ -7,21 +7,23 @@ interface ProductListProps {
   items: any[];
 }
 const ProductList: React.FC<ProductListProps> = ({ items }) => {
-  return (
-    <div className=" container py-12">
-      <h4 className=" text-4xl md:text-5xl text-white font-semibold">
-        New Templates
-      </h4>
-      <p className=" text-white/70 font-normal text-base md:text-lg mt-2">
-        The latest templates from the Astrae community.
-      </p>
-      <div className="grid mt-10 grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-10 w-full pb-20 md:pb-0">
-        {items.map((item) => (
-          <ProductCard key={item.id} data={item} />
-        ))}
+  if (items.length > 0) {
+    return (
+      <div className=" container py-12">
+        <h4 className=" text-4xl md:text-5xl text-white font-semibold">
+          New Templates
+        </h4>
+        <p className=" text-white/70 font-normal text-base md:text-lg mt-2">
+          The latest templates from the Astrae community.
+        </p>
+        <div className="grid mt-10 grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-10 w-full pb-20 md:pb-0">
+          {items.map((item) => (
+            <ProductCard key={item.id} data={item} />
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default ProductList;

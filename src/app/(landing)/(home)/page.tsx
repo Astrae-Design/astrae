@@ -20,8 +20,8 @@ const Home = () => {
       <LogoTicker />
       <GalleryShowcase />
       <GalleryShowcaseMobile />
-      <Value />
       <Features />
+      <Value />
       <Pricing />
       <FaqCentral />
       <Reviews />

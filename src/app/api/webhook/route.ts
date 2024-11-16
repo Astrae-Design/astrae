@@ -64,19 +64,9 @@ export const POST = async (req: NextRequest) => {
     switch (eventName) {
       case "subscription_created":
       case "subscription_updated":
-        let subscriptionType: "FREE" | "BASIC" | "ADVANCE" = "FREE";
-        const total = Number(subscriptionData.total) || 0;
-
-        if (total === 14900) {
-          subscriptionType = "BASIC";
-        } else if (total === 16900) {
-          subscriptionType = "ADVANCE";
-        }
-
         await db.subscription.upsert({
           where: { lemonSqueezyId: lemonSqueezyId },
           update: {
-            total: total,
             status: subscriptionData.status,
             renewsAt: subscriptionData.renews_at
               ? new Date(subscriptionData.renews_at)
@@ -93,7 +83,6 @@ export const POST = async (req: NextRequest) => {
           create: {
             lemonSqueezyId: lemonSqueezyId,
             customerId: customerId,
-            total: total,
             orderId: subscriptionData.order_id,
             name: subscriptionData.product_name,
             email: subscriptionData.user_email,
@@ -117,7 +106,7 @@ export const POST = async (req: NextRequest) => {
         await db.user.update({
           where: { id: userId },
           data: {
-            subscriptionType: subscriptionType,
+            subscriptionType: "PRO",
           },
         });
         break;
