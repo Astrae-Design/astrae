@@ -7,7 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { MouseEventHandler } from "react";
 import ProductPreview from "./product-preview";
-import { useCurrentUser } from "@/hooks/use-current-user";
 
 interface ProductCard {
   data: Product;
