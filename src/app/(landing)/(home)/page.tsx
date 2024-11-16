@@ -18,8 +18,7 @@ const Home = () => {
       <Hero />
       <LogoTicker />
       <GalleryShowcase />
-      <div className="h-[10rem]" />
-      <Value />
+      {/* <Value /> */}
       <Features />
       <Pricing />
       <FaqCentral />
