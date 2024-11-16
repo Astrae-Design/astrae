@@ -15,7 +15,7 @@ const ShowcaseCard = () => {
           <Image
             fill
             quality={100}
-            src="/assets/gallery/5.jpg"
+            src="/assets/gallery/5.webp"
             className=" object-cover rounded-xl group-hover:scale-110 transition-all ease-in-out duration-300"
             alt="Showcase card"
           />
