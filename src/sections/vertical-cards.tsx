@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const VerticalCards = () => {
   return (
-    <div className="bg-black flex -ml-32 md:-ml-4">
+    <div className="bg-black flex -ml-40 md:-ml-4">
       <div className="flex flex-col items-center mb-4">
         <CardItem list={card.one} duration={125} />
         <CardItem list={card.one} duration={125} />
