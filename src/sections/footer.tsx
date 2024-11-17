@@ -10,9 +10,9 @@ const Footer = () => {
   const pathName = usePathname();
   return (
     <div className="flex flex-col container py-20">
-      <div className="w-full flex flex-col md:flex-row items-start md:justify-between">
-        <div className="flex flex-col items-start w-1/2">
-          <div className="h-10 inline-flex gap-1.5 justify-center items-center">
+      <div className="w-full flex flex-col md:flex-row items-start md:justify-between md:gap-20">
+        <div className="flex flex-col items-start w-full md:w-1/2">
+          <div className="h-7 inline-flex gap-1.5 justify-center items-center">
             <div className="h-7 w-7 relative">
               <Image fill src="/assets/logo.svg" alt="Logo" />
             </div>
@@ -25,8 +25,20 @@ const Footer = () => {
               )}
             </span>
           </div>
-          <p className="text-white/70 text-sm mt-2 mb-6 lg:text-nowrap">
-            Templates Beyond Ordinary
+          <p className="text-white/70 text-sm mt-2 mb-2">
+            Templates Beyond Ordinary.
+          </p>
+          <p className="text-white/70 text-sm mt-2 mb-2">
+            Explore a constantly expanding library of premium, expertly designed
+            templates{" "}
+          </p>
+          <p className="text-white/70 text-sm mt-2 mb-6">
+            A product by{" "}
+            <Link className=" group" href="https://www.builtwithatlas.com">
+              <span className=" underline underline-offset-4 group-hover:text-white">
+                AtlasLabs
+              </span>
+            </Link>
           </p>
           <Link href="/products">
             <div className=" w-fit">
@@ -152,7 +164,7 @@ const Footer = () => {
         orientation="horizontal"
         className=" w-full opacity-20 mb-8 mt-12"
       />
-      <p className=" text-white/70 text-sm w-full text-center">
+      <p className=" text-white/70 text-sm w-full text-start">
         © 2024 Astrae Design. All Rights Reserved.
       </p>
     </div>

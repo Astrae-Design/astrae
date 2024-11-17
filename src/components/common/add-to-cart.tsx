@@ -18,7 +18,7 @@ const AddToCartButton: React.FC<ProductCard> = ({ data }) => {
     cart.addItem(data);
   };
   return (
-    <div onClick={onAddToCart} className=" w-1/2">
+    <div onClick={onAddToCart}>
       <PrimaryButton>Add Product to Cart - {data.price}</PrimaryButton>
     </div>
   );

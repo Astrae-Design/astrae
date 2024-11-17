@@ -8,9 +8,7 @@ const FaqCentral = () => {
           FAQ Central
         </h2>
         <p className=" text-sm text-white/70 mt-2 md:mt-2 text-center w-full md:max-w-sm mx-auto">
-          Explore our FAQs for instant answers to popular inquiries. For more
-          specific assistance, don&apos;t hesitate to{" "}
-          <span className=" text-[#0096FA]"> Reach out to us</span>
+          Explore our FAQs for instant answers to popular inquiries.
         </p>
         <FaqItems />
       </div>

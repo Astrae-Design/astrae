@@ -105,11 +105,11 @@ const SheetTitle = React.forwardRef<
   <div className="flex w-full justify-between items-center">
     <SheetPrimitive.Title
       ref={ref}
-      className={cn("text-xl font-medium text-white", className)}
+      className={cn("text-lg font-medium text-white", className)}
       {...props}
     />
     <SheetPrimitive.Close className=" text-white rounded-sm md:opacity-70 ring-offset-background transition-opacity md:hover:opacity-100 focus:outline-none focus:ring-0 focus:ring-ring focus:ring-offset-0 disabled:pointer-events-none data-[state=open]:bg-secondary">
-      <X className="h-6 w-6" />
+      <X className="h-5 w-5" />
       <span className="sr-only">Close</span>
     </SheetPrimitive.Close>
   </div>

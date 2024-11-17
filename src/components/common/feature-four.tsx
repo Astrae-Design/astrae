@@ -11,7 +11,7 @@ const FeatureFour = () => {
       </div>
       <div className=" h-full w-full flex flex-col justify-between">
         <div className="flex flex-col items-start pt-4 md:pt-8">
-          <h4 className=" text-xl md:text-2xl px-4 md:px-8 text-white font-semibold">
+          <h4 className="text-2xl px-4 md:px-8 text-white font-semibold">
             Clean Code
           </h4>
           <p className=" text-white/70 w-[84vw] md:w-[32rem] pl-4 md:pl-8 font-normal text-sm mt-2">

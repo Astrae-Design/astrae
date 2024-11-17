@@ -8,8 +8,8 @@ import { Code, Proportions, Puzzle, ScanSearch } from "lucide-react";
 
 const FeaturesAccordion = () => {
   return (
-    <div className="flex flex-col items-start w-full mt-20">
-      <h2 className="font-semibold text-2xl lg:text-3xl text-white text-center">
+    <div className="flex flex-col items-start w-full mt-12">
+      <h2 className="font-semibold text-2xl tracking-tighter text-white text-center">
         Features
       </h2>
       <Accordion type="multiple" className="w-full mt-6">

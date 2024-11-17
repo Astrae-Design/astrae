@@ -21,9 +21,9 @@ const CartItem: React.FC<CartItem> = ({ data }) => {
     <div className=" w-full group flex flex-col h-fit relative">
       <div
         onClick={onRemove}
-        className=" cursor-pointer h-14 aspect-square rounded-full absolute right-4 top-4 bg-black/50 backdrop-blur-md z-10 inline-flex items-center justify-center"
+        className=" cursor-pointer h-12 aspect-square rounded-full absolute right-4 top-4 bg-black/50 backdrop-blur-md z-10 inline-flex items-center justify-center"
       >
-        <Trash2 />
+        <Trash2 className=" h-5 w-5" />
       </div>
       <div className=" relative h-[12rem] rounded-xl overflow-clip">
         <Image
@@ -35,7 +35,7 @@ const CartItem: React.FC<CartItem> = ({ data }) => {
         />
       </div>
       <h3 className=" text-white text-xl mt-2">{data?.title}</h3>
-      <p className=" text-xl text-white/70 group-hover:text-white transition-all ease-in-out duration-300 line-clamp-4">
+      <p className=" text-lg text-white/70 group-hover:text-white transition-all ease-in-out duration-300 line-clamp-4">
         {data?.price}
       </p>
     </div>

@@ -10,7 +10,7 @@ const AdminDashboardNavigation = () => {
     <div className="bg-black border-b border-b-white/10  z-50 sticky top-16 pt-8 pb-4">
       <div className=" md:hidden container">
         <div className=" w-full flex items-center justify-between">
-          <p className=" text-2xl md:text-2xl font-semibold">All Products</p>
+          <p className=" text-base md:text-2xl font-semibold">All Products</p>
           <div className=" w-fit text-nowrap">
             <Link href="/admin/dashboard/add-product">
               <PrimaryButton>

@@ -11,7 +11,7 @@ import AccountDropdownSkeleton from "./account-dropdown-skeleton";
 export const Navigation = () => {
   const { user, isLoading } = useCurrentUser();
   return (
-    <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-[2147483000] w-full bg-black">
+    <header className="py-2.5 md:py-4 border-b border-white/15 md:border-none sticky top-0 z-[2147483000] w-full bg-black">
       <div className=" absolute inset-0 backdrop-blur -z-10 md:hidden"></div>
       <div className="container ">
         <div className="flex justify-between  items-center md:border border-white/15 md:bg-black/80 md:backdrop-blur md:px-2.5 md:h-16 rounded-xl max-w-full mx-auto relative">

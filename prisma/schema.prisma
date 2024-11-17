@@ -132,7 +132,6 @@ model Subscription {
   name               String
   email              String
   status             String
-  total              Int       @default(0)
   renewsAt           DateTime?
   endsAt             DateTime?
   trialEndsAt        DateTime?

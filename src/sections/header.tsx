@@ -25,7 +25,6 @@ const headerVariants = {
 
 export const Header = () => {
   const { user, isLoading } = useCurrentUser();
-  console.log("User object: ", user);
   const { role, loadingRole } = useCurrentRole();
   const pathName = usePathname();
   return (
@@ -33,7 +32,7 @@ export const Header = () => {
       variants={headerVariants}
       initial="initial"
       animate="animate"
-      className="py-4 border-b border-white/15 lg:border-none sticky top-0 z-[2147483000] w-full"
+      className="py-2.5 md:py-4 border-b border-white/15 lg:border-none sticky top-0 z-[2147483000] w-full"
     >
       <div className=" absolute inset-0 backdrop-blur -z-10 lg:hidden"></div>
       <div className="w-full container">
@@ -97,8 +96,11 @@ export const Header = () => {
                         Login
                       </Button>
                     </Link>
-                    <Link className="w-fit" href="/pricing">
+                    <Link className="w-fit hidden md:block" href="/pricing">
                       <PrimaryButton>Get Unlimited Access</PrimaryButton>
+                    </Link>
+                    <Link className="w-fit md:hidden" href="/pricing">
+                      <PrimaryButton>Get Access</PrimaryButton>
                     </Link>
                   </div>
                 ) : (

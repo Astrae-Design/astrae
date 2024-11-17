@@ -25,7 +25,7 @@ const BlogHero = ({
   );
 
   return (
-    <section className="-mt-28" ref={sectionRef}>
+    <section className="-mt-28 md:-mt-36" ref={sectionRef}>
       <div className=" ">
         <motion.div
           style={{
@@ -51,14 +51,16 @@ const BlogHero = ({
           ></div>
 
           <div className=" relative mt-28">
-            <h2 className=" text-5xl md:text-6xl lg:text-7xl px-4 md:px-0 md:max-w-5xl mx-auto tracking-tighter text-center font-semibold text-white">
+            <h2 className=" text-5xl lg:text-6xl px-4 md:px-0 md:max-w-5xl mx-auto tracking-tighter text-center font-semibold text-white">
               {title}
             </h2>
-            <div className=" flex justify-center mt-4">
-              <p className=" inline-flex gap-2 items-center justify-center text-center text-lg md:text-xl md:max-w-2xl mx-auto tracking-tight text-white/70 px-12 md:px-0">
-                <Calendar />
-                Published: {description}
-              </p>
+            <div className=" w-full inline-flex items-center justify-center mt-4 md:mt-6">
+              <div className="px-2 py-1.5 inline-flex items-center justify-center rounded-lg bg-[#262626] text-white text-base">
+                <p className=" inline-flex gap-2 items-center justify-center text-center text-lg md:text-xl md:max-w-2xl mx-auto tracking-tight opacity-70  px-12 md:px-0">
+                  <Calendar />
+                  {description}
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>

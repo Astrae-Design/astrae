@@ -53,7 +53,7 @@ export function Cart() {
         {cart.items.length === 0 && (
           <div className="flex flex-col w-full items-center h-full justify-between">
             <div className="flex flex-col w-full items-center h-full justify-center">
-              <div className=" w-full h-[12rem] relative">
+              <div className=" w-full h-[10rem] relative">
                 <Image
                   fill
                   className=" object-contain"
@@ -63,9 +63,7 @@ export function Cart() {
                 />
               </div>
 
-              <p className=" text-white/70 text-sm lg:text-base">
-                No items in cart
-              </p>
+              <p className=" text-white/70 text-sm">No items in cart</p>
             </div>
             <div className=" h-1/2 flex flex-col items-center w-full justify-end pb-12">
               <Separator className="mb-4 opacity-15" orientation="horizontal" />
@@ -94,15 +92,15 @@ export function Cart() {
           <div className=" h-fit flex flex-col items-center w-full justify-end pb-12">
             <Separator className="mb-4 opacity-15" orientation="horizontal" />
             <div className=" w-full flex items-center justify-between text-white">
-              <p>Total</p>
+              <p className=" text-base">Total</p>
               <Currency value={totalPrice} />
             </div>
             <Separator className="mt-4 opacity-15" orientation="horizontal" />
-            <div className="flex items-center space-x-2 w-full text-white mt-8 mb-4">
+            <div className="flex items-center space-x-2 w-full text-white mt-4 mb-2">
               <Checkbox id="terms" />
               <label
                 htmlFor="terms"
-                className="text-sm lg:text-base font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
               >
                 Accept terms and conditions
               </label>

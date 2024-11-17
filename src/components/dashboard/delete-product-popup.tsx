@@ -20,7 +20,7 @@ const DeleteProductPopup = () => {
           <Trash2 />
         </div>
       </AlertDialogTrigger>
-      <AlertDialogContent className=" md:max-w-md bg-[#0F0F0F] border border-white/10 rounded-xl flex flex-col w-[90vw] md:w-full items-center max-w-none">
+      <AlertDialogContent className=" md:max-w-sm bg-[#0F0F0F] border border-white/10 rounded-xl flex flex-col w-[90vw] md:w-full items-center max-w-none">
         <div className=" h-16 aspect-square rounded-full bg-[#606060]/10 flex items-center justify-center">
           <Trash2 size={32} color="#FA4E4E" />
         </div>
@@ -35,7 +35,7 @@ const DeleteProductPopup = () => {
         </AlertDialogHeader>
         <AlertDialogFooter className=" w-full flex flex-col items-center mt-4">
           <div className=" w-full">
-            <DangerButton>Delete Product</DangerButton>
+            <DangerButton>Confirm Delete</DangerButton>
           </div>
           <AlertDialogCancel asChild>
             <div className=" w-full">

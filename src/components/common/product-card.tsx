@@ -25,24 +25,26 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
     <div className=" w-full group flex flex-col h-fit relative">
       <div
         onClick={onAddToCart}
-        className=" cursor-pointer group-hover:opacity-100 opacity-0 ease-in-out transition-opacity duration-100 h-14 aspect-square rounded-full absolute right-[5rem] top-4 bg-black/50 backdrop-blur-md z-10 inline-flex items-center justify-center"
+        className=" cursor-pointer group-hover:opacity-100 opacity-0 ease-in-out transition-opacity duration-100 h-12 aspect-square rounded-full absolute right-[4.6rem] top-4 bg-black/50 backdrop-blur-md z-10 inline-flex items-center justify-center"
       >
-        <ShoppingBag />
+        <ShoppingBag className=" w-5 h-5" />
       </div>
       <ProductPreview previewLink={data.previewLink} />
-      <div className=" relative h-[16rem] rounded-xl overflow-clip">
-        <Image
-          fill
-          quality={100}
-          src={data.coverImage}
-          className=" object-cover rounded-xl group-hover:scale-110 transition-all ease-in-out duration-300"
-          alt="Showcase card"
-        />
-      </div>
       <Link href={`/products/${data.id}`}>
-        <h3 className=" text-white text-2xl mt-2">{data?.title}</h3>
+        <div className=" relative h-[16rem] rounded-xl overflow-clip">
+          <Image
+            fill
+            quality={100}
+            src={data.coverImage}
+            className=" object-cover rounded-xl group-hover:scale-110 transition-all ease-in-out duration-300"
+            alt="Showcase card"
+          />
+        </div>
+      </Link>
+      <Link href={`/products/${data.id}`}>
+        <h3 className=" text-white text-xl mt-2">{data?.title}</h3>
 
-        <p className=" text-xl text-white/70 group-hover:text-white transition-all ease-in-out duration-300 line-clamp-4">
+        <p className=" text-lg text-white/70 group-hover:text-white transition-all ease-in-out duration-300 line-clamp-4">
           {data?.price}
         </p>
       </Link>

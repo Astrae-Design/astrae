@@ -10,14 +10,16 @@ const Value = () => {
         <div className=" w-full flex flex-col md:flex-row items-center md:justify-between gap-4 md:gap-10">
           <div className="md:hidden w-full shrink-0">
             <div className=" container flex flex-col items-start flex-none text-start">
-              <h2 className="font-semibold text-5xl w-full text-white max-w-full md:max-w-lg ">
+              <h2 className="font-semibold text-5xl tracking-tighter w-full text-white max-w-sm ">
                 Customize And Launch In Minutes
               </h2>
               <p className=" text-base md:text-lg text-white/70 mt-2 md:mt-2 md:max-w-xl text-start ">
-                Plura is a sleek, one-page template crafted to showcase the work
-                of creative studios and visionaries with elegance and style.
-                Designed with a seamless, intuitive interface, Plura allows your
-                creativity to shine, making your portfolio the focal point.
+                With Astrae Design, you don&apos;t have to wait weeks to get
+                your perfect website up and running. Our intuitive templates are
+                fully customizable, allowing you to tailor every detail to match
+                your brand. Whether you&apos;re a designer, developer, or
+                entrepreneur, Astrae makes it simple to launch your site in
+                minutes.
               </p>
               <div className="flex items-center gap-8 mt-6">
                 <PrimaryButton>Browse Entire Library</PrimaryButton>
@@ -82,10 +84,12 @@ const Value = () => {
                 Customize And Launch In Minutes
               </h2>
               <p className=" text-sm text-white/70 mt-2 md:mt-2 md:max-w-md text-start ">
-                Plura is a sleek, one-page template crafted to showcase the work
-                of creative studios and visionaries with elegance and style.
-                Designed with a seamless, intuitive interface, Plura allows your
-                creativity to shine, making your portfolio the focal point.
+                With Astrae Design, you don&apos;t have to wait weeks to get
+                your perfect website up and running. Our intuitive templates are
+                fully customizable, allowing you to tailor every detail to match
+                your brand. Whether you&apos;re a designer, developer, or
+                entrepreneur, Astrae makes it simple to launch your site in
+                minutes.
               </p>
               <div className="flex items-center gap-8 mt-6">
                 <PrimaryButton>Browse Entire Library</PrimaryButton>

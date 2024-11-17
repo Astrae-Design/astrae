@@ -15,7 +15,7 @@ const DangerButton = (props: React.PropsWithChildren) => {
   return (
     <button
       onClick={logUserOut}
-      className="relative w-full h-10 inline-flex items-center justify-center px-3 md:px-4 rounded-lg font-medium text-white text-sm md:text-base bg-gradient-to-b from-[#A60202] to-[#FA4E4E] shadow-[0px_0px_2px_#FA4E4E]"
+      className="relative w-full h-10 inline-flex items-center justify-center px-3 md:px-4 rounded-lg font-medium text-white text-sm bg-gradient-to-b from-[#A60202] to-[#FA4E4E] shadow-[0px_0px_2px_#FA4E4E]"
     >
       <div className="absolute inset-0">
         <div className="rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]" />

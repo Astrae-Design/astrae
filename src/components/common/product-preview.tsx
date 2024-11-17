@@ -10,8 +10,8 @@ const ProductPreview = ({ previewLink }: { previewLink: string }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className=" cursor-pointer group-hover:opacity-100 opacity-0 ease-in-out transition-opacity duration-100 h-14 aspect-square rounded-full absolute right-4 top-4 bg-black/50 backdrop-blur-md z-10 inline-flex items-center justify-center">
-          <Eye />
+        <div className=" cursor-pointer group-hover:opacity-100 opacity-0 ease-in-out transition-opacity duration-100 h-12 aspect-square rounded-full absolute right-4 top-4 bg-black/50 backdrop-blur-md z-10 inline-flex items-center justify-center">
+          <Eye className=" w-5 h-5" />
         </div>
       </DialogTrigger>
       <DialogContent className="flex flex-col overflow-y-scroll max-w-full h-[86dvh] md:h-[96vh] p-0 w-[92vw] md:w-[90vw] border-none rounded-xl md:rounded-2xl overflow-clip mt-5 md:mt-0">

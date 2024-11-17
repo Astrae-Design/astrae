@@ -1,10 +1,9 @@
 "use client";
 
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
-import Image from "next/image";
+import { Plus } from "lucide-react";
 import { useState } from "react";
 import PrimaryButton from "../common/primarybutton";
-import { Plus } from "lucide-react";
 
 const DashboardMobileNavigation = () => {
   const [mobileNav, setMobileNav] = useState(false);
@@ -14,7 +13,7 @@ const DashboardMobileNavigation = () => {
   };
   return (
     <header className="sticky top-0 inset-x-0 p-0 lg:hidden">
-      <nav className="container mx-auto">
+      <nav className="mx-auto">
         <motion.button
           initial="hide"
           animate={mobileNav ? "show" : "hide"}
@@ -92,19 +91,6 @@ const DashboardMobileNavigation = () => {
                 exit="hide"
                 className="fixed top-0 inset-0 bg-[#000] px-[8px] flex flex-col justify-center "
               >
-                <a className="h-8 w-fit absolute top-7 container" href="/">
-                  <div className="inline-flex gap-1.5 justify-center items-center">
-                    <div className="h-8 w-8 relative">
-                      <Image fill src="/assets/logo.svg" alt="Logo" />
-                    </div>
-                    <span className=" text-white font-semibold text-base md:text-lg">
-                      Astrae{" "}
-                      <span className=" font-medium opacity-50">
-                        AdminDashboard
-                      </span>
-                    </span>
-                  </div>
-                </a>
                 <motion.ul
                   variants={{
                     hide: {

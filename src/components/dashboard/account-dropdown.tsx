@@ -20,7 +20,7 @@ const AccountDropdown = ({ user }: UserInfoProps) => {
       <DropdownMenuTrigger asChild>
         <div className="flex items-center md:gap-4 w-full bg-transparent rounded-lg py-1 cursor-pointer outline-none ring-0">
           {user?.image ? (
-            <div className="relative h-11 md:h-10 aspect-square">
+            <div className="relative h-10 md:h-10 aspect-square">
               <Image
                 fill
                 src={user?.image}
@@ -29,15 +29,15 @@ const AccountDropdown = ({ user }: UserInfoProps) => {
               />
             </div>
           ) : (
-            <div className=" h-11 md:h-10 aspect-square rounded-full bg-white/15 inline-flex items-center justify-center">
+            <div className=" h-10 md:h-10 aspect-square rounded-full bg-white/15 inline-flex items-center justify-center">
               <span className="text-white">{user?.name?.charAt(0)}</span>
             </div>
           )}
 
           <div className=" hidden md:block">
-            <div className="flex flex-col items-start -space-y-1">
-              <h4 className=" max-w-[18ch] truncate">{user?.name}</h4>
-              <p className="text-white/70">Free Tier</p>
+            <div className="flex flex-col items-start">
+              <h4 className=" max-w-[18ch] truncate text-sm">{user?.name}</h4>
+              <p className="text-white/70 text-sm">Free Tier</p>
             </div>
           </div>
         </div>

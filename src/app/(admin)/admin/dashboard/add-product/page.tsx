@@ -22,9 +22,6 @@ const AddProduct = () => {
             </Button>
             Add New Template
           </div>
-          <div className=" w-fit">
-            <PrimaryButton>Go to Marketplace</PrimaryButton>
-          </div>
         </div>
       </div>
       <div className="container pt-8 pb-28">

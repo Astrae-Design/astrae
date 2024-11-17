@@ -142,7 +142,7 @@ const Hero = () => {
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0096FA_0%,#0245A6_50%,#0096FA_100%)]" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#000B1A] pl-4 pr-2.5  text-sm font-archivo font-medium text-white backdrop-blur-3xl">
                 <span className="inline-flex items-center">
-                  ✨ 100+ templates available <ChevronRight className=" ml-3" />
+                  ✨ 10+ templates available <ChevronRight className=" ml-3" />
                 </span>
               </span>
             </div>

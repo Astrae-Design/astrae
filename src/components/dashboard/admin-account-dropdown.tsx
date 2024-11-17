@@ -20,7 +20,7 @@ const AdminAccountDropdown = ({ user }: UserInfoProps) => {
       <DropdownMenuTrigger asChild onSelect={(e) => e.preventDefault()}>
         <div className="flex items-center h-fit md:gap-4 w-full bg-transparent rounded-lg py-1 cursor-pointer outline-none ring-0">
           {user?.image ? (
-            <div className="relative h-11 md:h-11 aspect-square">
+            <div className="relative h-10 md:h-10 aspect-square">
               <Image
                 fill
                 src={user?.image}
@@ -29,15 +29,15 @@ const AdminAccountDropdown = ({ user }: UserInfoProps) => {
               />
             </div>
           ) : (
-            <div className=" h-11 md:h-11 aspect-square rounded-full bg-gradient-to-b from-[#0245A6] to-[#0096FA] inline-flex items-center justify-center">
+            <div className=" h-10 md:h-10 aspect-square rounded-full bg-gradient-to-b from-[#0245A6] to-[#0096FA] inline-flex items-center justify-center">
               <span className="text-white">{user?.name?.charAt(0)}</span>
             </div>
           )}
 
           <div className=" hidden md:block">
-            <div className="flex flex-col items-start -space-y-1">
-              <h4>{user?.name}</h4>
-              <p className="text-white/70">Admin</p>
+            <div className="flex flex-col items-start">
+              <h4 className=" text-sm">{user?.name}</h4>
+              <p className="text-white/70 text-sm">Admin</p>
             </div>
           </div>
         </div>
