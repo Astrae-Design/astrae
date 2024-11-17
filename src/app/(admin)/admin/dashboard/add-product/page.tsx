@@ -1,6 +1,5 @@
 "use client";
 
-import PrimaryButton from "@/components/common/primarybutton";
 import AddProductForm from "@/components/form/add-product-form";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";

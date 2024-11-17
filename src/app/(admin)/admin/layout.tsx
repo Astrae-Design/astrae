@@ -1,6 +1,4 @@
 import { AdminNavigation } from "@/components/dashboard/admin-navigation";
-import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
 
 const AdminDashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
