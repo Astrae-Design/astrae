@@ -1,13 +1,6 @@
-import { Poppins } from "next/font/google";
-
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import Image from "next/image";
-
-const font = Poppins({
-  subsets: ["latin"],
-  weight: ["600"],
-});
+import Link from "next/link";
 
 interface HeaderProps {
   title: string | null;
@@ -24,10 +17,7 @@ export const Header = ({ label, imgSrc, title }: HeaderProps) => {
         </div>
       </Link>
       <h1
-        className={cn(
-          "text-xl mt-6 tracking-tighter font-semibold text-white",
-          font.className
-        )}
+        className={cn("text-xl mt-6 tracking-tighter font-semibold text-white")}
       >
         {title}
       </h1>

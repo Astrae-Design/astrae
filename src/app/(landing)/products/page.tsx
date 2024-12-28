@@ -8,6 +8,8 @@ import { Metadata } from "next";
 const baseUrl = "https://astrae.design";
 const wwwBaseUrl = "https://www.astrae.design";
 
+export const revalidate = 1800;
+
 export const metadata: Metadata = {
   metadataBase: new URL(`${baseUrl}`) || new URL(`${wwwBaseUrl}`),
   keywords: [
