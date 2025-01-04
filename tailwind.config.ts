@@ -14,20 +14,15 @@ const config: Config = {
     container: {
       center: true,
       padding: {
-        sm: "20px",
-        md: "40px",
-        lg: "80px",
-      },
-      screens: {
-        sm: "430px",
-        md: "768px",
-        lg: "1300px",
+        DEFAULT: "1rem",
+        md: "2rem",
+        lg: "4rem",
       },
     },
     screens: {
-      sm: "400px",
+      sm: "375px",
       md: "768px",
-      lg: "1300px",
+      lg: "1200px",
     },
     extend: {
       colors: {
