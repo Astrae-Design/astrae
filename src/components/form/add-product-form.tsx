@@ -52,6 +52,7 @@ const AddProductForm = () => {
       codeLink: "",
       figmaLink: "",
       previewLink: "",
+      productVideo: "",
       description: "",
       detailedDescription: "",
       pages: "",
@@ -296,9 +297,27 @@ const AddProductForm = () => {
             />
             <FormField
               control={form.control}
+              name="productVideo"
+              render={({ field }) => (
+                <FormItem className="">
+                  <FormLabel>Product Video</FormLabel>
+                  <FormControl>
+                    <Input
+                      className="border border-white/0 bg-[#171717] hover:bg-[#171717]"
+                      {...field}
+                      disabled={isPending}
+                      placeholder="https://res.cloudinary.com/..."
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
               name="previewLink"
               render={({ field }) => (
-                <FormItem className=" col-span-2">
+                <FormItem className="">
                   <FormLabel>Live Preview Link</FormLabel>
                   <FormControl>
                     <Input

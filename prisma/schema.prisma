@@ -120,6 +120,7 @@ model Product {
   category            Category
   previewLink         String
   figmaLink           String
+  productVideo        String    @default("null")
   codeLink            String
   createdAt           DateTime  @default(now())
   toolkit             Toolkit[]

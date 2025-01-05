@@ -106,6 +106,7 @@ const ProductDetails: React.FC<ProductPageProps> = async ({ params }) => {
       </div>
       <ProjectCarousel images={images} />
       <ProductInfo {...product} />
+
       <CallToAction />
     </div>
   );

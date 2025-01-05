@@ -9,6 +9,7 @@ export interface Product {
   imageThree?: string;
   imageFour?: string;
   imageFive?: string;
+  productVideo: string;
   price: string;
   description: string;
   detailedDescription: string;

@@ -44,7 +44,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
       <Link href={`/products/${data.id}`}>
         <h3 className=" text-white text-xl mt-2">{data?.title}</h3>
 
-        <p className=" text-lg text-white/70 group-hover:text-white transition-all ease-in-out duration-300 line-clamp-4">
+        <p className=" hidden text-lg text-white/70 group-hover:text-white transition-all ease-in-out duration-300 line-clamp-4">
           {data?.price}
         </p>
       </Link>

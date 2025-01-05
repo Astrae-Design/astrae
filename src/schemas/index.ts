@@ -106,6 +106,9 @@ export const ProductSchema = z.object({
   pages: z.string().min(4, {
     message: "Enter one or more pages",
   }),
+  productVideo: z.string().min(4, {
+    message: "Enter link to product video",
+  }),
   figmaLink: z.string().min(4, {
     message: "Enter link to figma file",
   }),

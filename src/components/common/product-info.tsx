@@ -10,6 +10,7 @@ import {
 import { Button } from "../ui/button";
 import FeaturesAccordion from "./features-accordion";
 import SimilarProducts from "./similar-products";
+import ProductVideo from "../custom/product-video";
 
 const ProductInfo = (data: Product) => {
   const date = data.createdAt;
@@ -23,7 +24,7 @@ const ProductInfo = (data: Product) => {
     minute: "2-digit",
   });
   return (
-    <div>
+    <div className=" w-full">
       <div className=" container py-20">
         <div className="flex flex-col md:flex-row items-start justify-between gap-20 w-full">
           <div className=" w-full flex flex-col items-start">
@@ -102,6 +103,13 @@ const ProductInfo = (data: Product) => {
           </div>
         </div>
       </div>
+
+      <ProductVideo
+        srcMp4={data.productVideo}
+        poster={data.coverImage}
+        className="w-full h-auto border border-white/15 rounded-xl"
+      />
+      <div className="h-32" />
       <SimilarProducts id={data.id} />
       <div className="mt-20" />
     </div>
