@@ -109,6 +109,19 @@ const ProductInfo = (data: Product) => {
         poster={data.coverImage}
         className="w-full h-auto border border-white/15 rounded-xl"
       />
+      <div className=" w-full container h-fit mt-20">
+        <h2 className="font-semibold text-2xl tracking-tighter text-white mb-6">
+          Figma File
+        </h2>
+        <iframe
+          className=" w-full rounded-xl"
+          style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+          width="full"
+          height="720"
+          src={data.figmaEmbed}
+          allowFullScreen
+        />
+      </div>
       <div className="h-32" />
       <SimilarProducts id={data.id} />
       <div className="mt-20" />

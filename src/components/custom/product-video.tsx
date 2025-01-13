@@ -13,7 +13,7 @@ const ProductVideo: React.FC<ProductVideoProps> = ({
 }) => {
   return (
     <section className=" w-full container">
-      <h2 className="font-semibold text-2xl tracking-tighter text-white mb-8">
+      <h2 className="font-semibold text-2xl tracking-tighter text-white mb-6">
         Product Video
       </h2>
       <video

@@ -112,6 +112,9 @@ export const ProductSchema = z.object({
   figmaLink: z.string().min(4, {
     message: "Enter link to figma file",
   }),
+  figmaEmbed: z.string().min(4, {
+    message: "Enter figma embed link",
+  }),
   codeLink: z.string().min(4, {
     message: "Enter link to source code",
   }),

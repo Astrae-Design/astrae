@@ -16,6 +16,7 @@ export interface Product {
   pages: string;
   category: string;
   figmaLink: string;
+  figmaEmbed: string;
   codeLink: string;
   createdAt: Date;
   previewLink: string;

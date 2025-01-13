@@ -35,11 +35,11 @@ export const metadata: Metadata = {
     "template shop",
     "React UI kits",
   ],
-  title: "Astrae Design",
+  title: "Astrae Design | Premium Next.js Templates",
   description:
     "Discover beautifully crafted landing page templates built with React & Next.js, Tailwind CSS, and Framer Motion. Astrae Design offers high-quality, responsive templates perfect for startups, creatives, and agencies. Boost your project with smooth animations and modern design.",
   openGraph: {
-    title: "Astrae Design | Premium React Templates",
+    title: "Astrae Design | Premium Next.js Templates",
     siteName: "Astrae Design",
     description:
       "Discover beautifully crafted landing page templates built with React & Next.js, Tailwind CSS, and Framer Motion. Astrae Design offers high-quality, responsive templates perfect for startups, creatives, and agencies. Boost your project with smooth animations and modern design.",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Astrae Design | Premium React Templates",
+    title: "Astrae Design | Premium Next.js Templates",
     description:
       "Discover beautifully crafted landing page templates built with React & Next.js, Tailwind CSS, and Framer Motion. Astrae Design offers high-quality, responsive templates perfect for startups, creatives, and agencies. Boost your project with smooth animations and modern design.",
     images: ["/assets/thumbnail.webp"],

@@ -52,6 +52,7 @@ const AddProductForm = () => {
       codeLink: "",
       figmaLink: "",
       previewLink: "",
+      figmaEmbed: "",
       productVideo: "",
       description: "",
       detailedDescription: "",
@@ -315,7 +316,7 @@ const AddProductForm = () => {
             />
             <FormField
               control={form.control}
-              name="previewLink"
+              name="figmaEmbed"
               render={({ field }) => (
                 <FormItem className="">
                   <FormLabel>Live Preview Link</FormLabel>
@@ -325,6 +326,24 @@ const AddProductForm = () => {
                       {...field}
                       disabled={isPending}
                       placeholder="https://example.vercel.app"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="figmaEmbed"
+              render={({ field }) => (
+                <FormItem className="">
+                  <FormLabel>Figma Embed</FormLabel>
+                  <FormControl>
+                    <Input
+                      className="border border-white/0 bg-[#171717] hover:bg-[#171717]"
+                      {...field}
+                      disabled={isPending}
+                      placeholder="https://embed.figma.com/"
                     />
                   </FormControl>
                   <FormMessage />

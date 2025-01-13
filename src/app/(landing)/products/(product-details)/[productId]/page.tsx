@@ -90,7 +90,12 @@ const ProductDetails: React.FC<ProductPageProps> = async ({ params }) => {
               <div className=" w-full">
                 <AddToCartButton data={product} />
               </div>
-              <Link className=" w-full md:w-1/2" href={product.previewLink}>
+              <Link
+                className=" w-full md:w-1/2"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={product.previewLink}
+              >
                 <Button className=" w-full md:w-full">
                   Live Preview <ExternalLink className=" h-5 w-5 ml-3" />
                 </Button>
