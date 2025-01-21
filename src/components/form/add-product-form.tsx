@@ -26,14 +26,14 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { ProductSchema } from "@/schemas";
+import { Category, Toolkit } from "@prisma/client";
 import { Loader2, Save } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { z } from "zod";
+import { addProduct } from "../../../actions/add-product";
 import { Checkbox } from "../ui/checkbox";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
-import { Category, Toolkit } from "@prisma/client";
-import { addProduct } from "../../../actions/add-product";
-import { useRouter } from "next/navigation";
 
 const AddProductForm = () => {
   const [error, setError] = useState<string | undefined>("");
@@ -316,7 +316,7 @@ const AddProductForm = () => {
             />
             <FormField
               control={form.control}
-              name="figmaEmbed"
+              name="previewLink"
               render={({ field }) => (
                 <FormItem className="">
                   <FormLabel>Live Preview Link</FormLabel>

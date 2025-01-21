@@ -1,8 +1,8 @@
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogTrigger,
-  DialogClose,
 } from "@/components/ui/dialog";
 import { ExternalLink, Eye, X } from "lucide-react";
 
