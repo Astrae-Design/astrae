@@ -19,7 +19,7 @@ const Footer = () => {
             <span className=" text-white font-semibold text-base md:text-lg hidden md:block">
               Astrae{" "}
               {pathName.startsWith("/products") ? (
-                <span className=" font-medium opacity-50">Marketplace</span>
+                <span className=" font-medium opacity-50">Products</span>
               ) : (
                 <></>
               )}
@@ -63,14 +63,14 @@ const Footer = () => {
             <h4 className=" font-medium text-base text-white">Navigate</h4>
             <div className="flex flex-col items-start gap-2 text-sm font-normal text-white/70">
               <p>Home</p>
-              <p>Marketplace</p>
+              <p>Products</p>
               <p>Pricing</p>
               <p>Contact</p>
               <p>Blog</p>
             </div>
           </div>
           <div className="flex flex-col items-start gap-2">
-            <h4 className=" font-medium text-base text-white">
+            <h4 className=" font-medium text-base text-white text-nowrap">
               By Makers Of Astrae
             </h4>
             <div className="flex flex-col items-start gap-2 text-sm font-normal text-white/70">
@@ -165,7 +165,7 @@ const Footer = () => {
         className=" w-full opacity-20 mb-8 mt-12"
       />
       <p className=" text-white/70 text-sm w-full text-start">
-        © 2024 Astrae Design. All Rights Reserved.
+        © 2025 Astrae Design. All Rights Reserved.
       </p>
     </div>
   );

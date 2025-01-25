@@ -154,9 +154,9 @@ const Value = () => {
         </div>
       </div>
       <div className=" overflow-x-hidden relative w-full -z-50">
-        <div className="absolute top-0 bottom-0 left-0 w-28 md:w-40 z-10 bg-gradient-to-r from-black to-transparent" />
+        <div className="absolute top-0 bottom-0 left-0 w-8 md:w-40 z-10 bg-gradient-to-r from-black to-transparent" />
         <SlidingProjects />
-        <div className="absolute top-0 bottom-0 right-0 w-28 md:w-40 z-10 bg-gradient-to-l from-black to-transparent" />
+        <div className="absolute top-0 bottom-0 right-0 w-8 md:w-40 z-10 bg-gradient-to-l from-black to-transparent" />
       </div>
     </div>
   );

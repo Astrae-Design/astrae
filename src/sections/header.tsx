@@ -104,7 +104,7 @@ export const Header = () => {
                     </Link>
                   </div>
                 ) : (
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 ml-2">
                     {user?.subscriptionType === "FREE" && (
                       <>
                         <Link className=" hidden md:block" href="/pricing">
@@ -124,12 +124,6 @@ export const Header = () => {
                         </Link>
                       </>
                     )}
-                    {user?.subscriptionType === "PRO" && (
-                      <div className=" bg-emerald-500/15 text-emerald-500 p-3 rounded-md text-sm h-10 gap-2 flex items-center justify-center">
-                        <p className=" capitalize">Premium</p>
-                        <Gem size={18} />
-                      </div>
-                    )}
                     <Link
                       className=" hidden md:block"
                       href={
@@ -138,7 +132,10 @@ export const Header = () => {
                           : "/dashboard"
                       }
                     >
-                      <PrimaryButton>My Dashboard</PrimaryButton>
+                      <PrimaryButton>
+                        My Dashboard
+                        <Gem className=" ml-2" size={18} />
+                      </PrimaryButton>
                     </Link>
                   </div>
                 )}
