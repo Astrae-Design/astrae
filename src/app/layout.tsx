@@ -20,7 +20,7 @@ const baseUrl = "https://astrae.design";
 const wwwBaseUrl = "https://www.astrae.design";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`${baseUrl}`) || new URL(`${wwwBaseUrl}`),
+  metadataBase: new URL(`${wwwBaseUrl}`) || new URL(`${baseUrl}`),
   keywords: [
     "React landing page templates",
     "Tailwind CSS templates",
@@ -38,13 +38,16 @@ export const metadata: Metadata = {
   title: "Astrae Design | Premium Next.js Templates",
   description:
     "Discover beautifully crafted landing page templates built with React & Next.js, Tailwind CSS, and Framer Motion. Astrae Design offers high-quality, responsive templates perfect for startups, creatives, and agencies. Boost your project with smooth animations and modern design.",
+  alternates: {
+    canonical: wwwBaseUrl,
+  },
   openGraph: {
     title: "Astrae Design | Premium Next.js Templates",
     siteName: "Astrae Design",
     description:
       "Discover beautifully crafted landing page templates built with React & Next.js, Tailwind CSS, and Framer Motion. Astrae Design offers high-quality, responsive templates perfect for startups, creatives, and agencies. Boost your project with smooth animations and modern design.",
     images: ["/assets/thumbnail.webp"],
-    url: `${baseUrl}`,
+    url: `${wwwBaseUrl}`,
   },
   twitter: {
     card: "summary_large_image",

@@ -14,7 +14,7 @@ const baseUrl = "https://astrae.design";
 const wwwBaseUrl = "https://www.astrae.design";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`${baseUrl}`) || new URL(`${wwwBaseUrl}`),
+  metadataBase: new URL(`${wwwBaseUrl}`) || new URL(`${baseUrl}`),
   keywords: [
     "web design blog",
     "React tutorials",
@@ -29,16 +29,19 @@ export const metadata: Metadata = {
     "React landing page tutorials",
     "UI design resources",
   ],
-  title: "Blog",
+  title: "Astrae Design Blog | Web Design & Development Insights",
   description:
     "Stay up-to-date with the latest trends in web design and development. Explore blog posts covering topics like React, Next.js, Tailwind CSS, Framer Motion, and UI/UX design from Astrae Design experts.",
+  alternates: {
+    canonical: `${wwwBaseUrl}/blog`,
+  },
   openGraph: {
     title: "Astrae Design Blog | Web Design & Development Insights",
     siteName: "Astrae Design",
     description:
       "Stay up-to-date with the latest trends in web design and development. Explore blog posts covering topics like React, Next.js, Tailwind CSS, Framer Motion, and UI/UX design from Astrae Design experts.",
     images: ["/assets/blog-thumbnail.webp"],
-    url: `${baseUrl}/blog`,
+    url: `${wwwBaseUrl}/blog`,
   },
   twitter: {
     card: "summary_large_image",

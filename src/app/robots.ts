@@ -4,7 +4,7 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
-      allow: ["/", "/products", "/blog", "/pricing"],
+      allow: ["/", "/products", "/products/*","/blog", "/blog/*", "/pricing"],
       disallow: [
         "/welcome",
         "/login",
@@ -14,7 +14,14 @@ export default function robots(): MetadataRoute.Robots {
         "/new-password",
         "/new-verification",
         "/password-reset-successful",
-        "/studio"
+        "/studio",
+        "/_next/",
+        "/api/",
+        "/images/",
+        "/assets/",
+        "/*.ico$",
+        "/*.woff2$",
+        "/*.webp$",
       ],
     },
     sitemap: "https://www.astrae.design/sitemap.xml",

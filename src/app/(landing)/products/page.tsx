@@ -26,22 +26,25 @@ export const metadata: Metadata = {
     "modern web templates",
     "startup website templates for sale",
   ],
-  title: "Products",
+  title: "Products | Premium Next.js Templates | Astrae Design",
   description:
     "Browse Astrae Design's marketplace for premium React templates built with Next.js, Tailwind CSS, and Framer Motion. Discover high-quality, responsive templates perfect for startups, agencies, and creatives.",
+  alternates: {
+    canonical: `${wwwBaseUrl}/products`,
+  },
   openGraph: {
-    title: "Products | Astrae Design",
+    title: "Products | Premium Next.js Templates | Astrae Design",
     siteName: "Astrae Design",
     description:
-      "Explore Astrae Design's marketplace for beautifully crafted web templates. Find premium landing page templates built with React, Tailwind CSS, and Framer Motion.",
+      "Explore Astrae Design's marketplace for beautifully crafted website templates. Find premium landing page templates built with React, Tailwind CSS, and Framer Motion.",
     images: ["/assets/marketplace-thumbnail.webp"],
-    url: `${baseUrl}/marketplace`,
+    url: `${wwwBaseUrl}/products`,
   },
   twitter: {
     card: "summary_large_image",
     title: "Products | Astrae Design",
     description:
-      "Discover Astrae Design's marketplace filled with high-quality web templates built with React, Tailwind CSS, and Framer Motion. Perfect for startups, agencies, and creatives.",
+      "Discover Astrae Design's marketplace filled with high-quality website templates built with React, Tailwind CSS, and Framer Motion. Perfect for startups, agencies, and creatives.",
     images: ["/assets/marketplace-thumbnail.webp"],
     creator: "@astraedesign0",
   },
