@@ -14,6 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         "/new-password",
         "/new-verification",
         "/password-reset-successful",
+        "/studio"
       ],
     },
     sitemap: "https://www.astrae.design/sitemap.xml",

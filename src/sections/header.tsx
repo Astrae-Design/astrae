@@ -41,7 +41,7 @@ export const Header = () => {
             <Link className="h-7 z-[2147483006]" href="/">
               <div className="inline-flex gap-1.5 justify-center items-center shrink-0 text-nowrap">
                 <div className="h-7 w-7 relative">
-                  <Image fill src="/assets/logo.svg" alt="Logo" />
+                <Image fill src="/assets/logo.svg" alt="Logo" />
                 </div>
                 <span className=" text-white font-semibold text-base inline-flex gap-1">
                   Astrae{" "}

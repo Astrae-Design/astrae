@@ -121,7 +121,7 @@ const MobileNavigation = () => {
                       href="/products"
                       className="text-4xl font-medium text-white"
                     >
-                      Marketplace
+                      Products
                     </a>
                   </li>
                   <li>

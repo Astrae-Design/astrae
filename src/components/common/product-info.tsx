@@ -47,7 +47,7 @@ const ProductInfo = (data: Product) => {
                 {data.pages.split(",").map((page) => (
                   <Button
                     key={page.trim()}
-                    className=" px-2 md:px-3 w-fit"
+                    className=" bg-black border border-white/15 px-2 md:px-3 w-fit"
                     size="sm"
                   >
                     <Globe className="mr-2 h-5 w-5" />
@@ -63,32 +63,50 @@ const ProductInfo = (data: Product) => {
               </h2>
 
               {data.category === "MARKETING_PAGE" ? (
-                <Button size="sm" className="mt-4 w-fit px-3">
+                <Button
+                  size="sm"
+                  className="mt-4 w-fit px-3 bg-black border border-white/15"
+                >
                   <Briefcase className=" h-5 w-5 mr-3" />
                   Marketing Page
                 </Button>
               ) : data.category === "STARTUP_LANDING_PAGE" ? (
-                <Button size="sm" className="mt-4 w-fit px-3">
+                <Button
+                  size="sm"
+                  className="mt-4 w-fit px-3 bg-black border border-white/15"
+                >
                   <Building2 className=" h-5 w-5 mr-3" />
                   Startup Landing Page
                 </Button>
               ) : data.category === "SAAS_LANDING_PAGE" ? (
-                <Button size="sm" className="mt-4 w-fit px-3">
+                <Button
+                  size="sm"
+                  className="mt-4 w-fit px-3 bg-black border border-white/15"
+                >
                   <LayoutList className=" h-5 w-5 mr-3" />
                   SaaS Landing Page
                 </Button>
               ) : data.category === "SAAS_WAITLIST" ? (
-                <Button size="sm" className="mt-4 w-fit px-3">
+                <Button
+                  size="sm"
+                  className="mt-4 w-fit px-3 bg-black border border-white/15"
+                >
                   <Loader className=" h-5 w-5 mr-3" />
                   SaaS Waitlist
                 </Button>
               ) : data.category === "AGENCY_WEBSITE" ? (
-                <Button size="sm" className="mt-4 w-fit px-3">
+                <Button
+                  size="sm"
+                  className="mt-4 w-fit px-3 bg-black border border-white/15"
+                >
                   <Briefcase className=" h-5 w-5 mr-3" />
                   Agency Website
                 </Button>
               ) : data.category === "DEV_PORTFOLIO" ? (
-                <Button size="sm" className="mt-4 w-fit px-3">
+                <Button
+                  size="sm"
+                  className="mt-4 w-fit px-3 bg-black border border-white/15"
+                >
                   <FileCode className=" h-5 w-5 mr-3" />
                   Dev Portfolio
                 </Button>

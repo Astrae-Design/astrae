@@ -8,7 +8,7 @@ import { Metadata } from "next";
 const baseUrl = "https://astrae.design";
 const wwwBaseUrl = "https://www.astrae.design";
 
-export const revalidate = 1800;
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${baseUrl}`) || new URL(`${wwwBaseUrl}`),
@@ -48,13 +48,56 @@ export const metadata: Metadata = {
   icons: "/favicon.ico",
 };
 
+const toNormalCase = (text: string) => {
+  return text
+    .toLowerCase()
+    .replace(/_/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+};
+
+const toKebabCase = (text: string) => {
+  return text.toLowerCase().replace(/_/g, "-").replace(/\s+/g, "-");
+};
+
 const ProductsPage = async () => {
-  const allProducts = await db.product.findMany();
+  const allProducts = await db.product.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+  const currentMonth = new Date().getMonth();
+  const newProducts = allProducts.filter(
+    (product) => new Date(product.createdAt).getMonth() === currentMonth
+  );
+
+  const categories = [
+    ...new Set(allProducts.map((product) => product.category)),
+  ];
 
   return (
     <div className=" pt-12 md:pt-0">
       <Value />
-      <ProductList items={allProducts} />
+      <ProductList
+        title="Latest Templates"
+        description=" The latest templates from the Astrae community."
+        items={newProducts}
+      />
+      <ProductList
+        title="All Templates"
+        description="All templates from the Astrae community"
+        items={allProducts}
+      />
+      {categories.map((category) => (
+        <div id={toKebabCase(category)} key={category}>
+          <ProductList
+            title={`${toNormalCase(category)}`}
+            description={`Templates in the ${toNormalCase(category)} category`}
+            items={allProducts.filter(
+              (product) => product.category === category
+            )}
+          />
+        </div>
+      ))}
       <div className="h-[8rem]" />
       <Reviews />
       <CallToAction />

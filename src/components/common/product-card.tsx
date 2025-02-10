@@ -14,6 +14,8 @@ interface ProductCard {
 
 const ProductCard: React.FC<ProductCard> = ({ data }) => {
   const cart = useCart();
+  const currentMonth = new Date().getMonth();
+  const isNew = new Date(data.createdAt).getMonth() === currentMonth;
 
   const onAddToCart: MouseEventHandler<HTMLDivElement> = (event) => {
     event.stopPropagation();
@@ -41,10 +43,15 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
           />
         </div>
       </Link>
+      {isNew && (
+        <div className="bg-primary w-fit mt-4 text-white px-2 py-1 rounded">
+          New
+        </div>
+      )}
       <Link href={`/products/${data.id}`}>
-        <h3 className=" text-white text-xl mt-2">{data?.title}</h3>
+        <h3 className=" text-white text-xl md:text-2xl mt-2">{data?.title}</h3>
 
-        <p className=" hidden text-lg text-white/70 group-hover:text-white transition-all ease-in-out duration-300 line-clamp-4">
+        <p className="text-lg text-white/70 group-hover:text-white transition-all ease-in-out duration-300 line-clamp-4">
           {data?.price}
         </p>
       </Link>

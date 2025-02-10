@@ -22,37 +22,37 @@ const components: {
 }[] = [
   {
     title: "Startup Landing Page",
-    href: "/",
+    href: "/products/#startup-landing-page",
     src: "/assets/icons/icon-startup.svg",
     srcActive: "/assets/icons/icon-startup-active.svg",
   },
   {
     title: "Agency Website",
-    href: "/",
+    href: "/products/#agency-website",
     src: "/assets/icons/icon-agency.svg",
     srcActive: "/assets/icons/icon-agency-active.svg",
   },
   {
     title: "SAAS Landing Page",
-    href: "/",
+    href: "/products/#saas-landing-page",
     src: "/assets/icons/icon-saas-landing.svg",
     srcActive: "/assets/icons/icon-saas-landing-active.svg",
   },
   {
     title: "Marketing Page",
-    href: "/",
+    href: "/products/#marketing-page",
     src: "/assets/icons/icon-marketing.svg",
     srcActive: "/assets/icons/icon-marketing-active.svg",
   },
   {
     title: "SAAS Waitlist ",
-    href: "/",
+    href: "/products/#saas-waitlist",
     src: "/assets/icons/icon-saas-waitlist.svg",
     srcActive: "/assets/icons/icon-saas-waitlist-active.svg",
   },
   {
     title: "Dev Portfolio",
-    href: "/",
+    href: "/products/#dev-portfolio",
     src: "/assets/icons/icon-dev-portfolio.svg",
     srcActive: "/assets/icons/icon-dev-portfolio-active.svg",
   },

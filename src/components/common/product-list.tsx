@@ -5,16 +5,18 @@ import ProductCard from "./product-card";
 
 interface ProductListProps {
   items: any[];
+  title: string;
+  description: string;
 }
-const ProductList: React.FC<ProductListProps> = ({ items }) => {
+const ProductList: React.FC<ProductListProps> = ({ items, title, description }) => {
   if (items.length > 0) {
     return (
       <div className=" container py-12">
         <h4 className=" text-4xl md:text-5xl tracking-tighter text-white font-semibold">
-          New Templates
+          {title}
         </h4>
-        <p className=" text-white/70 font-normal text-sm mt-2">
-          The latest templates from the Astrae community.
+        <p className=" text-white/70 font-normal text-base mt-2">
+         {description}
         </p>
         <div className="grid mt-10 grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-10 w-full pb-20 md:pb-0">
           {items.map((item) => (
