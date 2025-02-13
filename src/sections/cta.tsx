@@ -1,7 +1,6 @@
 "use client";
 
 import PrimaryButton from "@/components/common/primarybutton";
-import Image from "next/image";
 
 import {
   motion,
