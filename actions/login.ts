@@ -11,7 +11,7 @@ import { getUserByEmail } from "@/data/user";
 import { db } from "@/lib/db";
 import { sendTwoFactorTokenEmail } from "@/lib/mail";
 import { generateTwoFactorToken } from "@/lib/token";
-import { DEFAULT_ADMIN_LOGIN_REDIRECT, DEFAULT_LOGIN_REDIRECT } from "@/routes";
+import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
 import { LoginSchema } from "@/schemas";
 
 export const login = async (
@@ -36,10 +36,7 @@ export const login = async (
     return { error: "Please verify your email!" };
   }
 
-  const redirectUrl =
-    existingUser.role === "ADMIN"
-      ? DEFAULT_ADMIN_LOGIN_REDIRECT
-      : DEFAULT_LOGIN_REDIRECT;
+  const redirectUrl = DEFAULT_LOGIN_REDIRECT;
 
   if (existingUser.isTwoFactorEnabled && existingUser.email) {
     // Check password before proceeding with 2FA

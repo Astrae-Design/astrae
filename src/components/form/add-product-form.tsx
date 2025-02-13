@@ -70,7 +70,7 @@ const AddProductForm = () => {
         if (data?.success) {
           form.reset();
           setSuccess(data.success);
-          router.push("/admin/dashboard");
+          router.push("/dashboard");
         }
         if (data?.error) {
           setError(data.error);

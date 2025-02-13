@@ -1,15 +1,13 @@
 "use client";
 
+import { useCurrentUser } from "@/hooks/use-current-user";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import PrimaryButton from "./primarybutton";
-import { useCurrentUser } from "@/hooks/use-current-user";
-import { useCurrentRole } from "@/hooks/use-current-role";
 
 const MobileNavigation = () => {
   const { user, isLoading } = useCurrentUser();
-  const { role, loadingRole } = useCurrentRole();
 
   const [mobileNav, setMobileNav] = useState(false);
 
@@ -160,14 +158,7 @@ const MobileNavigation = () => {
                   className="w-full container mt-8 mb-6"
                 >
                   {user && !isLoading ? (
-                    <a
-                      className=" hidden md:block"
-                      href={
-                        role === "ADMIN" && !loadingRole
-                          ? "/admin/dashboard"
-                          : "/dashboard"
-                      }
-                    >
+                    <a className=" hidden md:block" href="/dashboard">
                       <PrimaryButton>My Dashboard</PrimaryButton>
                     </a>
                   ) : (

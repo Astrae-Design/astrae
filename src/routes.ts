@@ -45,4 +45,3 @@ export const cmsPrefix = "/studio";
  * @type {string}
  */
 export const DEFAULT_LOGIN_REDIRECT = "/dashboard";
-export const DEFAULT_ADMIN_LOGIN_REDIRECT = "/admin/dashboard";

@@ -2,7 +2,6 @@ import NextAuth from "next-auth";
 
 import authConfig from "@/auth.config";
 import {
-  DEFAULT_ADMIN_LOGIN_REDIRECT,
   DEFAULT_LOGIN_REDIRECT,
   apiAuthPrefix,
   authRoutes,
@@ -36,14 +35,8 @@ export default auth((req) => {
 
   if (isAuthRoute) {
     if (isLoggedIn) {
-      const userRole = req.auth?.user?.role;
-      const roleBasedRedirect =
-        userRole === "ADMIN"
-          ? DEFAULT_ADMIN_LOGIN_REDIRECT
-          : DEFAULT_LOGIN_REDIRECT;
-      return Response.redirect(new URL(roleBasedRedirect, nextUrl));
+      return Response.redirect(new URL(DEFAULT_LOGIN_REDIRECT, nextUrl));
     }
-
     return undefined;
   }
 
@@ -63,7 +56,6 @@ export default auth((req) => {
   return undefined;
 });
 
-// Optionally, don't invoke Middleware on some paths
 export const config = {
   matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
 };

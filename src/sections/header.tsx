@@ -5,7 +5,6 @@ import MobileNavigation from "@/components/common/mobile-navigation";
 import PrimaryButton from "@/components/common/primarybutton";
 import { MarketplaceMenu } from "@/components/common/products-menu";
 import { Button } from "@/components/ui/button";
-import { useCurrentRole } from "@/hooks/use-current-role";
 import { useCurrentUser } from "@/hooks/use-current-user";
 import { CircleFadingArrowUp, Gem } from "lucide-react";
 import Image from "next/image";
@@ -25,7 +24,6 @@ const headerVariants = {
 
 export const Header = () => {
   const { user, isLoading } = useCurrentUser();
-  const { role, loadingRole } = useCurrentRole();
   const pathName = usePathname();
   return (
     <motion.header
@@ -41,7 +39,7 @@ export const Header = () => {
             <Link className="h-7 z-[2147483006]" href="/">
               <div className="inline-flex gap-1.5 justify-center items-center shrink-0 text-nowrap">
                 <div className="h-7 w-7 relative">
-                <Image fill src="/assets/logo.svg" alt="Logo" />
+                  <Image fill src="/assets/logo.svg" alt="Logo" />
                 </div>
                 <span className=" text-white font-semibold text-base inline-flex gap-1">
                   Astrae{" "}
@@ -124,14 +122,7 @@ export const Header = () => {
                         </Link>
                       </>
                     )}
-                    <Link
-                      className=" hidden md:block"
-                      href={
-                        role === "ADMIN" && !loadingRole
-                          ? "/admin/dashboard"
-                          : "/dashboard"
-                      }
-                    >
+                    <Link className=" hidden md:block" href="/dashboard">
                       <PrimaryButton>
                         My Dashboard
                         <Gem className=" ml-2" size={18} />

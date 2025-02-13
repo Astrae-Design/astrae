@@ -1,5 +1,5 @@
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import { SubscriptionType, UserRole } from "@prisma/client";
+import { SubscriptionType } from "@prisma/client";
 import NextAuth from "next-auth";
 
 import authConfig from "@/auth.config";
@@ -59,10 +59,6 @@ export const {
         session.user.id = token.sub;
       }
 
-      if (token.role && session.user) {
-        session.user.role = token.role as UserRole;
-      }
-
       const userWithSubscriptions = await db.user.findUnique({
         where: { id: token.sub },
         include: {
@@ -95,7 +91,6 @@ export const {
       token.isOAuth = !!(await getAccountByUserId(existingUser.id));
       token.name = existingUser.name ?? token.name;
       token.email = existingUser.email ?? token.email;
-      token.role = existingUser.role;
       token.subscriptionType =
         existingUser.subscriptionType as SubscriptionType;
       token.isTwoFactorEnabled = existingUser.isTwoFactorEnabled;
