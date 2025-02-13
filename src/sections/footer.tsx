@@ -34,6 +34,12 @@ const Footer = () => {
           </p>
           <p className="text-white/70 text-sm mt-2 mb-6">
             A product of{" "}
+            <Link className=" group" href="https://www.studioix.agency/">
+              <span className=" underline underline-offset-4 group-hover:text-white">
+                Studio IX
+              </span>
+            </Link>{" "}
+            &{" "}
             <Link className=" group" href="https://www.builtwithatlas.com">
               <span className=" underline underline-offset-4 group-hover:text-white">
                 AtlasLabs

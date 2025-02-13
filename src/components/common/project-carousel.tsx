@@ -19,8 +19,8 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images }) => {
   const loopedImages = [...images, images[0]];
   return (
     <div className=" w-full relative">
-      <div className="absolute top-0 bottom-0 left-0 w-28 md:w-52 z-[2] bg-gradient-to-r from-black to-transparent" />
-      <div className="absolute top-0 bottom-0 right-0 w-28 md:w-52 z-[2] bg-gradient-to-l from-black to-transparent" />
+      <div className="absolute top-0 bottom-0 left-0 w-28 md:w-52 z-[1] bg-gradient-to-r from-black to-transparent" />
+      <div className="absolute top-0 bottom-0 right-0 w-28 md:w-52 z-[1] bg-gradient-to-l from-black to-transparent" />
       <Carousel
         plugins={[
           Autoplay({

@@ -33,7 +33,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
       </div>
       <ProductPreview previewLink={data.previewLink} />
       <Link href={`/products/${data.id}`}>
-        <div className=" relative h-[16rem] rounded-xl overflow-clip">
+        <div className=" w-full relative md:h-[16rem] h-auto aspect-square md:aspect-auto rounded-xl overflow-clip">
           <Image
             fill
             quality={100}

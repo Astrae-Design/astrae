@@ -86,85 +86,20 @@ const CallToAction = () => {
           ></motion.div>
           <div className=" relative">
             <h2 className=" text-5xl px-4 md:px-0 md:max-w-2xl mx-auto tracking-tighter text-center font-semibold text-white">
-              Want a custom website tailored to your needs? Let&apos;s talk
+              Need a Custom MVP Fast? <br /> We&apos;ll Deliver in 6 Weeks.
             </h2>
             <div className=" flex justify-center mt-4">
-              <p className=" text-center text-sm mx-auto tracking-tight text-white/70 px-12 md:px-0">
-                We have helped hundreds of businesses with their website needs
+              <p className=" text-center text-sm mx-auto max-w-lg tracking-tight text-white/70 px-12 md:px-0">
+                From design to development, we build functional, high-performing
+                MVPs in record time. Get your product to market quickly without
+                compromising quality.
               </p>
             </div>
-            <div className=" flex items-center -space-x-4 mx-auto w-fit py-8">
-              <div className="inline-flex items-center justify-center h-11 w-11 p-0.5  md:h-14 md:w-14 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
-                <div className=" relative h-10 w-10 md:h-14 md:w-14">
-                  <Image
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src="/assets/user-1.webp"
-                    alt="User"
-                    className=" object-contain"
-                  />
-                </div>
-              </div>
-              <div className="inline-flex items-center justify-center h-11 w-11 p-0.5  md:h-14 md:w-14 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
-                <div className=" relative h-10 w-10 md:h-14 md:w-14">
-                  <Image
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src="/assets/user-2.webp"
-                    alt="User"
-                    className=" object-contain"
-                  />
-                </div>
-              </div>
-              <div className="inline-flex items-center justify-center h-11 w-11 p-0.5  md:h-14 md:w-14 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
-                <div className=" relative h-10 w-10 md:h-14 md:w-14">
-                  <Image
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src="/assets/user-3.webp"
-                    alt="User"
-                    className=" object-contain"
-                  />
-                </div>
-              </div>
-              <div className="inline-flex items-center justify-center h-11 w-11 p-0.5  md:h-14 md:w-14 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
-                <div className=" relative h-10 w-10 md:h-14 md:w-14">
-                  <Image
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src="/assets/user-4.webp"
-                    alt="User"
-                    className=" object-contain"
-                  />
-                </div>
-              </div>
-              <div className="inline-flex items-center justify-center h-11 w-11 p-0.5  md:h-14 md:w-14 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
-                <div className=" relative h-10 w-10 md:h-14 md:w-14">
-                  <Image
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src="/assets/user-5.webp"
-                    alt="User"
-                    className=" object-contain"
-                  />
-                </div>
-              </div>
-              <div className="inline-flex items-center justify-center h-11 w-11 p-0.5  md:h-14 md:w-14 bg-white/10 border border-white/10 backdrop-blur-lg rounded-full">
-                <div className=" relative h-10 w-10 md:h-14 md:w-14">
-                  <Image
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src="/assets/user-6.webp"
-                    alt="User"
-                    className=" object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className=" justify-center w-full inline-flex items-center gap-4 mt-4">
-              <Link href="/pricing">
+
+            <div className=" justify-center w-full inline-flex items-center gap-4 mt-4 md:mt-8">
+              <Link href="https://www.studioix.agency/">
                 <div className=" w-fit">
-                  <PrimaryButton>Get Astrae Now</PrimaryButton>
+                  <PrimaryButton>Learn More</PrimaryButton>
                 </div>
               </Link>
             </div>
